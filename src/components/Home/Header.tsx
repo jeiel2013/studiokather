@@ -29,10 +29,17 @@ export const Header = () => {
         <div className="container mx-auto px-6 max-w-[1400px] flex justify-between items-center">
           {/* Logo */}
           <a href="#" className="flex items-baseline leading-none">
+            {/* Logo para Mobile e Tablet */}
+            <img
+              src="src\assets\Images\K.png"
+              alt="Studio Kather"
+              className="h-7 w-auto lg:hidden"
+            />
+            {/* Logo para Desktop */}
             <img
               src="src\assets\Images\LogoKather.png"
               alt="Studio Kather"
-              className="h-7 w-auto"
+              className="h-7 w-auto hidden lg:block"
             />
           </a>
 
