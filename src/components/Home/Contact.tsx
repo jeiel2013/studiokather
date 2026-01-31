@@ -7,17 +7,17 @@ export const Contact = () => {
       <div className="container mx-auto px-4 md:px-6 max-w-7xl relative z-20 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-3 items-center">
           {/* Text Card */}
-          <div className="bg-white p-8 md:p-12 lg:p-16 shadow-lg aspect-square flex flex-col justify-center items-start rounded-2xl">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-4 md:mb-6 text-black">
-              Precisa de um projeto?
+          <div className="bg-beige p-8 md:p-12 lg:p-16 shadow-lg aspect-square flex flex-col justify-center items-start rounded-2xl">
+            <h2 className="text-3xl md:text-4xl lg:text-6xl font-semibold tracking-tight mb-4 md:mb-6 text-black">
+              Marcas sem identidade visual passam <span className="text-white">despercebidas</span>
             </h2>
-            <p className="text-sm md:text-base lg:text-lg font-light leading-relaxed mb-8 md:mb-10 text-black/60">
-              Agende uma conversa com nossa equipe. Estamos dispostos a entender
+            <p className="text-sm md:text-base lg:text-xl font-light leading-relaxed mb-8 md:mb-10 text-black">
+              Agende uma conversa comigo. Estou disposta a entender
               sobre sua marca para oferecer uma solução eficiente e criativa.
             </p>
             <a
               href="#"
-              className="inline-block bg-olive text-offwhite px-8 md:px-10 py-3 md:py-4 rounded-full font-medium text-sm md:text-base transition-all duration-300 hover:bg-[#5d7b32] hover:scale-105 shadow-lg shadow-olive/20"
+              className="inline-block bg-olive text-white px-8 md:px-10 py-3 md:py-4 rounded-full font-medium text-sm md:text-base transition-all duration-300 hover:bg-[#5d7b32] hover:text-black hover:scale-105 shadow-lg shadow-olive/20"
             >
               Agendar Call
             </a>

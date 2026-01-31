@@ -28,12 +28,12 @@ export const Header = () => {
       >
         <div className="container mx-auto px-6 max-w-[1400px] flex justify-between items-center">
           {/* Logo */}
-          <a
-            href="#"
-            className="text-xl md:text-2xl font-semibold tracking-tight text-black relative z-50"
-          >
-            CAMILA
-            <span className="text-olive">DESIGN</span>
+          <a href="#" className="flex items-baseline leading-none">
+            <img
+              src="src\assets\Images\LogoKather.png"
+              alt="Studio Kather"
+              className="h-7 w-auto"
+            />
           </a>
 
           {/* Desktop Menu */}

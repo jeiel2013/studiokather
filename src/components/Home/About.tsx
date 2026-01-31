@@ -21,19 +21,23 @@ export const About = () => {
           </div>
 
           {/* Content */}
-          <div className="order-1 lg:order-2 bg-white aspect-square overflow-hidden p-6 md:p-12 lg:p-16 shadow-sm flex flex-col justify-center rounded-2xl">
-            <h2 className="text-2xl md:text-3xl lg:text-[42px] font-semibold text-black leading-[1.15] mb-4 md:mb-6 tracking-tight">
-              Criamos para marcas que buscam crescer e
-              <span className="text-olive"> inovar.</span>
+          <div className="order-1 lg:order-2 bg-olive aspect-square overflow-hidden p-6 md:p-12 lg:p-16 shadow-sm flex flex-col justify-center rounded-2xl">
+            <h2 className="text-2xl md:text-6xl lg:text-[47px] font-semibold text-black leading-[1.15] mb-4 md:mb-6 tracking-tight">
+              <span className="text-beige">Acreditamos</span> que sua marca é o que ela transmite
             </h2>
 
-            <p className="text-sm md:text-base lg:text-lg text-black/85 font-normal leading-relaxed mb-6 md:mb-8 text-balance">
-              Sabemos que empresas carregam qualidades e entregas relevantes que
-              podem ser trabalhadas na percepção visual da sua marca. Nosso
-              processo é um mergulho profundo na essência do seu negócio.
+            <p className="text-sm md:text-base lg:text-xl text-black/85 font-normal leading-relaxed mb-6 md:mb-8 text-balance">
+              Você pode ter o melhor produto ou seviço do
+              mundo, mas se a sua identidade não parecer
+              profissional, seu negócio pode estagnar.
+              <br />
+              <br />
+              A identidade visual é tudo o que o cliente vê e 
+              percebe sobre sua marca, tanto nos meios digitais
+              quanto no offline.
             </p>
 
-            <div className="flex flex-col gap-3 md:gap-4">
+            {/* <div className="flex flex-col gap-3 md:gap-4">
               <div className="flex items-start gap-3">
                 <svg
                   className="text-olive text-xl mt-0.5 md:mt-1 w-5 h-5 md:w-6 md:h-6 flex-shrink-0"
@@ -88,12 +92,12 @@ export const About = () => {
                   Acompanhamento próximo
                 </span>
               </div>
-            </div>
+            </div> */}
 
-            <div className="mt-8 md:mt-10">
+            <div className="mt-4 md:mt-5">
               <a
                 href="#"
-                className="inline-flex items-center text-olive font-medium text-sm md:text-base hover:underline decoration-1 underline-offset-4 transition-all"
+                className="inline-flex items-center text-offwhite font-medium text-sm md:text-base hover:underline decoration-1 underline-offset-4 transition-all"
               >
                 Conhecer mais sobre nosso processo
                 <svg

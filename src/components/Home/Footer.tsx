@@ -1,23 +1,21 @@
 export const Footer = () => {
   return (
     <footer className="py-6 bg-offwhite text-black">
-      <div className="container mx-auto px-6 max-w-[1400px] w-full flex flex-col md:flex-row justify-between items-center gap-7">
+      <div className="container mx-auto px-6 max-w-[1400px] w-full flex flex-col md:flex-row justify-between items-center md:items-baseline gap-7">
         {/* Left: Logo */}
-        <a
-          href="#"
-          className="text-lg md:text-xl font-semibold tracking-tight text-black"
-        >
-          CAMILA
-          <span className="text-olive">DESIGN</span>
+        <a href="#" className="flex items-baseline leading-none">
+          <img
+            src="src\assets\Images\LogoKather.png"
+            alt="Studio Kather"
+            className="h-7 w-auto"
+          />
         </a>
 
         {/* Center: Copyright */}
-        <p className="text-xl font-light text-black">
-          © 2024 | Studio Kather
-        </p>
+        <p className="text-xl leading-tight font-light text-black md:translate-y-[-2px]">© 2024 | Studio Kather</p>
 
         {/* Right: Social Icons */}
-        <div className="flex gap-6">
+        <div className="flex gap-6 items-baseline md:translate-y-[5px]">
           <a
             href="#"
             className="text-black/90 hover:text-olive transition-colors"

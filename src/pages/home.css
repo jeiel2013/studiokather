@@ -1,28 +1,93 @@
 @import "tailwindcss";
 
 @theme {
+  /* 1. Isso torna a Macha a fonte padrão do Tailwind (font-sans) */
+  --font-sans: "Macha", ui-sans-serif, system-ui, sans-serif;
+
+  /* Suas cores */
   --color-beige: #cfc4b1;
   --color-olive: #4e6628;
   --color-offwhite: #e8e5e1;
   --color-black: #141414;
 }
 
+/* --- DECLARAÇÃO DAS FONTES --- */
+
+/* Thin (100) */
 @font-face {
-  font-family: "Plus Jakarta Sans";
+  font-family: "Macha";
+  src: url("../assets//fonts/MachaThin.otf") format("opentype");
+  font-weight: 100;
   font-style: normal;
-  font-weight: 300 700;
   font-display: swap;
-  src: url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
 }
+
+/* Book -> Regular (400) */
+@font-face {
+  font-family: "Macha";
+  src: url("../assets/fonts/MachaBook.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Book Italic -> Regular Italic (400) */
+@font-face {
+  font-family: "Macha";
+  src: url("../assets/fonts/MachaBookItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Medium (500) */
+@font-face {
+  font-family: "Macha";
+  src: url("../assets/fonts/MachaMedium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Medium Italic (500) */
+@font-face {
+  font-family: "Macha";
+  src: url("../assets/fonts/MachaMediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Bold (700) */
+@font-face {
+  font-family: "Macha";
+  src: url("../assets/fonts/MachaBold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold Italic (700) */
+@font-face {
+  font-family: "Macha";
+  src: url("../assets/fonts/MachaBoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* --- ESTILOS GLOBAIS --- */
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  background-color: #e8e5e1;
-  color: #141414;
+  /* Como definimos --font-sans no tema, o Tailwind aplica automaticamente */
+  font-family: var(--font-sans);
+  font-weight: 400;
+  background-color: var(--color-offwhite); /* Usando a variável do tema */
+  color: var(--color-black); /* Usando a variável do tema */
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -34,13 +99,13 @@ html {
 
 /* Selection */
 ::selection {
-  background-color: #4e6628;
-  color: #e8e5e1;
+  background-color: var(--color-olive);
+  color: var(--color-offwhite);
 }
 
 ::-moz-selection {
-  background-color: #4e6628;
-  color: #e8e5e1;
+  background-color: var(--color-olive);
+  color: var(--color-offwhite);
 }
 
 /* Custom Scrollbar */
@@ -49,16 +114,16 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #e8e5e1;
+  background: var(--color-offwhite);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cfc4b1;
+  background: var(--color-beige);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #4e6628;
+  background: var(--color-olive);
 }
 
 /* Hero Image 3D Effect */
