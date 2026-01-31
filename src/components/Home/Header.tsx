@@ -40,28 +40,28 @@ export const Header = () => {
           <nav className="hidden md:flex items-center gap-10">
             <a
               href="#home"
-              className="group relative text-sm font-semibold text-black hover:text-olive transition-colors duration-300"
+              className="group relative text-lg font-semibold text-black hover:text-olive transition-colors duration-300"
             >
               Home
               <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-olive transition-all duration-300"></span>
             </a>
             <a
               href="#about"
-              className="group relative text-sm font-medium text-black hover:text-olive transition-colors duration-300"
+              className="group relative text-lg font-medium text-black hover:text-olive transition-colors duration-300"
             >
               Sobre
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-olive transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a
               href="#portfolio"
-              className="group relative text-sm font-medium text-black hover:text-olive transition-colors duration-300"
+              className="group relative text-lg font-medium text-black hover:text-olive transition-colors duration-300"
             >
               Portfólio
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-olive transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a
               href="#contact"
-              className="group relative text-sm font-medium text-black hover:text-olive transition-colors duration-300"
+              className="group relative text-lg font-medium text-black hover:text-olive transition-colors duration-300"
             >
               Contato
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-olive transition-all duration-300 group-hover:w-full"></span>

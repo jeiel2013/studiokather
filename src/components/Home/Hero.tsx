@@ -2,30 +2,27 @@ export const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden pt-20 bg-offwhite"
+      className="relative min-h-screen flex items-center overflow-hidden pt-20 md:pt-24 lg:pt-32 bg-offwhite"
     >
-      <div className="container mx-auto px-6 max-w-[1400px] relative z-10 w-full">
-        <div className="p-6 md:p-12 lg:p-16 shadow-2xl relative border border-white/20 max-w-6xl mx-auto -translate-y-6 lg:-translate-y-12 bg-white rounded-2xl">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      <div className="container mx-auto px-4 md:px-6 max-w-7xl relative z-10 w-full">
+        <div className="p-6 md:p-8 lg:p-10 shadow-lg relative border border-gray-100 mx-auto bg-white rounded-3xl min-h-[500px] md:min-h-[550px] lg:min-h-[650px] -mt-12 md:-mt-16 lg:-mt-70">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-center">
             {/* Text Content */}
             <div
-              className="lg:col-span-7 flex flex-col justify-center"
+              className="flex flex-col justify-center items-start"
               style={{
                 opacity: 0,
                 animation: "fadeInUp 0.8s ease-out 0.2s forwards",
               }}
             >
-              <h1 className="text-3xl md:text-5xl lg:text-[56px] xl:text-[64px] font-semibold text-black leading-[1.1] tracking-tight text-balance">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-black leading-tight tracking-tight text-left">
                 Design fala quando
                 <br />
                 palavras não são
-                <span className="italic font-serif text-olive">
-                  {" "}
-                  suficientes.
-                </span>
+                <span className="italic text-olive"> suficientes.</span>
               </h1>
               <p
-                className="mt-6 text-base md:text-lg text-black/80 font-normal max-w-xl leading-relaxed"
+                className="mt-3 text-sm md:text-base text-black/70 font-normal max-w-md leading-relaxed text-left"
                 style={{
                   opacity: 0,
                   animation: "fadeInUp 0.8s ease-out 0.5s forwards",
@@ -36,7 +33,7 @@ export const Hero = () => {
                 percepção.
               </p>
               <div
-                className="mt-8"
+                className="mt-6"
                 style={{
                   opacity: 0,
                   animation: "fadeInUp 0.8s ease-out 0.8s forwards",
@@ -66,14 +63,14 @@ export const Hero = () => {
 
             {/* Image */}
             <div
-              className="lg:col-span-5 relative h-full flex items-center justify-center"
+              className="relative flex items-center justify-center"
               style={{
                 opacity: 0,
                 animation: "slideInRight 1s ease-out 0.6s forwards",
               }}
             >
-              <div className="relative w-full aspect-square max-w-[500px]">
-                <div className="absolute inset-0 bg-white hero-image-3d overflow-hidden border border-black/5 rounded-2xl">
+              <div className="relative w-full aspect-square max-w-xs lg:max-w-sm">
+                <div className="absolute inset-0 bg-white hero-image-3d overflow-hidden border border-gray-100 rounded-2xl">
                   <img
                     src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop"
                     alt="Brand Identity Mockup"
@@ -104,29 +101,6 @@ export const Hero = () => {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
-          <a
-            href="#portfolio"
-            className="text-olive opacity-60 hover:opacity-100 transition-opacity"
-          >
-            <svg
-              className="w-8 h-8"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <circle cx="12" cy="12" r="10" strokeWidth="2" />
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 8v8m0 0l-3-3m3 3l3-3"
-              />
-            </svg>
-          </a>
         </div>
       </div>
     </section>

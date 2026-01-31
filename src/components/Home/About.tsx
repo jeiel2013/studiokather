@@ -2,32 +2,32 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="py-16 md:py-20 lg:py-28 bg-offwhite border-t border-black/5"
+      className="z-20 py-16 md:py-20 lg:py-28 -mt-12 md:-mt-16 lg:-mt-45 bg-offwhite"
     >
       <div className="container mx-auto px-4 md:px-6 max-w-7xl w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-3 items-center">
           {/* Image */}
           <div className="relative order-2 lg:order-1">
-            <div className="relative overflow-hidden shadow-2xl aspect-square rounded-2xl">
+            <div className="relative overflow-hidden shadow-[0_6px_28px_-6px_rgba(0,0,0,0.45)] aspect-square rounded-2xl">
               <img
                 src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=1000&auto=format&fit=crop"
                 alt="Designer at work"
                 className="w-full h-full object-cover"
-              />
+              />  
               <div className="absolute inset-0 bg-olive/10 mix-blend-multiply"></div>
             </div>
             {/* Decorative element */}
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-beige rounded-full -z-10 blur-xl opacity-60 hidden lg:block"></div>
+            {/* <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-beige rounded-full -z-10 blur-xl opacity-60 hidden lg:block"></div> */}
           </div>
 
           {/* Content */}
-          <div className="order-1 lg:order-2 bg-white aspect-square p-6 md:p-10 lg:p-12 shadow-sm flex flex-col justify-center rounded-3xl">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-black leading-tight mb-4 md:mb-6 tracking-tight">
+          <div className="order-1 lg:order-2 bg-white aspect-square overflow-hidden p-6 md:p-12 lg:p-16 shadow-sm flex flex-col justify-center rounded-2xl">
+            <h2 className="text-2xl md:text-3xl lg:text-[42px] font-semibold text-black leading-[1.15] mb-4 md:mb-6 tracking-tight">
               Criamos para marcas que buscam crescer e
               <span className="text-olive"> inovar.</span>
             </h2>
 
-            <p className="text-sm md:text-base lg:text-base text-black/85 font-normal leading-relaxed mb-6 md:mb-8 text-balance">
+            <p className="text-sm md:text-base lg:text-lg text-black/85 font-normal leading-relaxed mb-6 md:mb-8 text-balance">
               Sabemos que empresas carregam qualidades e entregas relevantes que
               podem ser trabalhadas na percepção visual da sua marca. Nosso
               processo é um mergulho profundo na essência do seu negócio.

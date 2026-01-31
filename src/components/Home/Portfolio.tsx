@@ -52,13 +52,13 @@ const projects: Project[] = [
 
 export const Portfolio = () => {
   return (
-    <section id="portfolio" className="py-16 md:py-20 lg:py-28 bg-offwhite">
+    <section id="portfolio" className="py-16 md:py-20 lg:py-24 -mt-12 md:-mt-16 lg:-mt-75 bg-offwhite">
       <div className="container mx-auto px-4 md:px-6 max-w-7xl w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 lg:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group relative w-full aspect-square overflow-hidden cursor-pointer shadow-sm hover:shadow-lg transition-all duration-500 ease-in-out rounded-2xl"
+              className="group relative w-full aspect-square overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-500 ease-in-out rounded-2xl"
             >
               <img
                 src={project.image}
