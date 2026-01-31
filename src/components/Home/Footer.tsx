@@ -1,7 +1,9 @@
+const currentYear = new Date().getFullYear();
+
 export const Footer = () => {
   return (
     <footer className="py-6 bg-offwhite text-black">
-      <div className="container mx-auto px-6 max-w-[1400px] w-full flex flex-col md:flex-row justify-between items-center md:items-baseline gap-7">
+      <div className="container mx-auto px-4 md:px-6 max-w-[1400px] w-full flex flex-col md:flex-row justify-center md:justify-between items-center md:items-baseline gap-7">
         {/* Left: Logo */}
         <a href="#" className="flex items-baseline leading-none">
           <img
@@ -12,7 +14,9 @@ export const Footer = () => {
         </a>
 
         {/* Center: Copyright */}
-        <p className="text-xl leading-tight font-light text-black md:translate-y-[-2px]">© 2024 | Studio Kather</p>
+        <p className="text-xl leading-tight font-semibold text-black md:translate-y-[-2px]">
+          © {currentYear} Studio Kather
+        </p>
 
         {/* Right: Social Icons */}
         <div className="flex gap-6 items-baseline md:translate-y-[5px]">

@@ -2,18 +2,19 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-16 md:py-20 lg:py-24 -mt-12 md:-mt-16 lg:-mt-45 overflow-hidden bg-offwhite text-black z-10"
+      className="py-16 md:py-20 lg:py-24 -mt-28 md:-mt-16 lg:-mt-45 overflow-hidden bg-offwhite text-black z-10"
     >
       <div className="container mx-auto px-4 md:px-6 max-w-7xl relative z-20 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-3 items-center">
           {/* Text Card */}
           <div className="bg-beige p-8 md:p-12 lg:p-16 shadow-lg aspect-square flex flex-col justify-center items-start rounded-2xl">
-            <h2 className="text-3xl md:text-4xl lg:text-6xl font-semibold tracking-tight mb-4 md:mb-6 text-black">
-              Marcas sem identidade visual passam <span className="text-white">despercebidas</span>
+            <h2 className="text-5xl md:text-4xl lg:text-6xl font-semibold tracking-tight mb-6 md:mb-6 text-black">
+              Marcas sem identidade visual passam{" "}
+              <span className="text-white">despercebidas</span>
             </h2>
-            <p className="text-sm md:text-base lg:text-xl font-light leading-relaxed mb-8 md:mb-10 text-black">
-              Agende uma conversa comigo. Estou disposta a entender
-              sobre sua marca para oferecer uma solução eficiente e criativa.
+            <p className="text-[18px] md:text-base lg:text-xl font-regular leading-relaxed mb-8 md:mb-10 text-black">
+              Agende uma conversa comigo. Estou disposta a entender sobre sua
+              marca para oferecer uma solução eficiente e criativa.
             </p>
             <a
               href="#"
@@ -23,10 +24,10 @@ export const Contact = () => {
             </a>
           </div>
 
-          {/* Image Card */}
-          <div className="relative w-full aspect-square overflow-hidden shadow-lg rounded-2xl">
+          {/* Image Card - Hidden on mobile */}
+          <div className="hidden lg:block relative w-full aspect-square overflow-hidden shadow-lg rounded-2xl">
             <img
-              src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/c543a9e1-f226-4ced-80b0-feb8445a75b9_1600w.jpg"
+              src="src\assets\Images\Contact.jpg"
               alt="Creative Process"
               className="w-full h-full object-cover"
             />

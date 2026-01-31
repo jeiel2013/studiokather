@@ -93,28 +93,28 @@ export const Header = () => {
         <nav className="flex flex-col gap-8 text-center">
           <a
             href="#home"
-            className="text-2xl font-medium text-black hover:text-olive"
+            className="text-4xl font-medium text-black hover:text-olive"
             onClick={() => setIsMenuOpen(false)}
           >
             Home
           </a>
           <a
             href="#about"
-            className="text-2xl font-medium text-black hover:text-olive"
+            className="text-4xl font-medium text-black hover:text-olive"
             onClick={() => setIsMenuOpen(false)}
           >
             Sobre
           </a>
           <a
             href="#portfolio"
-            className="text-2xl font-medium text-black hover:text-olive"
+            className="text-4xl font-medium text-black hover:text-olive"
             onClick={() => setIsMenuOpen(false)}
           >
             Portfólio
           </a>
           <a
             href="#contact"
-            className="text-2xl font-medium text-black hover:text-olive"
+            className="text-4xl font-medium text-black hover:text-olive"
             onClick={() => setIsMenuOpen(false)}
           >
             Contato
