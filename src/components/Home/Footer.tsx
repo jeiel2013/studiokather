@@ -5,26 +5,64 @@ export const Footer = () => {
   return (
     <footer className="py-6 bg-offwhite text-black">
       <div className="container mx-auto px-4 md:px-6 max-w-[1400px] w-full">
-        <div className="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-baseline gap-7">
+        <div
+          className="flex 
+        flex-col 
+        min-[768px]:flex-row 
+        min-[820px]:flex-row
+        min-[853px]:flex-row
+        min-[912px]:flex-row
+        min-[1024px]:flex-row
+        min-[1280px]:flex-row
+        justify-center 
+        min-[768px]:justify-between 
+        min-[820px]:justify-between
+        min-[853px]:justify-between
+        min-[912px]:justify-between
+        min-[1024px]:justify-between
+        min-[1280px]:justify-between
+        items-center 
+        min-[768px]:items-baseline 
+        min-[820px]:items-baseline
+        min-[853px]:items-baseline
+        min-[912px]:items-baseline
+        min-[1024px]:items-baseline
+        min-[1280px]:items-baseline
+        gap-7"
+        >
           {/* Left: Logo */}
           <a
             href="#"
-            className="flex items-baseline leading-none w-full md:w-auto justify-center md:justify-start"
+            className="flex items-baseline leading-none 
+            w-full 
+            min-[768px]:w-auto 
+            justify-center 
+            min-[768px]:justify-start"
           >
-            <img
-              src={LogoKather}
-              alt="Studio Kather"
-              className="h-7 w-auto"
-            />
+            <img src={LogoKather} alt="Studio Kather" className="h-7 w-auto" />
           </a>
 
           {/* Center: Copyright */}
-          <p className="text-xl leading-tight font-semibold text-black md:translate-y-[-2px] w-full md:w-auto text-center md:text-left">
+          <p
+            className="text-xl leading-tight font-semibold text-black 
+          min-[768px]:translate-y-[-2px] 
+          w-full 
+          min-[768px]:w-auto 
+          text-center 
+          min-[768px]:text-left"
+          >
             © {currentYear} | Studio Kather
           </p>
 
           {/* Right: Social Icons */}
-          <div className="flex gap-6 items-baseline md:translate-y-[5px] w-full md:w-auto justify-center md:justify-end">
+          <div
+            className="flex gap-6 items-baseline 
+          min-[768px]:translate-y-[5px] 
+          w-full 
+          min-[768px]:w-auto 
+          justify-center 
+          min-[768px]:justify-end"
+          >
             <a
               href="#"
               className="text-black/90 hover:text-olive transition-colors"

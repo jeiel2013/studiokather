@@ -62,10 +62,45 @@ export const Portfolio = () => {
   return (
     <section
       id="portfolio"
-      className="py-16 md:py-20 lg:py-24 -mt-45 md:-mt-16 lg:-mt-75 bg-offwhite"
+      className="py-16 
+      min-[768px]:py-20 
+      min-[820px]:py-20
+      min-[853px]:py-20
+      min-[912px]:py-20
+      lg:py-24 
+      -mt-45 
+      min-[344px]:-mt-38
+      min-[360px]:-mt-46
+      min-[375px]:-mt-43
+      min-[412px]:-mt-47
+      min-[414px]:-mt-54
+      min-[430px]:-mt-60
+      min-[540px]:-mt-28
+      min-[768px]:-mt-37 
+      min-[820px]:-mt-40
+      min-[853px]:-mt-45
+      min-[912px]:-mt-36
+      min-[1024px]:-mt-84
+      min-[1280px]:-mt-75
+      bg-offwhite"
     >
       <div className="container mx-auto px-4 md:px-6 max-w-7xl w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+        <div
+          className="grid 
+        grid-cols-1 
+        min-[540px]:grid-cols-1
+        min-[768px]:grid-cols-2 
+        min-[820px]:grid-cols-2
+        min-[853px]:grid-cols-2
+        min-[912px]:grid-cols-2
+        min-[1024px]:grid-cols-3
+        min-[1280px]:grid-cols-3
+        gap-4 
+        min-[768px]:gap-5
+        min-[820px]:gap-5
+        min-[853px]:gap-6
+        min-[912px]:gap-6"
+        >
           {projects.map((project) => (
             <div
               key={project.id}
@@ -78,15 +113,34 @@ export const Portfolio = () => {
                 className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
               />
               <div
-                className={`absolute inset-0 bg-black/60 ${activeProject === project.id ? "opacity-100" : "opacity-0"} md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-6 backdrop-blur-[2px]`}
+                className={`absolute inset-0 bg-black/60 ${activeProject === project.id ? "opacity-100" : "opacity-0"} 
+                min-[768px]:opacity-0 
+                min-[768px]:group-hover:opacity-100 
+                transition-opacity duration-300 flex flex-col items-center justify-center text-center p-6 backdrop-blur-[2px]`}
               >
                 <h3
-                  className={`text-offwhite text-xl md:text-2xl font-semibold ${activeProject === project.id ? "translate-y-0" : "translate-y-4"} md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500 delay-75`}
+                  className={`text-offwhite text-xl 
+                  min-[768px]:text-2xl 
+                  min-[820px]:text-2xl
+                  min-[853px]:text-3xl
+                  min-[912px]:text-3xl
+                  font-semibold 
+                  ${activeProject === project.id ? "translate-y-0" : "translate-y-4"} 
+                  min-[768px]:translate-y-4 
+                  min-[768px]:group-hover:translate-y-0 
+                  transition-transform duration-500 delay-75`}
                 >
                   {project.title}
                 </h3>
                 <span
-                  className={`text-beige text-sm mt-2 font-light ${activeProject === project.id ? "translate-y-0" : "translate-y-4"} md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500 delay-100`}
+                  className={`text-beige text-sm 
+                  min-[853px]:text-base
+                  min-[912px]:text-base
+                  mt-2 font-light 
+                  ${activeProject === project.id ? "translate-y-0" : "translate-y-4"} 
+                  min-[768px]:translate-y-4 
+                  min-[768px]:group-hover:translate-y-0 
+                  transition-transform duration-500 delay-100`}
                 >
                   {project.category}
                 </span>

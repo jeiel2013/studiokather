@@ -31,13 +31,13 @@ export const Header = () => {
         <div className="container mx-auto px-6 max-w-[1400px] flex justify-between items-center">
           {/* Logo */}
           <a href="#" className="flex items-baseline leading-none">
-            {/* Logo para Mobile e Tablet */}
+            {/* Logo K para mobile e tablets até 1023px */}
             <img
               src={LogoK}
               alt="Studio Kather"
               className="h-7 w-auto lg:hidden"
             />
-            {/* Logo para Desktop */}
+            {/* Logo completa para desktop 1024px+ */}
             <img
               src={LogoKather}
               alt="Studio Kather"
@@ -45,8 +45,8 @@ export const Header = () => {
             />
           </a>
 
-          {/* Desktop Menu */}
-          <nav className="hidden md:flex items-center gap-10">
+          {/* Desktop Menu - apenas 1024px+ */}
+          <nav className="hidden lg:flex items-center gap-10">
             <a
               href="#home"
               className="group relative text-lg font-semibold text-black hover:text-olive transition-colors duration-300"
@@ -77,10 +77,10 @@ export const Header = () => {
             </a>
           </nav>
 
-          {/* Mobile Menu Toggle */}
+          {/* Mobile & Tablet Menu Toggle */}
           <button
             id="menu-btn"
-            className="md:hidden z-50 text-black"
+            className="lg:hidden z-50 text-black"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
@@ -92,7 +92,7 @@ export const Header = () => {
         </div>
       </header>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile & Tablet Menu Overlay */}
       <div
         id="mobile-menu"
         className={`fixed inset-0 bg-offwhite z-40 flex flex-col justify-center items-center transition-opacity duration-300 ${
