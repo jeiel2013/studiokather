@@ -20,7 +20,7 @@ export const Contact = () => {
             </p>
             <a
               href="#"
-              className="inline-block bg-olive text-white px-8 md:px-10 py-3 md:py-4 rounded-full font-medium text-sm md:text-base transition-all duration-300 hover:bg-[#5d7b32] hover:text-black hover:scale-105 shadow-lg shadow-olive/20"
+              className="inline-block bg-olive text-white px-8 md:px-10 py-3 md:py-4 rounded-full font-medium text-base md:text-base transition-all duration-300 hover:bg-[#5d7b32] hover:text-black hover:scale-105 shadow-lg shadow-olive/20"
             >
               Agendar Call
             </a>
