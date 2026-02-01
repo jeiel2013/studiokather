@@ -1,5 +1,7 @@
 import { Icon } from "@iconify/react";
 import { useState, useEffect } from "react";
+import LogoKather from "../../assets/Images/LogoKather.png";
+import LogoK from "../../assets/Images/K.png";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,13 +33,13 @@ export const Header = () => {
           <a href="#" className="flex items-baseline leading-none">
             {/* Logo para Mobile e Tablet */}
             <img
-              src="src\assets\Images\K.png"
+              src={LogoK}
               alt="Studio Kather"
               className="h-7 w-auto lg:hidden"
             />
             {/* Logo para Desktop */}
             <img
-              src="src\assets\Images\LogoKather.png"
+              src={LogoKather}
               alt="Studio Kather"
               className="h-7 w-auto hidden lg:block"
             />

@@ -1,4 +1,5 @@
 const currentYear = new Date().getFullYear();
+import LogoKather from "../../assets/Images/LogoKather.png";
 
 export const Footer = () => {
   return (
@@ -11,7 +12,7 @@ export const Footer = () => {
             className="flex items-baseline leading-none w-full md:w-auto justify-center md:justify-start"
           >
             <img
-              src="src\assets\Images\LogoKather.png"
+              src={LogoKather}
               alt="Studio Kather"
               className="h-7 w-auto"
             />

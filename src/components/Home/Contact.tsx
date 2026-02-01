@@ -1,3 +1,5 @@
+import ImageContact from "../../assets/Images/Contact.jpg";
+
 export const Contact = () => {
   return (
     <section
@@ -27,7 +29,7 @@ export const Contact = () => {
           {/* Image Card - Hidden on mobile */}
           <div className="hidden lg:block relative w-full aspect-square overflow-hidden shadow-lg rounded-2xl">
             <img
-              src="src\assets\Images\Contact.jpg"
+              src={ImageContact}
               alt="Creative Process"
               className="w-full h-full object-cover"
             />

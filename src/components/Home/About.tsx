@@ -1,3 +1,5 @@
+import ImageAbout from "../../assets/Images/About.jpg";
+
 export const About = () => {
   return (
     <section
@@ -10,7 +12,7 @@ export const About = () => {
           <div className="relative order-2 lg:order-1">
             <div className="relative overflow-hidden shadow-[0_6px_28px_-6px_rgba(0,0,0,0.45)] aspect-square rounded-2xl">
               <img
-                src="src\assets\Images\About.jpg"
+                src={ImageAbout}
                 alt="Designer at work"
                 className="w-full h-full object-cover"
               />

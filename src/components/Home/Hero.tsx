@@ -1,3 +1,5 @@
+import FundoHero from "../../assets/Images/FundoHero.jpg";
+
 export const Hero = () => {
   return (
     <section
@@ -9,7 +11,7 @@ export const Hero = () => {
           {/* Background Image */}
           <div className="absolute inset-0">
             <img
-              src="src\assets\Images\FundoHero.jpg"
+              src={FundoHero}
               alt="Brand Identity Background"
               className="w-full h-full object-cover object-[39%_70%] md:object-center"
             />
