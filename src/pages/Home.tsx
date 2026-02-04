@@ -351,12 +351,12 @@ function Home() {
 
               {/* Content */}
               <div className="order-1 lg:order-2 bg-olive shadow-sm flex flex-col justify-center rounded-[1.5rem] p-6 md:p-10 lg:p-12">
-                <h2 className="text-[40px] md:text-[59px] font-semibold text-black leading-[1.15] mb-6 tracking-tight">
+                <h2 className="text-[40px] md:text-[59px] font-semibold text-black leading-[1.15] mb-6 tracking-tight mt-6 md:mt-0">
                   <span className="text-beige">Acredito </span>
                   que sua marca é o que ela transmite
                 </h2>
 
-                <p className="text-lg md:text-2xl text-offwhite font-normal leading-relaxed mb-4 mt-2 md:mt-12 text-balance">
+                <p className="text-lg md:text-2xl text-offwhite font-normal leading-relaxed mb-4 mt-2 md:mt-12 text-balance mb-6 md:mb-0">
                   A identidade visual é tudo o que o cliente vê e percebe sobre
                   sua marca, tanto nos meios digitais quanto no offline.
                 </p>
@@ -396,7 +396,7 @@ function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-stretch">
               {/* Text Card */}
               <div className="bg-beige shadow-sm flex flex-col justify-center rounded-[1.5rem] p-6 md:p-10 lg:p-12 md:aspect-[3/2] lg:aspect-auto">
-                <h2 className="text-4xl md:text-6xl font-semibold tracking-tight mb-6 text-black">
+                <h2 className="text-4xl md:text-6xl font-semibold tracking-tight mb-6 text-black mt-4 md:mt-0">
                   Marcas sem identidade visual passam{" "}
                   <span className="text-white">despercebidas</span>
                 </h2>
@@ -406,7 +406,7 @@ function Home() {
                 </p>
                 <a
                   href="#"
-                  className="inline-block bg-olive text-white px-8 py-3 rounded-full font-medium text-base mt-0 md:mt-4 transition-all duration-300 hover:bg-[#5d7b32] hover:scale-105 shadow-lg shadow-olive/20 w-fit"
+                  className="inline-block bg-olive text-white px-8 py-3 rounded-full font-medium text-base mt-0 md:mt-4 mb-3 md:mb-0 transition-all duration-300 hover:bg-[#5d7b32] hover:scale-105 shadow-lg shadow-olive/20 w-fit"
                 >
                   Agendar Call
                 </a>
