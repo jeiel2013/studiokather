@@ -182,48 +182,50 @@ function Home() {
               </svg>
             )}
           </button>
-          <div
-            id="mobile-menu"
-            className={`fixed inset-0 bg-offwhite z-40 flex flex-col items-center justify-center gap-8 transition-all duration-300 ${
-              isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-            }`}
-          >
-            <a
-              href="#home"
-              className="mobile-link text-3xl font-medium text-black hover:text-olive transition-colors"
-              onClick={closeMenu}
-            >
-              Home
-            </a>
-            <a
-              href="#portfolio"
-              className="mobile-link text-3xl font-medium text-black hover:text-olive transition-colors"
-              onClick={closeMenu}
-            >
-              Portfolio
-            </a>
-            <a
-              href="#about"
-              className="mobile-link text-3xl font-medium text-black hover:text-olive transition-colors"
-              onClick={closeMenu}
-            >
-              Sobre
-            </a>
-            <a
-              href="#contact"
-              className="mobile-link text-3xl font-medium text-black hover:text-olive transition-colors"
-              onClick={closeMenu}
-            >
-              Contato
-            </a>
-          </div>
         </div>
       </header>
+
+      {/* Mobile Menu - Fora do Header */}
+      <div
+        id="mobile-menu"
+        className={`fixed inset-0 bg-beige z-40 flex flex-col items-center justify-center gap-8 transition-all duration-300 md:hidden ${
+          isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+      >
+        <a
+          href="#home"
+          className="mobile-link text-3xl font-medium text-black hover:text-olive transition-colors"
+          onClick={closeMenu}
+        >
+          Home
+        </a>
+        <a
+          href="#portfolio"
+          className="mobile-link text-3xl font-medium text-black hover:text-olive transition-colors"
+          onClick={closeMenu}
+        >
+          Portfolio
+        </a>
+        <a
+          href="#about"
+          className="mobile-link text-3xl font-medium text-black hover:text-olive transition-colors"
+          onClick={closeMenu}
+        >
+          Sobre
+        </a>
+        <a
+          href="#contact"
+          className="mobile-link text-3xl font-medium text-black hover:text-olive transition-colors"
+          onClick={closeMenu}
+        >
+          Contato
+        </a>
+      </div>
 
       <main>
         {/* HERO SECTION */}
         <section
-          className="flex overflow-hidden lg:pt-28 lg:items-start relative pt-24 lg:pb-10"
+          className="flex overflow-hidden lg:pt-28 lg:items-start relative pt-24 lg:pb-6"
           id="home"
         >
           <div className="container z-10 max-w-[1400px] mr-auto ml-auto pr-6 pl-6 relative">
@@ -286,7 +288,7 @@ function Home() {
         </section>
 
         {/* PORTFOLIO GRID */}
-        <section id="portfolio" className="pt-5 lg:pt-0 pb-4">
+        <section id="portfolio" className="pt-5 lg:pt-0 pb-2">
           <div className="container mx-auto px-6 max-w-[1400px]">
             {/* Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 gap-x-3 gap-y-3">
@@ -332,7 +334,7 @@ function Home() {
         </section>
 
         {/* ABOUT SECTION (Inline) */}
-        <section id="about" className="bg-offwhite pt-2 md:pt-4 pb-4">
+        <section id="about" className="bg-offwhite pt-2 md:pt-4 pb-2">
           <div className="container mx-auto px-6 max-w-[1400px]">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-stretch">
               {/* Image */}
@@ -400,13 +402,13 @@ function Home() {
                   Marcas sem identidade visual passam{" "}
                   <span className="text-white">despercebidas</span>
                 </h2>
-                <p className="text-base md:text-xl font-semibold leading-relaxed mb-5 md:mb-10 mt-0 md:mt-7 text-black/90">
+                <p className="text-base md:text-xl font-regular leading-relaxed mb-5 md:mb-10 mt-0 md:mt-7 text-black/90">
                   Agende uma conversa comigo. Estou disposta a entender sobre
                   sua marca para oferecer uma solução eficiente e criativa.
                 </p>
                 <a
                   href="#"
-                  className="inline-block bg-olive text-white px-8 py-3 rounded-full font-medium text-base mt-0 md:mt-4 mb-3 md:mb-0 transition-all duration-300 hover:bg-[#5d7b32] hover:scale-105 shadow-lg shadow-olive/20 w-fit"
+                  className="inline-block bg-olive text-white px-6 py-3 rounded-full font-medium text-base md:text-xl mt-0 md:mt-4 mb-4 md:mb-0 transition-all duration-300 hover:bg-[#5d7b32] hover:scale-105 shadow-lg shadow-olive/20 w-fit"
                 >
                   Agendar Call
                 </a>
