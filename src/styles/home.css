@@ -1,76 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Macha", ui-sans-serif, system-ui, sans-serif;
-
   /* Cores personalizadas */
   --color-beige: #cfc4b1;
   --color-olive: #4e6628;
   --color-offwhite: #e8e5e1;
   --color-black: #141414;
-}
-
-/* Thin (100) */
-@font-face {
-  font-family: "Macha";
-  src: url("../assets//fonts/MachaThin.otf") format("opentype");
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Book -> Regular (400) */
-@font-face {
-  font-family: "Macha";
-  src: url("../assets/fonts/MachaBook.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Book Italic -> Regular Italic (400) */
-@font-face {
-  font-family: "Macha";
-  src: url("../assets/fonts/MachaBookItalic.otf") format("opentype");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-/* Medium (500) */
-@font-face {
-  font-family: "Macha";
-  src: url("../assets/fonts/MachaMedium.otf") format("opentype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Medium Italic (500) */
-@font-face {
-  font-family: "Macha";
-  src: url("../assets/fonts/MachaMediumItalic.otf") format("opentype");
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-/* Bold (700) */
-@font-face {
-  font-family: "Macha";
-  src: url("../assets/fonts/MachaBold.otf") format("opentype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Bold Italic (700) */
-@font-face {
-  font-family: "Macha";
-  src: url("../assets/fonts/MachaBoldItalic.otf") format("opentype");
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
 }
 
 /* --- ESTILOS GLOBAIS --- */
@@ -80,7 +15,7 @@
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: "Macha", sans-serif;
   background-color: #e8e5e1;
   color: #141414;
   overflow-x: hidden;
@@ -207,4 +142,35 @@ body:has(.cursor-hover:hover) .custom-cursor {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Marquee Animation */
+@keyframes scrollLeftRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll {
+  animation: scrollLeftRight 10s linear infinite;
+}
+
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
 }
