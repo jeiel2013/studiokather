@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import FundoHero from "../assets/Images/FundoHero.jpg";
 import K from "../assets/Images/K.png";
 import LogoKather from "../assets/Images/LogoKather.png";
@@ -132,6 +133,8 @@ function Home() {
   const [cursorPosition, setCursorPosition] = useState({ x: 585, y: 10 });
   const [activeProject, setActiveProject] = useState<number | null>(null);
 
+  const location = useLocation();
+
   const handleProjectClick = (projectId: number) => {
     setActiveProject(activeProject === projectId ? null : projectId);
   };
@@ -170,7 +173,7 @@ function Home() {
       <header className="fixed top-0 left-0 w-full z-50 bg-offwhite/90 backdrop-blur-md transition-all duration-300">
         <div className="container mx-auto px-6 h-20 flex items-center justify-between max-w-[1400px]">
           <a
-            href="#"
+            href="/"
             className="flex items-center text-xl font-bold tracking-tight text-black z-50"
           >
             <img
@@ -182,14 +185,14 @@ function Home() {
           </a>
           <nav className="hidden md:flex items-center gap-8">
             <a
-              href="#home"
+              href="/"
               className="group relative text-lg font-semibold text-black/80 hover:text-black transition-colors"
             >
               Home
               <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-olive transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a
-              href="#portfolio"
+              href="/portfolio"
               className="group relative text-lg font-semibold text-black/80 hover:text-black transition-colors"
             >
               Portfolio
@@ -203,7 +206,7 @@ function Home() {
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-olive transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a
-              href="#contact"
+              href="/contact"
               className="group relative text-lg font-semibold text-black/80 hover:text-black transition-colors"
             >
               Contato
@@ -259,32 +262,61 @@ function Home() {
         }`}
       >
         <a
-          href="#home"
-          className="mobile-link text-3xl font-medium text-black hover:text-olive transition-colors"
+          href="/"
           onClick={closeMenu}
+          className="group relative text-4xl font-medium text-black hover:text-olive transition-colors"
         >
           Home
+          <span
+            className={`absolute left-0 -bottom-2 h-1 bg-olive transition-all duration-300 ${
+              location.pathname === "/" ? "w-full" : "w-0 group-hover:w-full"
+            }`}
+          ></span>
         </a>
+
         <a
-          href="#portfolio"
-          className="mobile-link text-3xl font-medium text-black hover:text-olive transition-colors"
+          href="/portfolio"
           onClick={closeMenu}
+          className="group relative text-4xl font-medium text-black hover:text-olive transition-colors"
         >
           Portfolio
+          <span
+            className={`absolute left-0 -bottom-2 h-1 bg-olive transition-all duration-300 ${
+              location.pathname === "/about"
+                ? "w-full"
+                : "w-0 group-hover:w-full"
+            }`}
+          ></span>
         </a>
+
         <a
-          href="#about"
-          className="mobile-link text-3xl font-medium text-black hover:text-olive transition-colors"
+          href="/about"
           onClick={closeMenu}
+          className="group relative text-4xl font-medium text-black hover:text-olive transition-colors"
         >
           Sobre
+          <span
+            className={`absolute left-0 -bottom-2 h-1 bg-olive transition-all duration-300 ${
+              location.pathname === "/about"
+                ? "w-full"
+                : "w-0 group-hover:w-full"
+            }`}
+          ></span>
         </a>
+
         <a
-          href="#contact"
-          className="mobile-link text-3xl font-medium text-black hover:text-olive transition-colors"
+          href="/contact"
           onClick={closeMenu}
+          className="group relative text-4xl font-medium text-black hover:text-olive transition-colors"
         >
           Contato
+          <span
+            className={`absolute left-0 -bottom-2 h-1 bg-olive transition-all duration-300 ${
+              location.pathname === "/about"
+                ? "w-full"
+                : "w-0 group-hover:w-full"
+            }`}
+          ></span>
         </a>
       </div>
 
@@ -329,7 +361,7 @@ function Home() {
                 {/* Botão - centralizado no mobile, alinhado à esquerda no desktop */}
                 <div className="mt-0 md:mt-8 md:opacity-0 md:animate-[fadeInUp_0.8s_cubic-bezier(0.16,1,0.3,1)_0.8s_forwards] flex justify-center md:justify-start">
                   <a
-                    href="#about"
+                    href="/about"
                     className="group inline-flex items-center gap-2 px-8 py-3.5 border-2 border-offwhite md:border-beige rounded-full text-offwhite md:text-offwhite text-base md:text-lg font-normal transition-all duration-300 hover:bg-beige hover:text-black"
                   >
                     Como trabalhamos?
@@ -514,7 +546,7 @@ function Home() {
 
                 <div className="mt-19 hidden md:block">
                   <a
-                    href="#"
+                    href="/about"
                     className="inline-flex items-center text-offwhite font-medium text-base hover:underline decoration-1 underline-offset-4 transition-all"
                   >
                     Conhecer mais sobre nosso processo
@@ -556,7 +588,7 @@ function Home() {
                   sua marca para oferecer uma solução eficiente e criativa.
                 </p>
                 <a
-                  href="#"
+                  href="/contact"
                   className="inline-block bg-olive text-white px-6 py-3 rounded-full font-medium text-base md:text-xl mt-0 md:mt-4 mb-4 md:mb-0 transition-all duration-300 hover:bg-[#5d7b32] hover:scale-105 shadow-lg shadow-olive/20 w-fit"
                 >
                   Agendar Call
@@ -611,7 +643,7 @@ function Home() {
               <FaBehance className="w-7 h-7" />
             </a>
             <a
-              href="https://www.behance.net/katharidiasar"
+              href="https://www.linkedin.com/in/katharine-araujo-824586251/"
               className="text-black hover:text-olive transition-colors"
             >
               <FaLinkedin className="w-7 h-7" />

@@ -152,7 +152,7 @@ function About() {
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-olive transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a
-              href="/#portfolio"
+              href="/portfolio"
               className="group relative text-lg font-semibold text-black/80 hover:text-black transition-colors"
             >
               Portfolio
@@ -166,7 +166,7 @@ function About() {
               <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-olive transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a
-              href="/#contact"
+              href="/contact"
               className="group relative text-lg font-semibold text-black/80 hover:text-black transition-colors"
             >
               Contato
@@ -214,7 +214,7 @@ function About() {
         </div>
       </header>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Fora do Header */}
       <div
         id="mobile-menu"
         className={`fixed inset-0 bg-beige z-40 flex flex-col items-center justify-center gap-8 transition-all duration-300 md:hidden ${
@@ -224,30 +224,59 @@ function About() {
         <a
           href="/"
           onClick={closeMenu}
-          className="text-3xl font-medium text-black hover:text-olive transition-colors"
+          className="group relative text-4xl font-medium text-black hover:text-olive transition-colors"
         >
           Home
+          <span
+            className={`absolute left-0 -bottom-2 h-1 bg-olive transition-all duration-300 ${
+              location.pathname === "/" ? "w-full" : "w-0 group-hover:w-full"
+            }`}
+          ></span>
         </a>
+
         <a
-          href="/#portfolio"
+          href="/portfolio"
           onClick={closeMenu}
-          className="text-3xl font-medium text-black hover:text-olive transition-colors"
+          className="group relative text-4xl font-medium text-black hover:text-olive transition-colors"
         >
           Portfolio
+          <span
+            className={`absolute left-0 -bottom-2 h-1 bg-olive transition-all duration-300 ${
+              location.pathname === "/portfolio"
+                ? "w-full"
+                : "w-0 group-hover:w-full"
+            }`}
+          ></span>
         </a>
+
         <a
           href="/about"
           onClick={closeMenu}
-          className="text-3xl font-medium text-black hover:text-olive transition-colors"
+          className="group relative text-4xl font-medium text-black hover:text-olive transition-colors"
         >
           Sobre
+          <span
+            className={`absolute left-0 -bottom-2 h-1 bg-olive transition-all duration-300 ${
+              location.pathname === "/about"
+                ? "w-full"
+                : "w-0 group-hover:w-full"
+            }`}
+          ></span>
         </a>
+
         <a
-          href="/#contact"
+          href="/contact"
           onClick={closeMenu}
-          className="text-3xl font-medium text-black hover:text-olive transition-colors"
+          className="group relative text-4xl font-medium text-black hover:text-olive transition-colors"
         >
           Contato
+          <span
+            className={`absolute left-0 -bottom-2 h-1 bg-olive transition-all duration-300 ${
+              location.pathname === "/contact"
+                ? "w-full"
+                : "w-0 group-hover:w-full"
+            }`}
+          ></span>
         </a>
       </div>
 
@@ -262,23 +291,23 @@ function About() {
             <div className="flex flex-col gap-10 lg:gap-14 w-full">
               {/* Text Content */}
               <div className="flex flex-col justify-center py-6 w-full">
-                <h1 className="text-4xl md:text-5xl lg:text-[64px] font-medium leading-[1.05] max-w-180 lg:max-w-300 text-black tracking-tight mb-6">
-                  Oiê, muito Prazer!{" "}
+                <h1 className="text-[53px] md:text-5xl lg:text-[64px] font-medium leading-[1.05] max-w-180 lg:max-w-300 text-black tracking-tight mb-6">
+                  Oiê, muito prazer!{" "} <br />
                   <span className="text-olive">Katharine</span> aqui, mas pode
                   me chamar de <span className="text-olive">Kath</span> .
                 </h1>
-                <p className="text-black/90 md:text-xl font-regular leading-relaxed mb-4 max-w-xl lg:max-w-250">
+                <p className="text-black/90 text-lg md:text-xl font-regular leading-relaxed mb-4 max-w-xl lg:max-w-250">
                   Sou designer especializada em identidades visuais e fundadora
                   do Studio Kather. Mais do que estética bonita, entrego
                   estrutura, clareza e emoção. Cada projeto nasce com base em
                   estratégia, pesquisa e escuta profunda, porque identidade
                   visual não é só sobre aparência, é sobre posicionamento.
                 </p>
-                <p className="text-black/90 md:text-xl font-regular leading-relaxed mb-4 max-w-xl lg:max-w-250">
+                <p className="text-black/90 text-lg md:text-xl font-regular leading-relaxed mb-4 max-w-xl lg:max-w-250">
                   Acredito que marcas são feitas de pessoas, e por isso precisam
                   ser vivas, únicas e intencionais.
                 </p>
-                <p className="text-black/90 md:text-xl font-regular leading-relaxed mb-4 max-w-xl lg:max-w-250">
+                <p className="text-black/90 text-lg md:text-xl font-regular leading-relaxed mb-4 max-w-xl lg:max-w-250">
                   Se você sente que está na hora da sua marca ser reconhecida
                   pelo que realmente é, seja bem-vindo(a). <br />
                   Aqui, a gente constrói visualmente tudo aquilo que você veio
@@ -287,7 +316,7 @@ function About() {
               </div>
 
               {/* Visual */}
-              <div className="relative h-[350px] lg:h-[500px] min-h-[300px] w-full rounded-[1.5rem] overflow-hidden shadow-sm group -mt-15 md:-mt-10">
+              <div className="relative h-[370px] lg:h-[500px] min-h-[300px] w-full rounded-[1.5rem] overflow-hidden shadow-sm group -mt-15 md:-mt-10">
                 <img
                   src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2000&auto=format&fit=crop"
                   alt="Office Space"
@@ -321,7 +350,8 @@ function About() {
                     Identidade não nasce de um copia e cola
                   </h2>
                   <p className="text-xl md:text-2xl text-black/60 font-light">
-                    Aqui, passamos por 7 etapas até alcançar um resultado verdadeiramente satisfatório.
+                    Aqui, passamos por 7 etapas até alcançar um resultado
+                    verdadeiramente satisfatório.
                   </p>
                 </div>
 
@@ -443,7 +473,7 @@ function About() {
               <FaBehance className="w-7 h-7" />
             </a>
             <a
-              href="https://www.behance.net/katharidiasar"
+              href="https://www.linkedin.com/in/katharine-araujo-824586251/"
               className="text-black hover:text-olive transition-colors"
             >
               <FaLinkedin className="w-7 h-7" />

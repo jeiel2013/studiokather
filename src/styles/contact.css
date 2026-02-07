@@ -1,0 +1,341 @@
+@import "tailwindcss";
+
+@theme {
+  /* Cores personalizadas */
+  --color-beige: #cfc4b1;
+  --color-olive: #4e6628;
+  --color-offwhite: #e8e5e1;
+  --color-black: #141414;
+}
+
+/* --- ESTILOS GLOBAIS --- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: #e8e5e1;
+  color: #141414;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+/* Selection */
+::selection {
+  background-color: #4e6628;
+  color: #e8e5e1;
+}
+
+::-moz-selection {
+  background-color: #4e6628;
+  color: #e8e5e1;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e8e5e1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #cfc4b1;
+  border-radius: 9999px;
+  border: 2px solid #e8e5e1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #4e6628;
+}
+
+/* Custom Cursor */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #4e6628;
+  background-color: rgba(78, 102, 40, 0.1);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    height 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.4s;
+  mix-blend-mode: difference;
+}
+
+/* Interactive Elements Cursor State */
+body:has(a:hover) .custom-cursor,
+body:has(button:hover) .custom-cursor,
+body:has(.cursor-hover:hover) .custom-cursor {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(78, 102, 40, 0.3);
+  border-color: transparent;
+}
+
+/* Utilities */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation Classes */
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.animate-slide-in {
+  animation: slideInRight 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Container utilities */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Form Input Styles */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #4e6628;
+}
+
+/* Custom KBD styling */
+kbd {
+  font-family:
+    ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono",
+    monospace;
+  font-size: 0.875rem;
+}
+
+/* Progress Bar Animation */
+.progress-bar {
+  transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Button Hover Effects */
+button {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+/* Success Animation */
+@keyframes checkmark {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.success-icon {
+  animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Input border animation */
+input:focus,
+textarea:focus {
+  border-bottom-width: 2px;
+  transition: border-color 0.3s ease;
+}
+
+/* Placeholder styling */
+input::placeholder,
+textarea::placeholder {
+  color: rgba(20, 20, 20, 0.4);
+  opacity: 1;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  opacity: 0.5;
+}
+
+/* Responsive grid alignment */
+@media (max-width: 1023px) {
+  .grid > * {
+    width: 100%;
+  }
+}
+
+/* Card min heights responsive */
+@media (max-width: 768px) {
+  .min-h-\[400px\] {
+    min-height: 350px;
+  }
+
+  .lg\:min-h-\[600px\] {
+    min-height: 450px;
+  }
+}
+
+/* Smooth transitions for all interactive elements */
+a,
+button,
+input,
+textarea {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Link hover underline animation */
+a {
+  position: relative;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* Auto-resize textarea */
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Number indicator animation */
+.step-indicator {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Focus visible for accessibility */
+*:focus-visible {
+  outline: 2px solid #4e6628;
+  outline-offset: 2px;
+}
+
+button:focus-visible {
+  outline-color: #4e6628;
+}
+
+/* Remove spinner from number inputs */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Group hover states */
+.group:hover .group-hover\:scale-110 {
+  transform: scale(1.1);
+}
+
+.group:hover .group-hover\:translate-y-0 {
+  transform: translateY(0);
+}
+
+/* Loading state animation */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Smooth card transitions */
+.card-transition {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Print styles */
+@media print {
+  header,
+  footer,
+  .custom-cursor {
+    display: none;
+  }
+
+  body {
+    background-color: white;
+  }
+}
