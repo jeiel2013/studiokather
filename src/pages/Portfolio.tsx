@@ -451,7 +451,7 @@ function Portfolio() {
         </a>
 
         <a
-          href="#contact"
+          href="/contact"
           onClick={closeMenu}
           className="group relative text-4xl font-medium text-black hover:text-olive transition-colors"
         >
