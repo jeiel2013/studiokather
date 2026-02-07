@@ -2,7 +2,13 @@ import { useState, useEffect } from "react";
 import LogoKather from "../assets/Images/LogoKather.png";
 import K from "../assets/Images/K.png";
 import "../styles/about.css";
-import { FaPinterest, FaBehance, FaLinkedin, FaSpotify, FaTiktok } from "react-icons/fa";
+import {
+  FaPinterest,
+  FaBehance,
+  FaLinkedin,
+  FaSpotify,
+  FaTiktok,
+} from "react-icons/fa";
 
 const currentYear = new Date().getFullYear();
 
@@ -353,9 +359,6 @@ function About() {
                   <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6 text-black">
                     Perguntas Frequentes
                   </h2>
-                  <p className="text-xl md:text-2xl text-black/60 font-light">
-                    Tire suas dúvidas sobre o processo.
-                  </p>
                 </div>
 
                 <div className="flex flex-col">
