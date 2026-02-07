@@ -355,7 +355,7 @@ function About() {
 
               {/* FAQ */}
               <div className="flex flex-col pt-20 border-t border-black/5">
-                <div className="mb-12">
+                <div className="mb-2">
                   <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6 text-black">
                     Perguntas Frequentes
                   </h2>
