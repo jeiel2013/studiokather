@@ -114,6 +114,16 @@ const projects: Project[] = [
 const brandLogos = [
   K,
   LogoKather,
+  K,
+  LogoKather,
+  K,
+  LogoKather,
+  K,
+  LogoKather,
+  K,
+  LogoKather,
+  K,
+  LogoKather,
   // NikeLogo
 ];
 
@@ -351,7 +361,7 @@ function Home() {
             </p>
             <div className="marquee-mask overflow-hidden flex">
               <div
-                className="flex gap-20 items-center whitespace-nowrap animate-scroll"
+                className="flex gap-15 items-center whitespace-nowrap animate-scroll"
                 style={{ width: "max-content" }}
               >
                 {/* Set 1 */}

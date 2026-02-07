@@ -318,11 +318,10 @@ function About() {
               <div className="flex flex-col gap-16">
                 <div className="mb-6">
                   <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6 text-black">
-                    Metodologia
+                    Identidade não nasce de um copia e cola
                   </h2>
                   <p className="text-xl md:text-2xl text-black/60 font-light">
-                    Um processo linear e transparente para construir marcas
-                    sólidas.
+                    Aqui, passamos por 7 etapas até alcançar um resultado verdadeiramente satisfatório.
                   </p>
                 </div>
 
