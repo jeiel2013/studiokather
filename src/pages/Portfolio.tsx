@@ -231,8 +231,6 @@ function Portfolio() {
   const [cursorPosition, setCursorPosition] = useState({ x: 585, y: 10 });
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [touchStart, setTouchStart] = useState(0);
-  const [touchEnd, setTouchEnd] = useState(0);
 
   const location = useLocation();
 
@@ -284,25 +282,6 @@ function Portfolio() {
       setCurrentImageIndex((prev) =>
         prev === 0 ? selectedProject.images.length - 1 : prev - 1,
       );
-    }
-  };
-
-  // Touch handlers for swipe
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchStart(e.targetTouches[0].clientX);
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    setTouchEnd(e.targetTouches[0].clientX);
-  };
-
-  const handleTouchEnd = () => {
-    if (touchStart - touchEnd > 75) {
-      nextImage();
-    }
-
-    if (touchStart - touchEnd < -75) {
-      prevImage();
     }
   };
 
@@ -569,18 +548,14 @@ function Portfolio() {
                 </div>
               </div>
 
-              {/* Image Carousel */}
+              {/* Image Carousel - SEM SWIPE */}
               <div className="relative">
-                <div
-                  className="relative aspect-video rounded-xl overflow-hidden bg-black/5"
-                  onTouchStart={handleTouchStart}
-                  onTouchMove={handleTouchMove}
-                  onTouchEnd={handleTouchEnd}
-                >
+                <div className="relative aspect-video rounded-xl overflow-hidden bg-black/5">
                   <img
                     src={selectedProject.images[currentImageIndex].url}
                     alt={selectedProject.images[currentImageIndex].alt}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover select-none"
+                    draggable="false"
                   />
 
                   {/* Navigation Arrows */}
