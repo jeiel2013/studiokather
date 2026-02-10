@@ -297,7 +297,7 @@ function Contact() {
         </a>
 
         <a
-          href="#contact"
+          href="/contact"
           onClick={closeMenu}
           className="group relative text-4xl font-medium text-black hover:text-olive transition-colors"
         >
@@ -327,7 +327,7 @@ function Contact() {
                 para{" "}
                 <a
                   href="mailto:ola@studiokather.com.br"
-                  className="text-olive font-medium hover:underline transition-all"
+                  className="text-offwhite font-medium hover:underline transition-all"
                 >
                   ola@studiokather.com.br
                 </a>

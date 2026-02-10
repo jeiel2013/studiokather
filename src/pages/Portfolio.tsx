@@ -635,7 +635,7 @@ function Portfolio() {
       )}
 
       {/* FOOTER */}
-      <footer className="py-6 bg-offwhite text-black border-t border-black/5">
+      <footer className="py-6 bg-offwhite text-black">
         <div className="container mx-auto px-6 max-w-[1400px] flex flex-col md:flex-row justify-between items-center gap-4">
           <a
             href="/"
