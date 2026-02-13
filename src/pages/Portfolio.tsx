@@ -14,6 +14,15 @@ import {
 
 const currentYear = new Date().getFullYear();
 
+const docidade = import.meta.glob<string>('/src/assets/Images/docidade/*.{png,jpg,jpeg,webp}', {
+  eager: true,
+  import: 'default'
+});
+const docidadeImages = Object.values(docidade).map((img, index) => ({
+  url: img,
+  alt: `Docidade - Aplicação ${index + 1}`
+}));
+
 const barbara = import.meta.glob<string>('/src/assets/Images/barbara/*.{png,jpg,jpeg,webp}', {
   eager: true,
   import: 'default'
@@ -74,24 +83,14 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    name: "Nordic Home",
-    type: "Packaging",
-    year: "2023",
-    location: "Curitiba, PR",
+    name: "Docidade",
+    type: "Identidade Visual",
+    year: "202X",
+    location: "Coroaci, MG",
     description:
-      "Design de embalagens premium para linha de produtos de decoração nórdica. Foco em minimalismo e elegância.",
-    coverImage:
-      "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=1000&auto=format&fit=crop",
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=1600&auto=format&fit=crop",
-        alt: "Nordic Home - Packaging",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1600607686664-e18f5d7c2a4f?q=80&w=1600&auto=format&fit=crop",
-        alt: "Nordic Home - Produtos",
-      },
-    ],
+      "Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.",
+    coverImage: docidadeImages[0]?.url,
+    images: docidadeImages
   },
   {
     id: 4,
