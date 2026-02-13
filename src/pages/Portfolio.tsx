@@ -14,6 +14,15 @@ import {
 
 const currentYear = new Date().getFullYear();
 
+const essenciaJeans = import.meta.glob<string>('/src/assets/Images/essenciaJeans/*.{png,jpg,jpeg,webp}', {
+  eager: true,
+  import: 'default'
+});
+const essenciaJeansImages = Object.values(essenciaJeans).map((img, index) => ({
+  url: img,
+  alt: `Docidade - Aplicação ${index + 1}`
+}));
+
 const docidade = import.meta.glob<string>('/src/assets/Images/docidade/*.{png,jpg,jpeg,webp}', {
   eager: true,
   import: 'default'
@@ -94,24 +103,14 @@ const projects: Project[] = [
   },
   {
     id: 4,
-    name: "Aura Tech",
-    type: "Web Design",
-    year: "2024",
-    location: "Florianópolis, SC",
+    name: "Essência Jeans",
+    type: "Identidade Visual",
+    year: "202X",
+    location: "XXXXXXXX, XX",
     description:
-      "Criação de website institucional e interface de aplicativo para startup de tecnologia em saúde digital.",
-    coverImage:
-      "https://images.unsplash.com/photo-1634152962476-4b8a00e1915c?q=80&w=1000&auto=format&fit=crop",
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1634152962476-4b8a00e1915c?q=80&w=1600&auto=format&fit=crop",
-        alt: "Aura Tech - Web Design",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1634152961532-67cf30e78e25?q=80&w=1600&auto=format&fit=crop",
-        alt: "Aura Tech - Interface",
-      },
-    ],
+      "Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.",
+    coverImage: essenciaJeansImages[0]?.url,
+    images: essenciaJeansImages
   },
   {
     id: 5,
