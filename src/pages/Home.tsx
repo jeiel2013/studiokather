@@ -21,6 +21,18 @@ import {
 
 const currentYear = new Date().getFullYear();
 
+const logos = import.meta.glob<string>(
+  "/src/assets/Images/CarouselLogos/*.{png,jpg,jpeg,webp}",
+  {
+    eager: true,
+    import: "default",
+  },
+);
+const CarouselLogos = Object.values(logos).map((img, index) => ({
+  url: img,
+  alt: `Logos ${index + 1}`,
+}));
+
 interface Project {
   id: number;
   title: string;
@@ -109,23 +121,6 @@ const projects: Project[] = [
     image:
       "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4734259a-bad7-422f-981e-ce01e79184f2_1600w.jpg",
   },
-];
-
-// Logos das marcas (substitua pelos paths das suas imagens)
-const brandLogos = [
-  K,
-  LogoKather,
-  K,
-  LogoKather,
-  K,
-  LogoKather,
-  K,
-  LogoKather,
-  K,
-  LogoKather,
-  K,
-  LogoKather,
-  // NikeLogo
 ];
 
 function Home() {
@@ -391,29 +386,31 @@ function Home() {
             <p className="text-xl font-semibold text-black/80 uppercase tracking-widest mb-8 ml-1">
               Marcas que confiam
             </p>
-            <div className="marquee-mask overflow-hidden flex">
-              <div
-                className="flex gap-15 items-center whitespace-nowrap animate-scroll"
-                style={{ width: "max-content" }}
-              >
-                {/* Set 1 */}
-                {brandLogos.map((logo, index) => (
-                  <img
-                    key={`brand-1-${index}`}
-                    src={logo}
-                    alt={`Brand ${index + 1}`}
-                    className="h-10 w-auto grayscale opacity-30 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
-                  />
-                ))}
-                {/* Set 2 (Duplicate para loop infinito) */}
-                {brandLogos.map((logo, index) => (
-                  <img
-                    key={`brand-2-${index}`}
-                    src={logo}
-                    alt={`Brand ${index + 1}`}
-                    className="h-10 w-auto grayscale opacity-30 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
-                  />
-                ))}
+
+            <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+              <div className="flex w-max animate-marquee">
+                <div className="flex gap-16 pr-13">
+                  {CarouselLogos.map((logo, index) => (
+                    <img
+                      key={`original-${index}`}
+                      src={logo.url}
+                      alt={logo.alt}
+                      className="h-14 w-auto grayscale opacity-30 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
+                    />
+                  ))}
+                </div>
+
+                <div className="flex gap-16">
+                  {CarouselLogos.map((logo, index) => (
+                    <img
+                      key={`clone-${index}`}
+                      src={logo.url}
+                      alt=""
+                      aria-hidden="true"
+                      className="h-14 w-auto grayscale opacity-30 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
