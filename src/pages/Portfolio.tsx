@@ -14,6 +14,15 @@ import {
 
 const currentYear = new Date().getFullYear();
 
+const lavoy = import.meta.glob<string>('/src/assets/Images/lavoy/*.{png,jpg,jpeg,webp}', {
+  eager: true,
+  import: 'default'
+});
+const lavoyImages = Object.values(lavoy).map((img, index) => ({
+  url: img,
+  alt: `LaVoy - Aplicação ${index + 1}`
+}));
+
 interface ProjectImage {
   url: string;
   alt: string;
@@ -33,28 +42,15 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    name: "Botanica Studio",
+    name: "LaVoy",
     type: "Identidade Visual",
-    year: "2024",
-    location: "São Paulo, SP",
+    year: "2025",
+    location: "Coroaci, MG",
     description:
-      "Desenvolvimento completo de identidade visual para estúdio de design botânico. Incluindo logotipo, paleta de cores, tipografia e aplicações em diversos materiais.",
+      "A identidade visual da LaVoy foi construída a partir dos pilares da autenticidade, liberdade e sofisticação sutil. Mais do que uma marca de acessórios, LaVoy representa uma experiência que valoriza o cotidiano e desperta a essência única de cada mulher.",
     coverImage:
-      "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg",
-    images: [
-      {
-        url: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg",
-        alt: "Botanica Studio - Identidade Visual",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1600&auto=format&fit=crop",
-        alt: "Botanica Studio - Aplicação 1",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1600607687644-c7171b42498b?q=80&w=1600&auto=format&fit=crop",
-        alt: "Botanica Studio - Aplicação 2",
-      },
-    ],
+      lavoyImages[0]?.url,
+    images: lavoyImages
   },
   {
     id: 2,
