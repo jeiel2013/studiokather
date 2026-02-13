@@ -14,6 +14,15 @@ import {
 
 const currentYear = new Date().getFullYear();
 
+const regra = import.meta.glob<string>('/src/assets/Images/regra/*.{png,jpg,jpeg,webp}', {
+  eager: true,
+  import: 'default'
+});
+const regraImages = Object.values(regra).map((img, index) => ({
+  url: img,
+  alt: `Docidade - Aplicação ${index + 1}`
+}));
+
 const essenciaJeans = import.meta.glob<string>('/src/assets/Images/essenciaJeans/*.{png,jpg,jpeg,webp}', {
   eager: true,
   import: 'default'
@@ -114,24 +123,14 @@ const projects: Project[] = [
   },
   {
     id: 5,
-    name: "Essence",
-    type: "Editorial",
-    year: "2023",
-    location: "São Paulo, SP",
+    name: "Regra",
+    type: "Identidade Visual",
+    year: "202X",
+    location: "XXXXXXX, XX",
     description:
-      "Design editorial para revista de lifestyle. Diagramação moderna e sistema visual coeso para todas as edições.",
-    coverImage:
-      "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?q=80&w=1000&auto=format&fit=crop",
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?q=80&w=1600&auto=format&fit=crop",
-        alt: "Essence - Editorial",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1596461404944-77f2db0c501c?q=80&w=1600&auto=format&fit=crop",
-        alt: "Essence - Revista",
-      },
-    ],
+      "Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.",
+    coverImage: regraImages[0]?.url,
+    images: regraImages
   },
   {
     id: 6,
