@@ -14,6 +14,15 @@ import {
 
 const currentYear = new Date().getFullYear();
 
+const barbara = import.meta.glob<string>('/src/assets/Images/barbara/*.{png,jpg,jpeg,webp}', {
+  eager: true,
+  import: 'default'
+});
+const barbaraImages = Object.values(barbara).map((img, index) => ({
+  url: img,
+  alt: `Bárbara Benevenutto - Aplicação ${index + 1}`
+}));
+
 const lavoy = import.meta.glob<string>('/src/assets/Images/lavoy/*.{png,jpg,jpeg,webp}', {
   eager: true,
   import: 'default'
@@ -54,24 +63,14 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    name: "Lumina Arc",
-    type: "Rebranding",
-    year: "2024",
-    location: "Rio de Janeiro, RJ",
+    name: "Bárbara Benevenutto",
+    type: "Identidade Visual",
+    year: "2025",
+    location: "XXXXXX, XX",
     description:
-      "Rebranding completo para empresa de arquitetura e design de interiores. Nova identidade reflete modernidade e sofisticação.",
-    coverImage:
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop",
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1600&auto=format&fit=crop",
-        alt: "Lumina Arc - Rebranding",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1618004912476-29818d81ae2e?q=80&w=1600&auto=format&fit=crop",
-        alt: "Lumina Arc - Logo",
-      },
-    ],
+      "Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.",
+    coverImage: barbaraImages[0]?.url,
+    images: barbaraImages
   },
   {
     id: 3,
