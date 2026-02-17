@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import FundoHero from "../assets/Images/FundoHero.jpg";
 import K from "../assets/Images/K.png";
 import LogoKather from "../assets/Images/LogoKather.png";
-import CartaoKather from "../assets/Images/CartaoKather.png";
+import CartaoKather from "../assets/Images/CartaoKather.webp";
 import About from "../assets/Images/About.jpg";
 import Contact from "../assets/Images/Contact.jpg";
 import "../styles/home.css";
@@ -15,9 +15,6 @@ import {
   FaSpotify,
   FaTiktok,
 } from "react-icons/fa";
-
-// import NikeLogo from "../assets/brands/nike.svg";
-// import AppleLogo from "../assets/brands/apple.svg";
 
 const currentYear = new Date().getFullYear();
 
