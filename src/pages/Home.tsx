@@ -336,14 +336,9 @@ function Home() {
                 <div className="absolute inset-0 bg-white/1 backdrop-blur-[1px] hidden md:block"></div>
               </div>
               <div className="flex flex-col md:p-16 lg:p-24 min-h-[600px] md:min-h-[750px] lg:min-h-[650px] z-10 lg:justify-start p-8 md:pt-10 md:pr-10 md:pb-10 md:pl-10 relative justify-end">
-                <h1 className="leading-tight md:leading-[1.1] text-balance md:text-6xl lg:text-[64px] lg:text-6xl text-3xl font-medium tracking-tight text-center md:text-left mb-6 md:mb-0 text-offwhite md:text-black">
-                  Está na hora de
-                  <br className="" />
-                  <span className="text-beige">muda a forma</span>
-                  <br />
-                  como seus clientes <br /> enxergam
-                  <br />
-                  <span className="text-beige">sua marca.</span>
+                <h1 className="leading-tight lg:uppercase md:leading-[1.1] text-balance md:text-6xl lg:text-[64px] lg:text-6xl text-3xl lg:font-bold font-medium tracking-tight text-center md:text-left mb-6 md:mb-0 text-offwhite md:text-black">
+                  Está na hora <br /> de mudar a forma <br /> como seus clientes <br />
+                  enxergam sua marca
                 </h1>
                 <p className="hidden md:block md:text-lg leading-relaxed text-base font-regular text-black max-w-xl mt-6 opacity-0 animate-[fadeInUp_0.8s_cubic-bezier(0.16,1,0.3,1)_0.5s_forwards]">
                   Marcas que crescem são aquelas que investem em design,
