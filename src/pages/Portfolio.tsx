@@ -98,6 +98,18 @@ const prospereImages = Object.values(prospere).map((img, index) => ({
   alt: `Escola da Crinaça Interior - Aplicação ${index + 1}`,
 }));
 
+const zadda = import.meta.glob<string>(
+  "/src/assets/Images/zadda/*.{png,jpg,jpeg,webp}",
+  {
+    eager: true,
+    import: "default",
+  },
+);
+const zaddaImages = Object.values(zadda).map((img, index) => ({
+  url: img,
+  alt: `Escola da Crinaça Interior - Aplicação ${index + 1}`,
+}));
+
 const escolaCrianca = import.meta.glob<string>(
   "/src/assets/Images/escolaCrianca/*.{png,jpg,jpeg,webp}",
   {
@@ -223,18 +235,8 @@ const projects: Project[] = [
     location: "Engenheiro Caldas, MG",
     description:
       "Zadda foi desenvolvida para expressar personalidade, beleza e atitude com identidade marcante. O projeto visual valoriza força feminina, estilo contemporâneo e presença estética refinada. A marca ganha destaque através de elementos visuais expressivos, criando conexão direta com o público e posicionamento autêntico.",
-    coverImage:
-      "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1000&auto=format&fit=crop",
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1600&auto=format&fit=crop",
-        alt: "Artisan Bakery - Branding",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1517433670267-08bbd4be890f?q=80&w=1600&auto=format&fit=crop",
-        alt: "Artisan Bakery - Produtos",
-      },
-    ],
+    coverImage: zaddaImages[0]?.url,
+    images: zaddaImages,
   },
 ];
 
