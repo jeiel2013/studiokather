@@ -214,7 +214,7 @@ const projects: Project[] = [
     description:
       "A marca Pastro nasceu do desafio de unir diferentes áreas da saúde em uma identidade única e estratégica. O projeto foi desenvolvido para transmitir clareza, confiança e inovação, equilibrando ciência e humanidade. A estética visual reforça profissionalismo e integração, criando uma presença sólida e memorável.",
     coverImage: pastroImages[0]?.url,
-    images: pastroImages
+    images: pastroImages,
   },
   {
     id: 8,
@@ -245,6 +245,8 @@ function Portfolio() {
   const [cursorPosition, setCursorPosition] = useState({ x: 585, y: 10 });
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
 
   const location = useLocation();
 
@@ -563,9 +565,17 @@ function Portfolio() {
                 </div>
               </div>
 
-              {/* Image Carousel - SEM SWIPE */}
+              {/* Image Carousel */}
               <div className="relative">
-                <div className="relative aspect-video rounded-xl overflow-hidden bg-black/5">
+                <div
+                  className="relative aspect-video rounded-xl overflow-hidden bg-black/5 md:cursor-default cursor-zoom-in"
+                  onClick={() => {
+                    if (window.innerWidth < 768) {
+                      setLightboxIndex(currentImageIndex);
+                      setLightboxOpen(true);
+                    }
+                  }}
+                >
                   <img
                     src={selectedProject.images[currentImageIndex].url}
                     alt={selectedProject.images[currentImageIndex].alt}
@@ -573,19 +583,25 @@ function Portfolio() {
                     draggable="false"
                   />
 
-                  {/* Navigation Arrows */}
+                  {/* Navigation Arrows - apenas desktop */}
                   {selectedProject.images.length > 1 && (
                     <>
                       <button
-                        onClick={prevImage}
-                        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-black p-3 rounded-full transition-all shadow-lg"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          prevImage();
+                        }}
+                        className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-black p-3 rounded-full transition-all shadow-lg"
                         aria-label="Imagem anterior"
                       >
                         <ChevronLeft className="w-6 h-6" />
                       </button>
                       <button
-                        onClick={nextImage}
-                        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-black p-3 rounded-full transition-all shadow-lg"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          nextImage();
+                        }}
+                        className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-black p-3 rounded-full transition-all shadow-lg"
                         aria-label="Próxima imagem"
                       >
                         <ChevronRight className="w-6 h-6" />
@@ -599,6 +615,24 @@ function Portfolio() {
                       {currentImageIndex + 1} / {selectedProject.images.length}
                     </div>
                   )}
+
+                  {/* Ícone de toque - apenas mobile */}
+                  <div className="md:hidden absolute top-3 right-3 bg-black/50 text-white p-1.5 rounded-full pointer-events-none">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-4 h-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                      />
+                    </svg>
+                  </div>
                 </div>
 
                 {/* Thumbnail Indicators */}
@@ -619,6 +653,68 @@ function Portfolio() {
                   </div>
                 )}
               </div>
+
+              {/* Lightbox Mobile */}
+              {lightboxOpen && (
+                <div
+                  className="md:hidden fixed inset-0 bg-black z-[60] flex items-center justify-center"
+                  onClick={() => setLightboxOpen(false)}
+                >
+                  {/* Botão fechar */}
+                  <button
+                    onClick={() => setLightboxOpen(false)}
+                    className="absolute top-4 right-4 bg-white/20 text-white p-2 rounded-full z-10"
+                  >
+                    <X className="w-6 h-6" />
+                  </button>
+
+                  {/* Contador */}
+                  <div className="absolute top-4 left-1/2 -translate-x-1/2 bg-black/60 text-white px-4 py-1.5 rounded-full text-sm z-10">
+                    {lightboxIndex + 1} / {selectedProject.images.length}
+                  </div>
+
+                  {/* Imagem */}
+                  <img
+                    src={selectedProject.images[lightboxIndex].url}
+                    alt={selectedProject.images[lightboxIndex].alt}
+                    className="max-w-full max-h-full object-contain select-none"
+                    draggable="false"
+                    onClick={(e) => e.stopPropagation()}
+                  />
+
+                  {/* Setas de navegação */}
+                  {selectedProject.images.length > 1 && (
+                    <>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setLightboxIndex((prev) =>
+                            prev === 0
+                              ? selectedProject.images.length - 1
+                              : prev - 1,
+                          );
+                        }}
+                        className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/30 text-white p-3 rounded-full"
+                      >
+                        <ChevronLeft className="w-7 h-7" />
+                      </button>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setLightboxIndex((prev) =>
+                            prev === selectedProject.images.length - 1
+                              ? 0
+                              : prev + 1,
+                          );
+                        }}
+                        className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/30 text-white p-3 rounded-full"
+                      >
+                        <ChevronRight className="w-7 h-7" />
+                      </button>
+                    </>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         </div>
