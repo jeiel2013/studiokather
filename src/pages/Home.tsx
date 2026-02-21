@@ -337,13 +337,15 @@ function Home() {
               </div>
               <div className="flex flex-col md:p-16 lg:p-24 min-h-[600px] md:min-h-[750px] lg:min-h-[650px] z-10 lg:justify-start p-8 md:pt-10 md:pr-10 md:pb-10 md:pl-10 relative justify-end">
                 <h1 className="leading-tight lg:uppercase md:leading-[1.3] text-balance md:text-6xl lg:text-[53px] text-3xl lg:font-bold font-medium tracking-tight text-center md:text-left mb-6 md:mb-0 text-black md:text-black">
-                  Está na hora <br /> de  <span className="text-beige">mudar a forma</span> <br /> como seus clientes <br />
+                  Está na hora <br /> de{" "}
+                  <span className="text-beige">mudar a forma</span> <br /> como
+                  seus clientes <br />
                   enxergam <span className="text-beige">sua marca</span>
                 </h1>
                 <p className="hidden md:block md:text-xl leading-relaxed text-base font-regular lg:font-semibold text-black max-w-xl mt-6 opacity-0 animate-[fadeInUp_0.8s_cubic-bezier(0.16,1,0.3,1)_0.5s_forwards]">
-                  Vamos mostrar o seu profissionalismo, <br /> eficiência e valores em 
-                  uma identidade visual <br /> não apenas bonita, mas fundamentada em um
-                  conceito sólido e duradouro.
+                  Vamos mostrar o seu profissionalismo, <br /> eficiência e
+                  valores em uma identidade visual <br /> não apenas bonita, mas
+                  fundamentada em um conceito sólido e duradouro.
                 </p>
                 {/* Botão - centralizado no mobile, alinhado à esquerda no desktop */}
                 <div className="mt-0 md:mt-8 md:opacity-0 md:animate-[fadeInUp_0.8s_cubic-bezier(0.16,1,0.3,1)_0.8s_forwards] flex justify-center md:justify-start">
@@ -383,24 +385,32 @@ function Home() {
               <div className="flex w-max animate-marquee">
                 <div className="flex gap-16 pr-13">
                   {CarouselLogos.map((logo, index) => (
-                    <img
+                    <div
                       key={`original-${index}`}
-                      src={logo.url}
-                      alt={logo.alt}
-                      className="h-14 w-auto grayscale opacity-30 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
-                    />
+                      className="w-32 h-14 flex items-center justify-center"
+                    >
+                      <img
+                        src={logo.url}
+                        alt={logo.alt}
+                        className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                      />
+                    </div>
                   ))}
                 </div>
 
                 <div className="flex gap-16">
                   {CarouselLogos.map((logo, index) => (
-                    <img
+                    <div
                       key={`clone-${index}`}
-                      src={logo.url}
-                      alt=""
-                      aria-hidden="true"
-                      className="h-14 w-auto grayscale opacity-30 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
-                    />
+                      className="w-32 h-14 flex items-center justify-center"
+                    >
+                      <img
+                        src={logo.url}
+                        alt=""
+                        aria-hidden="true"
+                        className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                      />
+                    </div>
                   ))}
                 </div>
               </div>
