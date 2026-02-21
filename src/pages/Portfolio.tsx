@@ -129,7 +129,7 @@ const projects: Project[] = [
     name: "Essência Jeans",
     type: "Identidade Visual",
     year: "2025",
-    location: "XXXXXXXX, XX",
+    location: "Coroaci, MG",
     description:
       "Essência Jeans teve sua identidade desenvolvida para unir autenticidade, estilo urbano e força feminina. O projeto buscou transmitir atitude e identidade própria, valorizando a expressão individual através da moda. A construção visual traz presença, modernidade e versatilidade, posicionando a marca de forma marcante e atual.",
     coverImage: essenciaJeansImages[0]?.url,
