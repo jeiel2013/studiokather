@@ -13,76 +13,9 @@ import { useLocation } from "react-router-dom";
 
 const currentYear = new Date().getFullYear();
 
-interface FormData {
-  name: string;
-  email: string;
-  phone: string;
-  projectType: string;
-  budget: string;
-  timeline: string;
-  message: string;
-}
-
-const questions = [
-  {
-    id: "name",
-    question: "Como você gostaria de ser chamado (a)?",
-    placeholder: "Responda aqui...",
-    type: "text",
-  },
-  {
-    id: "email",
-    question: "Qual é o seu e-mail?",
-    placeholder: "seuemail@exemplo.com",
-    type: "email",
-  },
-  {
-    id: "phone",
-    question: "Qual é o seu telefone/WhatsApp?",
-    placeholder: "(00) 00000-0000",
-    type: "tel",
-  },
-  {
-    id: "projectType",
-    question: "Qual tipo de projeto você precisa?",
-    placeholder: "Ex: Identidade Visual, Rebranding, Web Design...",
-    type: "text",
-  },
-  {
-    id: "budget",
-    question: "Qual é o seu orçamento aproximado?",
-    placeholder: "Ex: R$ 5.000 - R$ 10.000",
-    type: "text",
-  },
-  {
-    id: "timeline",
-    question: "Qual é o prazo desejado para o projeto?",
-    placeholder: "Ex: 2 meses, urgente, flexível...",
-    type: "text",
-  },
-  {
-    id: "message",
-    question: "Conte-nos mais sobre o seu projeto",
-    placeholder: "Descreva brevemente o que você precisa...",
-    type: "textarea",
-  },
-];
-
 function Contact() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [cursorPosition, setCursorPosition] = useState({ x: 585, y: 10 });
-  const [currentStep, setCurrentStep] = useState(0);
-  const [formData, setFormData] = useState<FormData>({
-    name: "",
-    email: "",
-    phone: "",
-    projectType: "",
-    budget: "",
-    timeline: "",
-    message: "",
-  });
-  const [currentAnswer, setCurrentAnswer] = useState("");
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const location = useLocation();
 
@@ -105,51 +38,6 @@ function Contact() {
 
   const closeMenu = () => {
     setIsMenuOpen(false);
-  };
-
-  const handleNext = () => {
-    if (!currentAnswer.trim()) return;
-
-    const currentQuestion = questions[currentStep];
-    setFormData({
-      ...formData,
-      [currentQuestion.id]: currentAnswer,
-    });
-
-    if (currentStep < questions.length - 1) {
-      setCurrentStep(currentStep + 1);
-      setCurrentAnswer("");
-    } else {
-      handleSubmit();
-    }
-  };
-
-  const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === "Enter" && questions[currentStep].type !== "textarea") {
-      e.preventDefault();
-      handleNext();
-    }
-  };
-
-  const handleSubmit = () => {
-    // Aqui você pode integrar com sua API ou serviço de e-mail
-    console.log("Form Data:", { ...formData, message: currentAnswer });
-    setIsSubmitted(true);
-  };
-
-  const resetForm = () => {
-    setCurrentStep(0);
-    setCurrentAnswer("");
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      projectType: "",
-      budget: "",
-      timeline: "",
-      message: "",
-    });
-    setIsSubmitted(false);
   };
 
   return (
@@ -335,109 +223,67 @@ function Contact() {
             </div>
 
             {/* Form Card */}
+            {/* Contact Card */}
             <div className="bg-white shadow-sm rounded-[1.5rem] p-8 md:p-10 lg:p-12 min-h-[400px] lg:min-h-[600px] flex flex-col justify-center">
-              {!isSubmitted ? (
-                <div className="space-y-6">
-                  {/* Progress Indicator */}
-                  <div className="flex items-center gap-2 mb-8">
-                    {questions.map((_, index) => (
-                      <div
-                        key={index}
-                        className={`h-1 flex-1 rounded-full transition-all duration-300 ${
-                          index <= currentStep ? "bg-olive" : "bg-black/10"
-                        }`}
-                      ></div>
-                    ))}
-                  </div>
-
-                  {/* Question */}
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-olive/10 flex items-center justify-center text-olive text-sm font-semibold mt-1">
-                        {currentStep + 1}
-                      </span>
-                      <h2 className="text-2xl md:text-3xl font-medium text-black leading-tight">
-                        {questions[currentStep].question}
-                        {questions[currentStep].id === "name" && (
-                          <span className="text-olive">*</span>
-                        )}
-                      </h2>
-                    </div>
-
-                    {/* Answer Input */}
-                    <div className="pl-9">
-                      {questions[currentStep].type === "textarea" ? (
-                        <textarea
-                          value={currentAnswer}
-                          onChange={(e) => setCurrentAnswer(e.target.value)}
-                          placeholder={questions[currentStep].placeholder}
-                          className="w-full px-0 py-3 text-lg text-black placeholder:text-black/40 bg-transparent border-b-2 border-black/20 focus:border-olive outline-none transition-colors resize-none"
-                          rows={4}
-                          autoFocus
-                        />
-                      ) : (
-                        <input
-                          type={questions[currentStep].type}
-                          value={currentAnswer}
-                          onChange={(e) => setCurrentAnswer(e.target.value)}
-                          onKeyPress={handleKeyPress}
-                          placeholder={questions[currentStep].placeholder}
-                          className="w-full px-0 py-3 text-lg text-black placeholder:text-black/40 bg-transparent border-b-2 border-black/20 focus:border-olive outline-none transition-colors"
-                          autoFocus
-                        />
-                      )}
-
-                      {/* OK Button */}
-                      <button
-                        onClick={handleNext}
-                        disabled={!currentAnswer.trim()}
-                        className="mt-6 px-8 py-3 bg-black text-white rounded-full font-medium text-base hover:bg-olive transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-black"
-                      >
-                        {currentStep === questions.length - 1 ? "Enviar" : "OK"}
-                      </button>
-                    </div>
-                  </div>
-
-                  {/* Navigation Hint */}
-                  <p className="text-sm text-black/50 pl-9 mt-4">
-                    Pressione{" "}
-                    <kbd className="px-2 py-1 bg-black/5 rounded">Enter ↵</kbd>{" "}
-                    ou clique em OK
+              <div className="space-y-8">
+                {/* Texto principal */}
+                <div className="space-y-3">
+                  <p className="text-lg md:text-[30px] text-black/70 font-light leading-relaxed">
+                    Fale comigo pelo WhatsApp para alinharmos escopo, entender
+                    suas necessidades e definir o melhor caminho para a sua
+                    marca.
                   </p>
                 </div>
-              ) : (
-                // Success Message
-                <div className="text-center space-y-6">
-                  <div className="w-20 h-20 bg-olive/10 rounded-full flex items-center justify-center mx-auto">
+
+                {/* Botão + Horário */}
+                <div className="flex flex-col items-start gap-2">
+                  <a
+                    href="https://wa.me/5533984247165?text=Ol%C3%A1%20Katharine!%20Quero%20saber%20mais%20sobre%20os%20seus%20servi%C3%A7os!"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-8 py-3 bg-olive text-white rounded-full font-medium text-base lg:text-lg hover:bg-olive transition-all duration-300"
+                  >
+                    {/* Ícone WhatsApp */}
                     <svg
-                      className="w-10 h-10 text-olive"
-                      fill="none"
-                      stroke="currentColor"
+                      className="w-5 h-5"
+                      fill="currentColor"
                       viewBox="0 0 24 24"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.523 5.847L.057 23.885a.5.5 0 0 0 .606.61l6.109-1.498A11.955 11.955 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.9a9.9 9.9 0 0 1-5.031-1.371l-.36-.214-3.733.916.987-3.63-.235-.374A9.862 9.862 0 0 1 2.1 12C2.1 6.533 6.533 2.1 12 2.1c5.466 0 9.9 4.433 9.9 9.9 0 5.466-4.434 9.9-9.9 9.9z" />
                     </svg>
-                  </div>
-                  <h2 className="text-3xl md:text-4xl font-semibold text-black">
-                    Mensagem enviada!
-                  </h2>
-                  <p className="text-lg text-black/70">
-                    Obrigado pelo contato. Retornaremos em breve para agendar
-                    uma conversa sobre seu projeto.
+                    Falar no WhatsApp
+                  </a>
+                  <p className="text-base text-black/40 pl-1">
+                    Seg–Sex, 8:30h – 17h
                   </p>
-                  <button
-                    onClick={resetForm}
-                    className="mt-6 px-8 py-3 bg-olive text-white rounded-full font-medium text-base hover:bg-olive/80 transition-all duration-300"
-                  >
-                    Enviar outra mensagem
-                  </button>
                 </div>
-              )}
+
+                {/* Divisor */}
+                <div className="border-t border-black/8" />
+
+                {/* Por que WhatsApp */}
+                <div className="space-y-4">
+                  <p className="text-lg font-semibold text-olive uppercase tracking-widest">
+                    Por que iniciar pelo WhatsApp?
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {[
+                      "Contato rápido",
+                      "Briefing estratégico",
+                      "Flexibilidade no atendimento",
+                      "Proposta clara para investir com segurança",
+                    ].map((item, index) => (
+                      <div key={index} className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-olive mt-2 flex-shrink-0" />
+                        <p className="text-lg text-black/60 font-light">
+                          {item}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
