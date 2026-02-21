@@ -62,6 +62,18 @@ const barbaraImages = Object.values(barbara).map((img, index) => ({
   alt: `Bárbara Benevenutto - Aplicação ${index + 1}`,
 }));
 
+const maite = import.meta.glob<string>(
+  "/src/assets/Images/maite/*.{png,jpg,jpeg,webp}",
+  {
+    eager: true,
+    import: "default",
+  },
+);
+const maiteImages = Object.values(maite).map((img, index) => ({
+  url: img,
+  alt: `Escola da Crinaça Interior - Aplicação ${index + 1}`,
+}));
+
 const escolaCrianca = import.meta.glob<string>(
   "/src/assets/Images/escolaCrianca/*.{png,jpg,jpeg,webp}",
   {
@@ -154,18 +166,8 @@ const projects: Project[] = [
     location: "Campinas, SP",
     description:
       "A identidade visual de Maitê Ferreira foi pensada para expressar liberdade, intuição e ousadia dentro do universo clínico. O projeto conecta espiritualidade, escuta crítica e sofisticação contemporânea, criando uma marca sensível e forte ao mesmo tempo. Elementos orgânicos e elegantes reforçam um posicionamento autêntico e profundo.",
-    coverImage:
-      "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4734259a-bad7-422f-981e-ce01e79184f2_1600w.jpg",
-    images: [
-      {
-        url: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4734259a-bad7-422f-981e-ce01e79184f2_1600w.jpg",
-        alt: "Kinetic - Brand Strategy",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1600&auto=format&fit=crop",
-        alt: "Kinetic - Academia",
-      },
-    ],
+    coverImage: maiteImages[0]?.url,
+    images: maiteImages,
   },
   {
     id: 7,
