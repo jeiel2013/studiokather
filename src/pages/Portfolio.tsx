@@ -74,6 +74,18 @@ const maiteImages = Object.values(maite).map((img, index) => ({
   alt: `Escola da Crinaça Interior - Aplicação ${index + 1}`,
 }));
 
+const pastro = import.meta.glob<string>(
+  "/src/assets/Images/pastro/*.{png,jpg,jpeg,webp}",
+  {
+    eager: true,
+    import: "default",
+  },
+);
+const pastroImages = Object.values(pastro).map((img, index) => ({
+  url: img,
+  alt: `Escola da Crinaça Interior - Aplicação ${index + 1}`,
+}));
+
 const escolaCrianca = import.meta.glob<string>(
   "/src/assets/Images/escolaCrianca/*.{png,jpg,jpeg,webp}",
   {
@@ -171,24 +183,14 @@ const projects: Project[] = [
   },
   {
     id: 7,
-    name: "Pastro - Piscologia e Coloproctologia",
+    name: "Pastro",
     type: "Identidade Visual e Naming",
     year: "2025",
     location: "Jundiaí, SP",
     description:
       "A marca Pastro nasceu do desafio de unir diferentes áreas da saúde em uma identidade única e estratégica. O projeto foi desenvolvido para transmitir clareza, confiança e inovação, equilibrando ciência e humanidade. A estética visual reforça profissionalismo e integração, criando uma presença sólida e memorável.",
-    coverImage:
-      "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=1000&auto=format&fit=crop",
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=1600&auto=format&fit=crop",
-        alt: "Verde Café - Identidade",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1600&auto=format&fit=crop",
-        alt: "Verde Café - Interior",
-      },
-    ],
+    coverImage: pastroImages[0]?.url,
+    images: pastroImages
   },
   {
     id: 8,
