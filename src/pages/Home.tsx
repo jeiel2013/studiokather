@@ -315,7 +315,7 @@ function Home() {
       <main>
         {/* HERO SECTION */}
         <section
-          className="flex overflow-hidden lg:pt-28 lg:items-start relative pt-24 lg:pb-6"
+          className="flex overflow-hidden lg:pt-28 lg:items-start relative pt-24 lg:pb-2"
           id="home"
         >
           <div className="container z-10 max-w-[1400px] mr-auto ml-auto pr-6 pl-6 relative">
@@ -377,7 +377,7 @@ function Home() {
         {/* MARCAS QUE CONFIAM - SEÇÃO NOVA */}
         <section className="py-10 bg-offwhite overflow-hidden">
           <div className="container mx-auto px-6 max-w-[1400px]">
-            <p className="text-xl font-semibold text-black/80 uppercase tracking-widest mb-8 ml-1">
+            <p className="text-2xl font-semibold text-black/80 uppercase tracking-widest mb-8 ml-1">
               Marcas que confiam
             </p>
 
