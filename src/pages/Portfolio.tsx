@@ -190,12 +190,12 @@ const projects: Project[] = [
   },
   {
     id: 8,
-    name: "Stellar Labs",
-    type: "Brand Identity",
+    name: "Prospere",
+    type: "Identidade Visual",
     year: "2024",
-    location: "Brasília, DF",
+    location: "Coroaci, MG",
     description:
-      "Criação de marca para laboratório de inovação. Identidade futurista com elementos tecnológicos.",
+      "A Prospere Odontologia Especializada, fundada pelo casal de dentistas Marcelle Moura e João Pedro, transforma sorrisos e vidas com excelência e atendimento humanizado. Oferecem tratamentos odontológicos e estéticos personalizados, combinando tecnologia com cuidado acolhedor. Seu compromisso é proporcionar bem-estar e autoestima, tornando-se a escolha preferida para quem busca qualidade e inovação em saúde bucal e estética facial.",
     coverImage:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop",
     images: [
