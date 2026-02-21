@@ -128,10 +128,10 @@ const projects: Project[] = [
     id: 4,
     name: "Essência Jeans",
     type: "Identidade Visual",
-    year: "202X",
+    year: "2025",
     location: "XXXXXXXX, XX",
     description:
-      "Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.",
+      "Essência Jeans teve sua identidade desenvolvida para unir autenticidade, estilo urbano e força feminina. O projeto buscou transmitir atitude e identidade própria, valorizando a expressão individual através da moda. A construção visual traz presença, modernidade e versatilidade, posicionando a marca de forma marcante e atual.",
     coverImage: essenciaJeansImages[0]?.url,
     images: essenciaJeansImages,
   },
