@@ -93,12 +93,12 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    name: "LaVoy",
+    name: "Escola da Criança Interior",
     type: "Identidade Visual",
     year: "2025",
-    location: "Coroaci, MG",
+    location: "Poços de Caldas, MG",
     description:
-      "A identidade visual da LaVoy foi construída a partir dos pilares da autenticidade, liberdade e sofisticação sutil. Mais do que uma marca de acessórios, LaVoy representa uma experiência que valoriza o cotidiano e desperta a essência única de cada mulher.",
+      "A identidade visual da Escola da Criança Interior foi criada para comunicar acolhimento emocional, sensibilidade e desenvolvimento humano. O projeto traduz a jornada terapêutica através de elementos suaves e simbólicos, conectando infância, autoconhecimento e evolução pessoal. Uma marca que equilibra ludicidade e profundidade com estética contemporânea.",
     coverImage: lavoyImages[0]?.url,
     images: lavoyImages,
   },
