@@ -474,32 +474,45 @@ function Home() {
               {testimonials.map((testimonial) => (
                 <div
                   key={testimonial.id}
-                  className="bg-white p-8 rounded-[1.5rem] flex flex-col justify-between shadow-sm hover:shadow-lg transition-shadow duration-300 h-full"
+                  className="bg-white p-8 rounded-[1.5rem] flex flex-col justify-between shadow-sm hover:shadow-lg transition-shadow duration-300 h-full relative lg:min-h-[320px]"
                 >
-                  <div className="mb-6">
-                    {/* Quote Icon */}
-                    <svg
-                      className="text-olive text-3xl mb-4 w-8 h-8"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
-                    </svg>
-                    <p className="text-black/80 text-xl leading-relaxed">
-                      {testimonial.quote}
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      className="w-12 h-12 rounded-full object-cover border border-offwhite"
-                    />
+                  {/* Aspas decorativas no canto superior direito */}
+                  <svg
+                    className="absolute top-6 right-6 w-10 h-10 text-black/10"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
+                  </svg>
+
+                  {/* Texto do depoimento */}
+                  <p className="text-black/75 text-lg italic leading-relaxed mb-8">
+                    "{testimonial.quote}"
+                  </p>
+
+                  {/* Autor */}
+                  <div className="flex items-center gap-3">
+                    {/* Ícone avatar */}
+                    <div className="w-12 h-12 rounded-full bg-black/10 flex items-center justify-center flex-shrink-0">
+                      <svg
+                        className="w-7 h-7 text-black/40"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={1.5}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+                        />
+                      </svg>
+                    </div>
                     <div>
-                      <h4 className="font-semibold text-black text-base">
+                      <h4 className="font-semibold text-black text-sm">
                         {testimonial.name}
                       </h4>
-                      <p className="text-xs font-medium text-olive uppercase tracking-wide">
+                      <p className="text-xs text-black/50">
                         {testimonial.company}
                       </p>
                     </div>
