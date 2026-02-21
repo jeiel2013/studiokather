@@ -14,49 +14,64 @@ import {
 
 const currentYear = new Date().getFullYear();
 
-const regra = import.meta.glob<string>('/src/assets/Images/regra/*.{png,jpg,jpeg,webp}', {
-  eager: true,
-  import: 'default'
-});
+const regra = import.meta.glob<string>(
+  "/src/assets/Images/regra/*.{png,jpg,jpeg,webp}",
+  {
+    eager: true,
+    import: "default",
+  },
+);
 const regraImages = Object.values(regra).map((img, index) => ({
   url: img,
-  alt: `Docidade - Aplicação ${index + 1}`
+  alt: `Docidade - Aplicação ${index + 1}`,
 }));
 
-const essenciaJeans = import.meta.glob<string>('/src/assets/Images/essenciaJeans/*.{png,jpg,jpeg,webp}', {
-  eager: true,
-  import: 'default'
-});
+const essenciaJeans = import.meta.glob<string>(
+  "/src/assets/Images/essenciaJeans/*.{png,jpg,jpeg,webp}",
+  {
+    eager: true,
+    import: "default",
+  },
+);
 const essenciaJeansImages = Object.values(essenciaJeans).map((img, index) => ({
   url: img,
-  alt: `Docidade - Aplicação ${index + 1}`
+  alt: `Docidade - Aplicação ${index + 1}`,
 }));
 
-const docidade = import.meta.glob<string>('/src/assets/Images/docidade/*.{png,jpg,jpeg,webp}', {
-  eager: true,
-  import: 'default'
-});
+const docidade = import.meta.glob<string>(
+  "/src/assets/Images/docidade/*.{png,jpg,jpeg,webp}",
+  {
+    eager: true,
+    import: "default",
+  },
+);
 const docidadeImages = Object.values(docidade).map((img, index) => ({
   url: img,
-  alt: `Docidade - Aplicação ${index + 1}`
+  alt: `Docidade - Aplicação ${index + 1}`,
 }));
 
-const barbara = import.meta.glob<string>('/src/assets/Images/barbara/*.{png,jpg,jpeg,webp}', {
-  eager: true,
-  import: 'default'
-});
+const barbara = import.meta.glob<string>(
+  "/src/assets/Images/barbara/*.{png,jpg,jpeg,webp}",
+  {
+    eager: true,
+    import: "default",
+  },
+);
 const barbaraImages = Object.values(barbara).map((img, index) => ({
   url: img,
-  alt: `Bárbara Benevenutto - Aplicação ${index + 1}`
+  alt: `Bárbara Benevenutto - Aplicação ${index + 1}`,
 }));
 
-const lavoy = import.meta.glob<string>('/src/assets/Images/lavoy/*.{png,jpg,jpeg,webp}', {
-  eager: true,
-  import: 'default'
-});
+const lavoy = import.meta.glob<string>(
+  "/src/assets/Images/lavoy/*.{png,jpg,jpeg,webp}",
+  {
+    eager: true,
+    import: "default",
+  },
+);
 const lavoyImages = Object.values(lavoy).map((img, index) => ({
   url: img,
-  alt: `LaVoy - Aplicação ${index + 1}`
+  alt: `LaVoy - Aplicação ${index + 1}`,
 }));
 
 interface ProjectImage {
@@ -84,20 +99,19 @@ const projects: Project[] = [
     location: "Coroaci, MG",
     description:
       "A identidade visual da LaVoy foi construída a partir dos pilares da autenticidade, liberdade e sofisticação sutil. Mais do que uma marca de acessórios, LaVoy representa uma experiência que valoriza o cotidiano e desperta a essência única de cada mulher.",
-    coverImage:
-      lavoyImages[0]?.url,
-    images: lavoyImages
+    coverImage: lavoyImages[0]?.url,
+    images: lavoyImages,
   },
   {
     id: 2,
     name: "Bárbara Benevenutto",
     type: "Identidade Visual",
     year: "2025",
-    location: "XXXXXX, XX",
+    location: "Brasília, DF",
     description:
-      "Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.",
+      "A identidade visual de Bárbara Benevenutto foi construída para equilibrar sofisticação, maturidade e acolhimento, traduzindo uma atuação psicológica ética e sensível. O projeto buscou transmitir confiança para um público exigente, sem perder a leveza do cuidado terapêutico. Elementos visuais elegantes e atemporais reforçam profissionalismo, posicionamento estratégico e presença digital consistente.",
     coverImage: barbaraImages[0]?.url,
-    images: barbaraImages
+    images: barbaraImages,
   },
   {
     id: 3,
@@ -108,7 +122,7 @@ const projects: Project[] = [
     description:
       "Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.",
     coverImage: docidadeImages[0]?.url,
-    images: docidadeImages
+    images: docidadeImages,
   },
   {
     id: 4,
@@ -119,7 +133,7 @@ const projects: Project[] = [
     description:
       "Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.",
     coverImage: essenciaJeansImages[0]?.url,
-    images: essenciaJeansImages
+    images: essenciaJeansImages,
   },
   {
     id: 5,
@@ -130,7 +144,7 @@ const projects: Project[] = [
     description:
       "Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.",
     coverImage: regraImages[0]?.url,
-    images: regraImages
+    images: regraImages,
   },
   {
     id: 6,
