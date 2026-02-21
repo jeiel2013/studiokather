@@ -211,12 +211,12 @@ const projects: Project[] = [
   },
   {
     id: 9,
-    name: "Artisan Bakery",
-    type: "Packaging & Branding",
-    year: "2023",
-    location: "Salvador, BA",
+    name: "Zadda - Beleza e Saúde",
+    type: "Identidade Visual e Naming",
+    year: "2026",
+    location: "Engenheiro Caldas, MG",
     description:
-      "Identidade e embalagens para padaria artesanal. Design rústico-moderno que valoriza o produto local.",
+      "Zadda foi desenvolvida para expressar personalidade, beleza e atitude com identidade marcante. O projeto visual valoriza força feminina, estilo contemporâneo e presença estética refinada. A marca ganha destaque através de elementos visuais expressivos, criando conexão direta com o público e posicionamento autêntico.",
     coverImage:
       "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1000&auto=format&fit=crop",
     images: [
