@@ -355,7 +355,7 @@ function About() {
                   </p>
                 </div>
 
-                <div className="flex flex-col gap-12 -mt-10 md:-mt-8">
+                <div className="flex flex-col gap-12 -mt-10 md:-mt-8 lg:max-w-210">
                   {methodologySteps.map((step, index) => (
                     <div
                       key={index}
