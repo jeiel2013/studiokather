@@ -62,16 +62,16 @@ const barbaraImages = Object.values(barbara).map((img, index) => ({
   alt: `Bárbara Benevenutto - Aplicação ${index + 1}`,
 }));
 
-const lavoy = import.meta.glob<string>(
+const escolaCrianca = import.meta.glob<string>(
   "/src/assets/Images/lavoy/*.{png,jpg,jpeg,webp}",
   {
     eager: true,
     import: "default",
   },
 );
-const lavoyImages = Object.values(lavoy).map((img, index) => ({
+const escolaCriancaImages = Object.values(escolaCrianca).map((img, index) => ({
   url: img,
-  alt: `LaVoy - Aplicação ${index + 1}`,
+  alt: `Escola da Crinaça Interior - Aplicação ${index + 1}`,
 }));
 
 interface ProjectImage {
@@ -99,8 +99,8 @@ const projects: Project[] = [
     location: "Poços de Caldas, MG",
     description:
       "A identidade visual da Escola da Criança Interior foi criada para comunicar acolhimento emocional, sensibilidade e desenvolvimento humano. O projeto traduz a jornada terapêutica através de elementos suaves e simbólicos, conectando infância, autoconhecimento e evolução pessoal. Uma marca que equilibra ludicidade e profundidade com estética contemporânea.",
-    coverImage: lavoyImages[0]?.url,
-    images: lavoyImages,
+    coverImage: escolaCriancaImages[0]?.url,
+    images: escolaCriancaImages,
   },
   {
     id: 2,
