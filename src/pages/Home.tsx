@@ -590,7 +590,7 @@ function Home() {
                   href="/contact"
                   className="inline-block bg-olive text-white px-6 py-3 rounded-full font-medium text-base md:text-xl mt-0 md:mt-4 mb-4 md:mb-0 transition-all duration-300 hover:bg-[#5d7b32] hover:scale-105 shadow-lg shadow-olive/20 w-fit"
                 >
-                  Agendar Call
+                  Agendar uma conversa
                 </a>
               </div>
 
