@@ -148,12 +148,12 @@ const projects: Project[] = [
   },
   {
     id: 6,
-    name: "Kinetic",
-    type: "Brand Strategy",
-    year: "2024",
-    location: "Belo Horizonte, MG",
+    name: "Maitê Ferreira",
+    type: "Identidade Visual",
+    year: "2025",
+    location: "Campinas, SP",
     description:
-      "Estratégia de marca completa para academia boutique. Posicionamento premium e comunicação visual impactante.",
+      "A identidade visual de Maitê Ferreira foi pensada para expressar liberdade, intuição e ousadia dentro do universo clínico. O projeto conecta espiritualidade, escuta crítica e sofisticação contemporânea, criando uma marca sensível e forte ao mesmo tempo. Elementos orgânicos e elegantes reforçam um posicionamento autêntico e profundo.",
     coverImage:
       "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4734259a-bad7-422f-981e-ce01e79184f2_1600w.jpg",
     images: [
