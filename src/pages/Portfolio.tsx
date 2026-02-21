@@ -169,12 +169,12 @@ const projects: Project[] = [
   },
   {
     id: 7,
-    name: "Verde Café",
-    type: "Identidade Visual",
-    year: "2023",
-    location: "Porto Alegre, RS",
+    name: "Pastro - Piscologia e Coloproctologia",
+    type: "Identidade Visual e Naming",
+    year: "2025",
+    location: "Jundiaí, SP",
     description:
-      "Identidade visual para cafeteria sustentável. Design orgânico refletindo os valores ecológicos da marca.",
+      "A marca Pastro nasceu do desafio de unir diferentes áreas da saúde em uma identidade única e estratégica. O projeto foi desenvolvido para transmitir clareza, confiança e inovação, equilibrando ciência e humanidade. A estética visual reforça profissionalismo e integração, criando uma presença sólida e memorável.",
     coverImage:
       "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=1000&auto=format&fit=crop",
     images: [
