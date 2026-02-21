@@ -116,11 +116,11 @@ const projects: Project[] = [
   {
     id: 3,
     name: "Docidade",
-    type: "Identidade Visual",
-    year: "202X",
+    type: "Identidade Visual e Naming",
+    year: "2026",
     location: "Coroaci, MG",
     description:
-      "Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.",
+      "Docidade nasceu a partir de uma história afetiva e familiar, transformando memória e emoção em identidade visual. O projeto foi desenvolvido para transmitir delicadeza, proximidade e autenticidade, valorizando o artesanal e o cuidado em cada detalhe. A estética combina leveza e personalidade, criando uma marca doce, acolhedora e cheia de significado.",
     coverImage: docidadeImages[0]?.url,
     images: docidadeImages,
   },
