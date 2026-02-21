@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import FundoHero from "../assets/Images/FundoHero.jpg";
+import FundoHero from "../assets/Images/FundoHero.webp";
 import K from "../assets/Images/K.png";
 import LogoKather from "../assets/Images/LogoKather.png";
 import CartaoKather from "../assets/Images/CartaoKather.webp";
