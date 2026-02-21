@@ -206,10 +206,10 @@ function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-start">
             {/* Text Card */}
             <div className="bg-olive shadow-sm rounded-[1.5rem] p-8 md:p-10 lg:p-12 flex flex-col justify-center min-h-[400px] lg:min-h-[600px]">
-              <h1 className="text-[40px] md:text-5xl lg:text-6xl font-semibold text-white leading-tight tracking-tight mb-6">
+              <h1 className="text-[40px] lg:text-[65px] md:text-5xl lg:text-6xl font-semibold text-white leading-tight tracking-tight mb-16">
                 Vamos conhecer seus desafios.
               </h1>
-              <p className="text-lg md:text-xl text-offwhite font-light leading-relaxed">
+              <p className="text-lg md:text-2xl text-offwhite font-light leading-relaxed">
                 Preencha a solicitação para que possamos agendar um horário e
                 conversarmos sobre seu projeto. Se preferir, nos envie um e-mail
                 para{" "}
@@ -228,7 +228,7 @@ function Contact() {
               <div className="space-y-8">
                 {/* Texto principal */}
                 <div className="space-y-3">
-                  <p className="text-lg md:text-[30px] text-black/70 font-light leading-relaxed">
+                  <p className="text-lg md:text-[28px] text-black/70 font-light leading-relaxed">
                     Fale comigo pelo WhatsApp para alinharmos escopo, entender
                     suas necessidades e definir o melhor caminho para a sua
                     marca.
