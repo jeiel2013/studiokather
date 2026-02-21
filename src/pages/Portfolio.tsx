@@ -86,6 +86,18 @@ const pastroImages = Object.values(pastro).map((img, index) => ({
   alt: `Escola da Crinaça Interior - Aplicação ${index + 1}`,
 }));
 
+const prospere = import.meta.glob<string>(
+  "/src/assets/Images/prospere/*.{png,jpg,jpeg,webp}",
+  {
+    eager: true,
+    import: "default",
+  },
+);
+const prospereImages = Object.values(prospere).map((img, index) => ({
+  url: img,
+  alt: `Escola da Crinaça Interior - Aplicação ${index + 1}`,
+}));
+
 const escolaCrianca = import.meta.glob<string>(
   "/src/assets/Images/escolaCrianca/*.{png,jpg,jpeg,webp}",
   {
@@ -200,18 +212,8 @@ const projects: Project[] = [
     location: "Coroaci, MG",
     description:
       "A Prospere Odontologia Especializada, fundada pelo casal de dentistas Marcelle Moura e João Pedro, transforma sorrisos e vidas com excelência e atendimento humanizado. Oferecem tratamentos odontológicos e estéticos personalizados, combinando tecnologia com cuidado acolhedor. Seu compromisso é proporcionar bem-estar e autoestima, tornando-se a escolha preferida para quem busca qualidade e inovação em saúde bucal e estética facial.",
-    coverImage:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop",
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop",
-        alt: "Stellar Labs - Identity",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1600&auto=format&fit=crop",
-        alt: "Stellar Labs - Tech",
-      },
-    ],
+    coverImage: prospereImages[0]?.url,
+    images: prospereImages,
   },
   {
     id: 9,
