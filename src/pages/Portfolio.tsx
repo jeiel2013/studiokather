@@ -63,7 +63,7 @@ const barbaraImages = Object.values(barbara).map((img, index) => ({
 }));
 
 const escolaCrianca = import.meta.glob<string>(
-  "/src/assets/Images/lavoy/*.{png,jpg,jpeg,webp}",
+  "/src/assets/Images/escolaCrianca/*.{png,jpg,jpeg,webp}",
   {
     eager: true,
     import: "default",
