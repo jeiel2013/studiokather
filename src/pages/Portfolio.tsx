@@ -464,17 +464,18 @@ function Portfolio() {
         <div className="container mx-auto px-6 max-w-[1400px]">
           {/* Header Card */}
           <div className="bg-beige/40 rounded-[1.5rem] p-8 md:p-12 lg:p-16 mb-6 md:mb-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-black leading-tight tracking-tight mb-5 md:mb-3">
+            <h1 className="uppercase text-4xl md:text-5xl lg:text-6xl font-semibold text-black leading-tight tracking-tight mb-5 md:mb-3">
               Portfolio
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl text-black/80 mb-3 md:mb-2 font-light leading-relaxed">
               Seja bem-vindo ao meu portfólio!
             </p>
-            <p className="text-lg md:text-xl lg:text-2xl text-black/80 mb-3 md:mb-2 font-light leading-relaxed">
+            <br />
+            <p className="text-lg md:text-xl lg:text-2xl text-black/80 mb-3 md:mb-2 font-light leading-relaxed lg:wrap-break-word lg:max-w-140">
               Este espaço está sempre em atualização, então aproveite para
               explorar, mergulhar nos conceitos e se inspirar.
             </p>
-            <p className="text-lg md:text-xl lg:text-2xl text-black/80 font-light leading-relaxed">
+            <p className="text-lg md:text-xl lg:text-2xl text-black/80 font-light leading-relaxed lg:wrap-break-word lg:max-w-140">
               Quem sabe a sua marca não aparece por aqui também?
             </p>
           </div>
