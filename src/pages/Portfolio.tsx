@@ -139,10 +139,10 @@ const projects: Project[] = [
     id: 5,
     name: "Regra",
     type: "Identidade Visual",
-    year: "202X",
-    location: "XXXXXXX, XX",
+    year: "2025",
+    location: "Governador Valadares, MG",
     description:
-      "Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.",
+      "REGRA Produtora teve sua identidade visual criada para transmitir autoridade criativa, organização e direção estratégica. O projeto equilibra impacto visual e clareza conceitual, posicionando a marca como referência em produção e comunicação. A construção estética reforça ritmo, movimento e presença forte no mercado",
     coverImage: regraImages[0]?.url,
     images: regraImages,
   },
