@@ -370,7 +370,7 @@ function Home() {
                   seus clientes <br />
                   enxergam <span className="text-beige">sua marca</span>
                 </h1>
-                <p className="hidden md:block md:text-xl leading-relaxed text-base font-regular lg:font-semibold text-black max-w-xl mt-6 opacity-0 animate-[fadeInUp_0.8s_cubic-bezier(0.16,1,0.3,1)_0.5s_forwards]">
+                <p className="hidden md:block md:text-xl leading-relaxed text-base font-regular lg:font-medium text-black max-w-xl mt-6 opacity-0 animate-[fadeInUp_0.8s_cubic-bezier(0.16,1,0.3,1)_0.5s_forwards]">
                   Vamos mostrar o seu profissionalismo, <br /> eficiência e
                   valores em uma identidade visual <br /> não apenas bonita, mas
                   fundamentada em um conceito sólido e duradouro.
