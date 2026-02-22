@@ -75,6 +75,29 @@ const testimonials: Testimonial[] = [
   },
 ];
 
+const faqItemsHome = [
+  {
+    question: "Quanto tempo leva o processo completo?",
+    answer:
+      "O prazo médio é de 20 a 35 dias úteis, dependendo da complexidade do projeto. Tudo é planejado com cronograma e transparência — sem atropelos, mas com comprometimento.",
+  },
+  {
+    question: "Posso parcelar o pagamento?",
+    answer:
+      "Sim! O pagamento pode ser parcelado via cartão de crédito em até 6x sem juros, através de uma plataforma segura.",
+  },
+  {
+    question: "Os arquivos finais são editáveis?",
+    answer:
+      "Você recebe a identidade visual finalizada, com todos os arquivos organizados e prontos para uso: versões vetoriais (.ai e .svg), imagens em alta resolução (.png) e o manual da marca.",
+  },
+  {
+    question: "Esse serviço serve para qualquer tipo de negócio?",
+    answer:
+      "Sim! Já desenvolvemos identidades para psicólogas, estúdios criativos, marcas de moda, indústrias e mais. A metodologia se adapta à proposta e essência de cada negócio.",
+  },
+];
+
 const projects: Project[] = [
   {
     id: 1,
@@ -124,8 +147,13 @@ function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [cursorPosition, setCursorPosition] = useState({ x: 585, y: 10 });
   const [activeProject, setActiveProject] = useState<number | null>(null);
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
   const location = useLocation();
+
+  const toggleFAQ = (index: number) => {
+    setOpenFAQ(openFAQ === index ? null : index);
+  };
 
   const handleProjectClick = (projectId: number) => {
     setActiveProject(activeProject === projectId ? null : projectId);
@@ -616,6 +644,76 @@ function Home() {
                 />
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* FAQ SECTION */}
+        <section className="bg-offwhite pt-4 pb-4">
+          <div className="container mx-auto px-6 max-w-[1400px]">
+            <p className="text-xl font-semibold text-black/90 uppercase tracking-widest mb-5 ml-1">
+              Perguntas Frequentes
+            </p>
+
+            <div className="flex flex-col">
+              {faqItemsHome.map((item, index) => (
+                <details
+                  key={index}
+                  className="group py-5 border-b border-black/10"
+                  open={openFAQ === index}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    toggleFAQ(index);
+                  }}
+                >
+                  <summary className="flex justify-between items-start cursor-pointer list-none outline-none [&::-webkit-details-marker]:hidden gap-4">
+                    <span className="text-lg md:text-xl font-medium text-black/90 group-hover:text-olive transition-colors leading-tight">
+                      {item.question}
+                    </span>
+                    <span
+                      className={`text-olive pt-1 flex-shrink-0 transform transition-transform duration-300 ${openFAQ === index ? "rotate-180" : ""}`}
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
+                        <path
+                          d="M6 9l6 6 6-6"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </span>
+                  </summary>
+                  <div className="mt-3 text-lg text-black/60 font-light leading-relaxed lg:max-w-210">
+                    {item.answer}
+                  </div>
+                </details>
+              ))}
+            </div>
+
+            <a
+              href="/about"
+              className="inline-flex items-center text-olive font-medium text-sm mt-6 hover:underline decoration-1 underline-offset-4 transition-all"
+            >
+              Ver todas as perguntas
+              <svg
+                className="ml-2 w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </a>
           </div>
         </section>
       </main>
