@@ -343,7 +343,7 @@ function Home() {
       <main>
         {/* HERO SECTION */}
         <section
-          className="flex overflow-hidden lg:pt-28 lg:items-start relative pt-24 lg:pb-2"
+          className="flex overflow-hidden lg:pt-28 lg:items-start relative pt-24 lg:pb-5"
           id="home"
         >
           <div className="container z-10 max-w-[1400px] mr-auto ml-auto pr-6 pl-6 relative">
@@ -447,10 +447,10 @@ function Home() {
         </section>
 
         {/* PORTFOLIO GRID */}
-        <section id="portfolio" className="pt-5 lg:pt-2 pb-2">
+        <section id="portfolio" className="pt-5 lg:pt-9 pb-2 lg:pb-8">
           <div className="container mx-auto px-6 max-w-[1400px]">
             {/* Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 gap-x-3 gap-y-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 gap-x-3 gap-y-3 lg:gap-y-7">
               {projects.map((project) => (
                 <div
                   key={project.id}
@@ -493,7 +493,7 @@ function Home() {
         </section>
 
         {/* TESTIMONIALS SECTION */}
-        <section className="pt-4 lg:pt-6 pb-10 bg-offwhite">
+        <section className="pt-4 lg:pt-6 pb-10 lg:pb-17 bg-offwhite">
           <div className="container mx-auto px-6 max-w-[1400px]">
             <p className="text-xl font-semibold text-black/90 uppercase tracking-widest mb-5 ml-1">
               Um recado dos meus clientes
@@ -613,7 +613,7 @@ function Home() {
         {/* CTA SECTION */}
         <section
           id="contact"
-          className="relative overflow-hidden bg-offwhite text-black pt-1 md:pt-4 pb-10"
+          className="relative overflow-hidden bg-offwhite text-black pt-1 md:pt-4 lg:pt-7 pb-10"
         >
           <div className="container mx-auto px-6 max-w-[1400px] relative z-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-stretch">
@@ -648,7 +648,7 @@ function Home() {
         </section>
 
         {/* FAQ SECTION */}
-        <section className="bg-offwhite pt-4 pb-4">
+        <section className="bg-offwhite pt-6 pb-4">
           <div className="container mx-auto px-6 max-w-[1400px]">
             <p className="text-xl font-semibold text-black/90 uppercase tracking-widest mb-5 ml-1">
               Perguntas Frequentes
