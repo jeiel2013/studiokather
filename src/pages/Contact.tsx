@@ -202,7 +202,7 @@ function Contact() {
 
       {/* MAIN CONTENT */}
       <main className="pt-28 lg:pt-40 pb-10 lg:-mb-21 bg-offwhite min-h-screen">
-        <div className="container mx-auto px-6 max-w-[1400px]">
+        <div className="container mx-auto px-3 md:px-6 max-w-[1400px]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-start">
             {/* Text Card */}
             <div className="bg-olive shadow-sm rounded-[1.5rem] p-8 md:p-10 lg:p-12 flex flex-col justify-center min-h-[400px] lg:min-h-[600px]">
