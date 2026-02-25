@@ -463,7 +463,7 @@ function Portfolio() {
 
       {/* MAIN CONTENT */}
       <main className="pt-28 pb-10 bg-offwhite min-h-screen">
-        <div className="container mx-auto px-6 max-w-[1400px]">
+        <div className="container mx-auto px-3 md:px-6 max-w-[1400px]">
           {/* Header Card */}
           <div className="bg-beige/40 rounded-[1.5rem] p-8 md:p-12 lg:p-16 mb-6 md:mb-8">
             <h1 className="uppercase text-4xl md:text-5xl lg:text-6xl font-semibold text-black leading-tight tracking-tight mb-5 md:mb-3">
