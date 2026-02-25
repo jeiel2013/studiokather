@@ -340,7 +340,7 @@ function About() {
         </section>
 
         {/* METHODOLOGY / PROCESS SECTION */}
-        <section id="process" className="pt-10 pb-16 md:pt-12 md:pb-24">
+        <section id="process" className="pt-10 pb-16 md:pt-12 lg:pt-14 md:pb-24">
           <div className="container mx-auto px-6 max-w-[1400px]">
             <div className="flex flex-col gap-20 w-full ">
               {/* Methodology */}
