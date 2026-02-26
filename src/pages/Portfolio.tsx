@@ -327,28 +327,28 @@ function Portfolio() {
           <nav className="hidden md:flex items-center gap-8">
             <a
               href="/"
-              className="group relative text-lg font-semibold text-black/80 hover:text-black transition-colors"
+              className="group relative text-lg font-medium text-black/80 hover:text-black transition-colors"
             >
               Home
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-olive transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a
               href="/portfolio"
-              className="group relative text-lg font-semibold text-black/80 hover:text-black transition-colors"
+              className="group relative text-lg font-medium text-black/80 hover:text-black transition-colors"
             >
               Portfolio
               <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-olive transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a
               href="/about"
-              className="group relative text-lg font-semibold text-black/80 hover:text-black transition-colors"
+              className="group relative text-lg font-medium text-black/80 hover:text-black transition-colors"
             >
               Sobre
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-olive transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a
               href="/contact"
-              className="group relative text-lg font-semibold text-black/80 hover:text-black transition-colors"
+              className="group relative text-lg font-medium text-black/80 hover:text-black transition-colors"
             >
               Contato
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-olive transition-all duration-300 group-hover:w-full"></span>
@@ -469,15 +469,15 @@ function Portfolio() {
             <h1 className="uppercase text-4xl md:text-5xl lg:text-6xl font-semibold text-black leading-tight tracking-tight mb-5 md:mb-3">
               Portfolio
             </h1>
-            <p className="text-lg md:text-xl lg:text-2xl text-black/80 mb-3 md:mb-2 font-light leading-relaxed">
+            <p className="text-lg md:text-xl lg:text-2xl text-black/80 mb-3 md:mb-2 font-regular leading-relaxed">
               Seja bem-vindo ao meu portfólio!
             </p>
             <br />
-            <p className="text-lg md:text-xl lg:text-2xl text-black/80 mb-3 md:mb-2 font-light leading-relaxed lg:wrap-break-word lg:max-w-140">
+            <p className="text-lg md:text-xl lg:text-2xl text-black/80 mb-3 md:mb-2 font-regular leading-relaxed lg:wrap-break-word lg:max-w-140">
               Este espaço está sempre em atualização, então aproveite para
               explorar, mergulhar nos conceitos e se inspirar.
             </p>
-            <p className="text-lg md:text-xl lg:text-2xl text-black/80 font-light leading-relaxed lg:wrap-break-word lg:max-w-140">
+            <p className="text-lg md:text-xl lg:text-2xl text-black/80 font-regular leading-relaxed lg:wrap-break-word lg:max-w-140">
               Quem sabe a sua marca não aparece por aqui também?
             </p>
           </div>
@@ -734,7 +734,7 @@ function Portfolio() {
             />
           </a>
 
-          <p className="text-base font-bold text-black mt-1">
+          <p className="text-base font-medium text-black mt-1">
             © {currentYear} | Studio Kather
           </p>
 
