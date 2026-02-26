@@ -66,28 +66,28 @@ function Contact() {
           <nav className="hidden md:flex items-center gap-8">
             <a
               href="/"
-              className="group relative text-lg font-semibold text-black/80 hover:text-black transition-colors"
+              className="group relative text-lg font-medium text-black/80 hover:text-black transition-colors"
             >
               Home
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-olive transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a
               href="/portfolio"
-              className="group relative text-lg font-semibold text-black/80 hover:text-black transition-colors"
+              className="group relative text-lg font-medium text-black/80 hover:text-black transition-colors"
             >
               Portfolio
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-olive transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a
               href="/about"
-              className="group relative text-lg font-semibold text-black/80 hover:text-black transition-colors"
+              className="group relative text-lg font-medium text-black/80 hover:text-black transition-colors"
             >
               Sobre
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-olive transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a
               href="/contact"
-              className="group relative text-lg font-semibold text-black/80 hover:text-black transition-colors"
+              className="group relative text-lg font-medium text-black/80 hover:text-black transition-colors"
             >
               Contato
               <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-olive transition-all duration-300 group-hover:w-full"></span>
@@ -209,7 +209,7 @@ function Contact() {
               <h1 className="text-[40px] lg:text-[65px] md:text-5xl lg:text-6xl font-semibold text-white leading-tight tracking-tight mb-16">
                 Vamos conhecer seus desafios.
               </h1>
-              <p className="text-lg md:text-2xl text-offwhite font-light leading-relaxed">
+              <p className="text-lg md:text-2xl text-offwhite font-regular leading-relaxed">
                 Preencha a solicitação para que possamos agendar um horário e
                 conversarmos sobre seu projeto. Se preferir, nos envie um e-mail
                 para{" "}
@@ -228,7 +228,7 @@ function Contact() {
               <div className="space-y-8">
                 {/* Texto principal */}
                 <div className="space-y-3">
-                  <p className="text-lg md:text-[28px] text-black/70 font-light leading-relaxed">
+                  <p className="text-lg md:text-[28px] text-black/70 font-regular leading-relaxed">
                     Fale comigo pelo WhatsApp para alinharmos escopo, entender
                     suas necessidades e definir o melhor caminho para a sua
                     marca.
@@ -241,7 +241,7 @@ function Contact() {
                     href="https://wa.me/5533984247165?text=Ol%C3%A1%20Katharine!%20Quero%20saber%20mais%20sobre%20os%20seus%20servi%C3%A7os!"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-8 py-3 bg-olive text-white rounded-full font-medium text-base lg:text-lg hover:bg-olive transition-all duration-300"
+                    className="inline-flex items-center gap-2 px-8 py-3 bg-olive text-white rounded-full font-regular text-base lg:text-lg hover:bg-olive transition-all duration-300"
                   >
                     {/* Ícone WhatsApp */}
                     <svg
@@ -254,7 +254,7 @@ function Contact() {
                     </svg>
                     Falar no WhatsApp
                   </a>
-                  <p className="text-base text-black/40 pl-1">
+                  <p className="text-lg text-black/40 pl-1">
                     Seg–Sex, 8:30h – 17h
                   </p>
                 </div>
@@ -276,7 +276,7 @@ function Contact() {
                     ].map((item, index) => (
                       <div key={index} className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-olive mt-2 flex-shrink-0" />
-                        <p className="text-lg text-black/60 font-light">
+                        <p className="text-lg text-black/60 font-regular">
                           {item}
                         </p>
                       </div>
@@ -303,7 +303,7 @@ function Contact() {
             />
           </a>
 
-          <p className="text-base font-bold text-black mt-1">
+          <p className="text-base font-medium text-black mt-1">
             © {currentYear} | Studio Kather
           </p>
 
