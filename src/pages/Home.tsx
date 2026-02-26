@@ -206,28 +206,28 @@ function Home() {
           <nav className="hidden md:flex items-center gap-8">
             <a
               href="/"
-              className="group relative text-lg font-semibold text-black/80 hover:text-black transition-colors"
+              className="group relative text-lg font-medium text-black/80 hover:text-black transition-colors"
             >
               Home
               <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-olive transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a
               href="/portfolio"
-              className="group relative text-lg font-semibold text-black/80 hover:text-black transition-colors"
+              className="group relative text-lg font-medium text-black/80 hover:text-black transition-colors"
             >
               Portfolio
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-olive transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a
               href="/about"
-              className="group relative text-lg font-semibold text-black/80 hover:text-black transition-colors"
+              className="group relative text-lg font-medium text-black/80 hover:text-black transition-colors"
             >
               Sobre
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-olive transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a
               href="/contact"
-              className="group relative text-lg font-semibold text-black/80 hover:text-black transition-colors"
+              className="group relative text-lg font-medium text-black/80 hover:text-black transition-colors"
             >
               Contato
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-olive transition-all duration-300 group-hover:w-full"></span>
@@ -587,7 +587,7 @@ function Home() {
                 <div className="mt-19 hidden md:block">
                   <a
                     href="/about"
-                    className="inline-flex items-center text-offwhite font-medium text-base hover:underline decoration-1 underline-offset-4 transition-all"
+                    className="inline-flex items-center text-white font-regular text-base hover:underline decoration-1 underline-offset-4 transition-all"
                   >
                     Conhecer mais sobre nosso processo
                     <svg
@@ -734,7 +734,7 @@ function Home() {
           </a>
 
           {/* Center: Copyright */}
-          <p className="text-base font-bold text-black mt-1">
+          <p className="text-base font-medium text-black mt-1">
             © {currentYear} | Studio Kather
           </p>
 
