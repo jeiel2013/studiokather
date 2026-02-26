@@ -19,7 +19,7 @@ interface FAQItem {
 
 const faqItems: FAQItem[] = [
   {
-    question: "Quanto tempo leva o procecsso completo?",
+    question: "Quanto tempo leva o processo completo?",
     answer:
       "O prazo médio é de 20 a 35 dias úteis, dependendo da complexidade do projeto. Tudo é planejado com cronograma e transparência — sem atropelos, mas com comprometimento.",
   },

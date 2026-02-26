@@ -1,1 +1,54 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Macha";
+  src: url("./assets/fonts/MachaThin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Macha";
+  src: url("./assets/fonts/MachaBook.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Macha";
+  src: url("./assets/fonts/MachaBookItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Macha";
+  src: url("./assets/fonts/MachaMedium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Macha";
+  src: url("./assets/fonts/MachaMediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Macha";
+  src: url("./assets/fonts/MachaBold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Macha";
+  src: url("./assets/fonts/MachaBoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@theme {
+  --font-sans: "Macha", ui-sans-serif, system-ui, sans-serif;
+}

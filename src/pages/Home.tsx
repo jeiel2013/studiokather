@@ -191,7 +191,7 @@ function Home() {
 
       {/* HEADER / NAVIGATION */}
       <header className="fixed top-0 left-0 w-full z-50 bg-offwhite/90 backdrop-blur-md transition-all duration-300">
-        <div className="container mx-auto px-6 h-20 flex items-center justify-between max-w-[1400px]">
+        <div className="container mx-auto px-5 md:px-6 h-20 flex items-center justify-between max-w-[1400px]">
           <a
             href="/"
             className="flex items-center text-xl font-bold tracking-tight text-black z-50"
