@@ -191,7 +191,7 @@ function Home() {
 
       {/* HEADER / NAVIGATION */}
       <header className="fixed top-0 left-0 w-full z-50 bg-offwhite/90 backdrop-blur-md transition-all duration-300">
-        <div className="container mx-auto px-5 md:px-6 h-20 flex items-center justify-between max-w-[1400px]">
+        <div className="container mx-auto px-3 md:px-6 h-20 flex items-center justify-between max-w-[1400px]">
           <a
             href="/"
             className="flex items-center text-xl font-bold tracking-tight text-black z-50"
@@ -340,13 +340,13 @@ function Home() {
         </a>
       </div>
 
-      <main>
+      <main className="overflow-x-hidden">
         {/* HERO SECTION */}
         <section
           className="flex overflow-hidden lg:pt-28 lg:items-start relative pt-24 lg:pb-5"
           id="home"
         >
-          <div className="container z-10 max-w-[1400px] mr-auto ml-auto pr-3 pl-3 md:pr-6 md:pl-6 relative">
+          <div className="container z-10 max-w-[1400px] mr-auto ml-auto px-3 md:px-6 relative">
             <div className="relative w-full bg-white rounded-[1.5rem] overflow-hidden group">
               <div className="absolute inset-0 w-full h-full">
                 {/* Desktop */}
@@ -403,13 +403,13 @@ function Home() {
         </section>
 
         {/* MARCAS QUE CONFIAM - SEÇÃO NOVA */}
-        <section className="py-10 bg-offwhite overflow-hidden">
-          <div className="container mx-auto px-6 max-w-[1400px]">
+        <section className="py-10 bg-offwhite">
+          <div className="container mx-auto px-3 md:px-6 max-w-[1400px]">
             <p className="text-2xl font-semibold text-black/80 uppercase tracking-widest mb-8 ml-1">
               Marcas que confiam
             </p>
 
-            <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+            <div className="relative overflow-hidden w-full [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
               <div className="flex w-max animate-marquee">
                 <div className="flex gap-16 pr-13">
                   {CarouselLogos.map((logo, index) => (
@@ -450,7 +450,7 @@ function Home() {
         <section id="portfolio" className="pt-5 lg:pt-9 pb-2 lg:pb-8">
           <div className="container mx-auto px-3 md:px-6 max-w-[1400px]">
             {/* Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 gap-x-3 lg:gap-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 gap-x-3 gap-y-3 lg:gap-y-7">
               {projects.map((project) => (
                 <div
                   key={project.id}
@@ -649,7 +649,7 @@ function Home() {
 
         {/* FAQ SECTION */}
         <section className="bg-offwhite pt-6 pb-4">
-          <div className="container mx-auto px-6 max-w-[1400px]">
+          <div className="container mx-auto px-3 md:px-6 max-w-[1400px]">
             <p className="text-xl font-semibold text-black/90 uppercase tracking-widest mb-5 ml-1">
               Perguntas Frequentes
             </p>
@@ -720,7 +720,7 @@ function Home() {
 
       {/* FOOTER */}
       <footer className="py-6 bg-offwhite text-black">
-        <div className="container mx-auto px-6 max-w-[1400px] flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="container mx-auto px-3 md:px-6 max-w-[1400px] flex flex-col md:flex-row justify-between items-center gap-4">
           {/* Left: Logo */}
           <a
             href="#"
