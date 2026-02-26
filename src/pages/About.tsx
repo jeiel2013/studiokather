@@ -146,28 +146,28 @@ function About() {
           <nav className="hidden md:flex items-center gap-8">
             <a
               href="/"
-              className="group relative text-lg font-semibold text-black/80 hover:text-black transition-colors"
+              className="group relative text-lg font-medium text-black/80 hover:text-black transition-colors"
             >
               Home
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-olive transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a
               href="/portfolio"
-              className="group relative text-lg font-semibold text-black/80 hover:text-black transition-colors"
+              className="group relative text-lg font-medium text-black/80 hover:text-black transition-colors"
             >
               Portfolio
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-olive transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a
               href="/about"
-              className="group relative text-lg font-semibold text-black/80 hover:text-black transition-colors"
+              className="group relative text-lg font-medium text-black/80 hover:text-black transition-colors"
             >
               Sobre
               <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-olive transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a
               href="/contact"
-              className="group relative text-lg font-semibold text-black/80 hover:text-black transition-colors"
+              className="group relative text-lg font-medium text-black/80 hover:text-black transition-colors"
             >
               Contato
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-olive transition-all duration-300 group-hover:w-full"></span>
@@ -349,7 +349,7 @@ function About() {
                   <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6 text-black">
                     Identidade não nasce de um copia e cola
                   </h2>
-                  <p className="text-xl md:text-2xl text-black/60 font-light">
+                  <p className="text-xl md:text-2xl text-black/60 font-regular">
                     Aqui, passamos por 7 etapas até alcançar um resultado
                     verdadeiramente satisfatório.
                   </p>
@@ -373,7 +373,7 @@ function About() {
                         <h3 className="text-3xl md:text-4xl font-medium text-black tracking-tight">
                           {step.title}
                         </h3>
-                        <p className="text-lg md:text-xl text-black/60 font-light leading-relaxed">
+                        <p className="text-lg md:text-xl text-black/60 font-regular leading-relaxed">
                           {step.description}
                         </p>
                       </div>
@@ -426,7 +426,7 @@ function About() {
                           </svg>
                         </span>
                       </summary>
-                      <div className="mt-6 text-xl text-black/60 font-light leading-relaxed">
+                      <div className="mt-6 text-xl text-black/60 font-regular leading-relaxed">
                         {item.answer}
                       </div>
                     </details>
@@ -454,7 +454,7 @@ function About() {
           </a>
 
           {/* Center: Copyright */}
-          <p className="text-base font-bold text-black mt-1">
+          <p className="text-base font-medium text-black mt-1">
             © {currentYear} | Studio Kather
           </p>
 
