@@ -209,13 +209,13 @@ function Contact() {
               <h1 className="text-[40px] md:text-[59px] font-semibold uppercase text-black leading-tight tracking-tight mb-16">
                 Vamos conhecer seus <span className="text-white">desafios.</span>
               </h1>
-              <p className="text-lg md:text-2xl text-offwhite font-regular leading-relaxed">
+              <p className="text-lg md:text-2xl text-offwhite font-medium leading-relaxed md:max-w-120">
                 Preencha a solicitação para que possamos agendar um horário e
                 conversarmos sobre seu projeto. Se preferir, nos envie um e-mail
                 para{" "}
                 <a
                   href="mailto:ola@studiokather.com.br"
-                  className="text-offwhite font-medium hover:underline transition-all"
+                  className="text-white font-medium hover:underline transition-all"
                 >
                   ola@studiokather.com.br
                 </a>
@@ -228,7 +228,7 @@ function Contact() {
               <div className="space-y-8">
                 {/* Texto principal */}
                 <div className="space-y-3">
-                  <p className="text-lg md:text-[28px] text-black/70 font-regular leading-relaxed">
+                  <p className="text-lg md:text-[28px] text-black/80 font-medium leading-relaxed">
                     Fale comigo pelo WhatsApp para alinharmos escopo, entender
                     suas necessidades e definir o melhor caminho para a sua
                     marca.
@@ -241,7 +241,7 @@ function Contact() {
                     href="https://wa.me/5533984247165?text=Ol%C3%A1%20Katharine!%20Quero%20saber%20mais%20sobre%20os%20seus%20servi%C3%A7os!"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-8 py-3 bg-olive text-white rounded-full font-regular text-base lg:text-lg hover:bg-olive transition-all duration-300"
+                    className="inline-flex items-center gap-2 px-8 py-3 bg-olive text-white rounded-full font-regular text-base lg:text-lg transition-all duration-300"
                   >
                     {/* Ícone WhatsApp */}
                     <svg
@@ -254,7 +254,7 @@ function Contact() {
                     </svg>
                     Falar no WhatsApp
                   </a>
-                  <p className="text-lg text-black/40 pl-1">
+                  <p className="text-lg text-black/60 pl-1">
                     Seg–Sex, 8:30h – 17h
                   </p>
                 </div>
@@ -264,7 +264,7 @@ function Contact() {
 
                 {/* Por que WhatsApp */}
                 <div className="space-y-4">
-                  <p className="text-lg font-semibold text-olive uppercase tracking-widest">
+                  <p className="text-lg font-medium text-olive uppercase tracking-widest">
                     Por que iniciar pelo WhatsApp?
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -276,7 +276,7 @@ function Contact() {
                     ].map((item, index) => (
                       <div key={index} className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-olive mt-2 flex-shrink-0" />
-                        <p className="text-lg text-black/60 font-regular">
+                        <p className="text-lg text-black/70 font-medium">
                           {item}
                         </p>
                       </div>

@@ -370,7 +370,7 @@ function Home() {
                   seus clientes <br />
                   enxergam <span className="text-white">sua marca</span>
                 </h1>
-                <p className="hidden md:block md:text-xl leading-relaxed text-base font-regular lg:font-medium text-black max-w-xl mt-6 opacity-0 animate-[fadeInUp_0.8s_cubic-bezier(0.16,1,0.3,1)_0.5s_forwards]">
+                <p className="hidden md:block md:text-2xl leading-relaxed text-base font-medium text-black max-w-xl mt-6 opacity-0 animate-[fadeInUp_0.8s_cubic-bezier(0.16,1,0.3,1)_0.5s_forwards] lg:max-w-140">
                   Vamos mostrar o seu profissionalismo, <br /> eficiência e
                   valores em uma identidade visual <br /> não apenas bonita, mas
                   fundamentada em um conceito sólido e duradouro.
@@ -561,12 +561,12 @@ function Home() {
 
               {/* Content */}
               <div className="order-1 lg:order-2 bg-olive shadow-sm flex flex-col justify-center rounded-[1.5rem] p-6 md:p-10 lg:p-12">
-                <h2 className="text-[40px] md:text-[59px] font-semibold uppercase text-black leading-[1.15] mb-6 tracking-tight mt-6 md:mt-0">
+                <h2 className="text-[40px] md:text-[59px] font-semibold uppercase text-black leading-[1.15] mb-3 tracking-tight mt-6 md:mt-0">
                   <span className="text-white">Acredito </span>
                   que sua marca é o que ela transmite
                 </h2>
 
-                <p className="text-lg md:text-2xl text-offwhite font-normal leading-relaxed mb-4 mt-2 md:mt-12 text-balance mb-6 md:mb-0">
+                <p className="text-lg md:text-2xl text-offwhite font-medium leading-relaxed mb-4 mt-2 md:mt-12 text-balance md:mb-0">
                   A identidade visual é tudo o que o cliente vê e percebe sobre
                   sua marca, tanto nos meios digitais quanto no offline.
                 </p>
@@ -606,17 +606,17 @@ function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-stretch">
               {/* Text Card */}
               <div className="bg-beige shadow-sm flex flex-col justify-center rounded-[1.5rem] p-6 md:p-10 lg:p-12 md:aspect-[3/2] lg:aspect-auto">
-                <h2 className="text-[40px] md:text-[59px] font-semibold uppercase leading-[1.15] tracking-tight mb-6 text-black mt-4 md:mt-0">
+                <h2 className="text-[40px] md:text-[59px] font-semibold uppercase leading-[1.15] tracking-tight mb-4 text-black mt-4 md:mt-0">
                   Marcas sem identidade visual passam{" "}
                   <span className="text-white">despercebidas</span>
                 </h2>
-                <p className="text-base md:text-xl font-regular leading-relaxed mb-5 md:mb-10 mt-0 md:mt-7 text-black/90">
+                <p className="text-lg md:text-2xl font-medium leading-relaxed mb-5 md:mb-10 mt-0 md:mt-4 text-black/90 md:max-w-120">
                   Agende uma conversa comigo. Estou disposta a entender sobre
                   sua marca para oferecer uma solução eficiente e criativa.
                 </p>
                 <a
                   href="/contact"
-                  className="inline-block bg-olive text-white px-6 py-3 rounded-full font-medium text-base md:text-xl mt-0 md:mt-4 mb-4 md:mb-0 transition-all duration-300 hover:bg-[#5d7b32] hover:scale-105 shadow-lg shadow-olive/20 w-fit"
+                  className="inline-block bg-olive text-white px-6 py-3 rounded-full font-medium text-base md:text-xl mt-0 md:mt-2 mb-4 md:mb-0 transition-all duration-300 hover:bg-[#5d7b32] hover:scale-105 shadow-lg shadow-olive/20 w-fit"
                 >
                   Agendar uma conversa
                 </a>

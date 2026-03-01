@@ -469,15 +469,15 @@ function Portfolio() {
             <h1 className="uppercase text-[40px] md:text-[59px] font-semibold text-black leading-tight tracking-tight mb-5 md:mb-3">
               Portfolio
             </h1>
-            <p className="text-lg md:text-xl lg:text-2xl text-black/80 mb-3 md:mb-2 font-regular leading-relaxed">
+            <p className="text-lg md:text-2xl text-black/80 mb-3 md:mb-0 font-medium leading-relaxed">
               Seja bem-vindo ao meu portfólio!
             </p>
             <br />
-            <p className="text-lg md:text-xl lg:text-2xl text-black/80 mb-3 md:mb-2 font-regular leading-relaxed lg:wrap-break-word lg:max-w-140">
+            <p className="text-lg md:text-2xl text-black/80 mb-3 md:mb-2 font-medium leading-relaxed lg:wrap-break-word lg:max-w-140">
               Este espaço está sempre em atualização, então aproveite para
               explorar, mergulhar nos conceitos e se inspirar.
             </p>
-            <p className="text-lg md:text-xl lg:text-2xl text-black/80 font-regular leading-relaxed lg:wrap-break-word lg:max-w-140">
+            <p className="text-lg md:text-2xl text-black/80 font-medium leading-relaxed lg:wrap-break-word lg:max-w-140">
               Quem sabe a sua marca não aparece por aqui também?
             </p>
           </div>
