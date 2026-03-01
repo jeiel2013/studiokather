@@ -291,10 +291,10 @@ function About() {
             <div className="flex flex-col gap-10 lg:gap-14 w-full">
               {/* Text Content */}
               <div className="flex flex-col justify-center py-6 w-full">
-                <h1 className="text-[53px] md:text-5xl lg:text-[64px] font-medium leading-[1.05] max-w-180 lg:max-w-300 text-black tracking-tight mb-6">
+                <h1 className="text-[40px] md:text-[59px] font-semibold leading-[1.15] uppercase max-w-180 lg:max-w-180 text-black tracking-tight mb-6">
                   Oiê, muito prazer!{" "} <br />
                   <span className="text-olive">Katharine</span> aqui, mas pode
-                  me chamar de <span className="text-olive">Kath</span> .
+                  me chamar de <span className="text-olive">Kath</span>.
                 </h1>
                 <p className="text-black/90 text-lg md:text-xl font-regular leading-relaxed mb-4 max-w-xl lg:max-w-250">
                   Sou designer especializada em identidades visuais e fundadora

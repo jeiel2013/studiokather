@@ -206,8 +206,8 @@ function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-start">
             {/* Text Card */}
             <div className="bg-olive shadow-sm rounded-[1.5rem] p-8 md:p-10 lg:p-12 flex flex-col justify-center min-h-[400px] lg:min-h-[600px]">
-              <h1 className="text-[40px] lg:text-[65px] md:text-5xl lg:text-6xl font-semibold text-white leading-tight tracking-tight mb-16">
-                Vamos conhecer seus desafios.
+              <h1 className="text-[40px] md:text-[59px] font-semibold uppercase text-black leading-tight tracking-tight mb-16">
+                Vamos conhecer seus <span className="text-white">desafios.</span>
               </h1>
               <p className="text-lg md:text-2xl text-offwhite font-regular leading-relaxed">
                 Preencha a solicitação para que possamos agendar um horário e

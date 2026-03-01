@@ -366,9 +366,9 @@ function Home() {
               <div className="flex flex-col md:p-16 lg:p-24 min-h-[600px] md:min-h-[750px] lg:min-h-[650px] z-10 lg:justify-start p-8 md:pt-10 md:pr-10 md:pb-10 md:pl-10 relative justify-end">
                 <h1 className="leading-tight lg:uppercase md:leading-[1.3] text-balance md:text-6xl lg:text-[53px] text-3xl lg:font-bold font-medium tracking-tight text-center md:text-left mb-6 md:mb-0 text-black md:text-black">
                   Está na hora <br /> de{" "}
-                  <span className="text-beige">mudar a forma</span> <br /> como
+                  <span className="text-white">mudar a forma</span> <br /> como
                   seus clientes <br />
-                  enxergam <span className="text-beige">sua marca</span>
+                  enxergam <span className="text-white">sua marca</span>
                 </h1>
                 <p className="hidden md:block md:text-xl leading-relaxed text-base font-regular lg:font-medium text-black max-w-xl mt-6 opacity-0 animate-[fadeInUp_0.8s_cubic-bezier(0.16,1,0.3,1)_0.5s_forwards]">
                   Vamos mostrar o seu profissionalismo, <br /> eficiência e
@@ -561,8 +561,8 @@ function Home() {
 
               {/* Content */}
               <div className="order-1 lg:order-2 bg-olive shadow-sm flex flex-col justify-center rounded-[1.5rem] p-6 md:p-10 lg:p-12">
-                <h2 className="text-[40px] md:text-[59px] font-semibold text-black leading-[1.15] mb-6 tracking-tight mt-6 md:mt-0">
-                  <span className="text-beige">Acredito </span>
+                <h2 className="text-[40px] md:text-[59px] font-semibold uppercase text-black leading-[1.15] mb-6 tracking-tight mt-6 md:mt-0">
+                  <span className="text-white">Acredito </span>
                   que sua marca é o que ela transmite
                 </h2>
 
@@ -606,7 +606,7 @@ function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-stretch">
               {/* Text Card */}
               <div className="bg-beige shadow-sm flex flex-col justify-center rounded-[1.5rem] p-6 md:p-10 lg:p-12 md:aspect-[3/2] lg:aspect-auto">
-                <h2 className="text-4xl md:text-6xl font-semibold tracking-tight mb-6 text-black mt-4 md:mt-0">
+                <h2 className="text-[40px] md:text-[59px] font-semibold uppercase leading-[1.15] tracking-tight mb-6 text-black mt-4 md:mt-0">
                   Marcas sem identidade visual passam{" "}
                   <span className="text-white">despercebidas</span>
                 </h2>
