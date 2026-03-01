@@ -241,7 +241,7 @@ function Contact() {
                     href="https://wa.me/5533984247165?text=Ol%C3%A1%20Katharine!%20Quero%20saber%20mais%20sobre%20os%20seus%20servi%C3%A7os!"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-8 py-3 bg-olive text-white rounded-full font-regular text-base lg:text-lg transition-all duration-300"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-olive rounded-full text-olive text-base lg:text-xl font-medium transition-all duration-300 hover:bg-olive hover:text-white whitespace-nowrap"
                   >
                     {/* Ícone WhatsApp */}
                     <svg

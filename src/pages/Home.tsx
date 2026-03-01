@@ -379,7 +379,7 @@ function Home() {
                 <div className="mt-0 md:mt-8 md:opacity-0 md:animate-[fadeInUp_0.8s_cubic-bezier(0.16,1,0.3,1)_0.8s_forwards] flex justify-center md:justify-start">
                   <a
                     href="/about"
-                    className="group inline-flex items-center gap-2 px-8 py-3.5 border-2 border-offwhite md:border-offwhite rounded-full text-offwhite md:text-offwhite text-base md:text-lg font-normal transition-all duration-300 hover:bg-offwhite hover:text-black"
+                    className="inline-flex items-center justify-center px-6 py-3 border-2 border-offwhite rounded-full text-offwhite text-base md:text-xl font-medium transition-all duration-300 hover:bg-offwhite hover:text-black whitespace-nowrap"
                   >
                     Como trabalhamos?
                   </a>
@@ -574,22 +574,9 @@ function Home() {
                 <div className="mt-19 hidden md:block">
                   <a
                     href="/about"
-                    className="inline-flex items-center text-white font-regular text-base hover:underline decoration-1 underline-offset-4 transition-all"
+                    className="inline-flex items-center justify-center px-6 py-3 border-2 border-white rounded-full text-white text-base md:text-xl font-medium transition-all duration-300 hover:bg-white hover:text-black whitespace-nowrap"
                   >
                     Conhecer mais sobre nosso processo
-                    <svg
-                      className="ml-2 w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17 8l4 4m0 0l-4 4m4-4H3"
-                      />
-                    </svg>
                   </a>
                 </div>
               </div>
@@ -616,7 +603,7 @@ function Home() {
                 </p>
                 <a
                   href="/contact"
-                  className="inline-block bg-olive text-white px-6 py-3 rounded-full font-medium text-base md:text-xl mt-0 md:mt-2 mb-4 md:mb-0 transition-all duration-300 hover:bg-[#5d7b32] hover:scale-105 shadow-lg shadow-olive/20 w-fit"
+                  className="inline-flex items-center justify-center px-6 py-3 border-2 border-[#4e6628] bg-transparent rounded-full text-olive hover:text-white text-base md:text-xl font-medium transition-all duration-300 hover:bg-olive whitespace-nowrap w-fit"
                 >
                   Agendar uma conversa
                 </a>
