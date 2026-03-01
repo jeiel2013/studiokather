@@ -482,7 +482,7 @@ function Home() {
         {/* TESTIMONIALS SECTION */}
         <section className="pt-4 lg:pt-6 pb-10 lg:pb-17 bg-offwhite">
           <div className="container mx-auto px-3 md:px-6 max-w-[1400px]">
-            <p className="text-xl font-semibold text-black/90 uppercase tracking-widest mb-5 ml-1">
+            <p className="text-2xl font-semibold text-black/90 uppercase tracking-widest mb-5 ml-1">
               Um recado dos meus clientes
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -637,7 +637,7 @@ function Home() {
         {/* FAQ SECTION */}
         <section className="bg-offwhite pt-6 pb-4">
           <div className="container mx-auto px-3 md:px-6 max-w-[1400px]">
-            <p className="text-xl font-semibold text-black/90 uppercase tracking-widest mb-5 ml-1">
+            <p className="text-2xl font-semibold text-black/90 uppercase tracking-widest mb-5 ml-1">
               Perguntas Frequentes
             </p>
 
