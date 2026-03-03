@@ -1,0 +1,21 @@
+# Robots.txt for Studio Kather
+# Allow all search engines to crawl and index the site
+
+User-agent: *
+Allow: /
+Disallow: /node_modules/
+Disallow: *.map
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+
+# Sitemap location
+Sitemap: https://studiokather.com/sitemap.xml
+
+# Crawl delay (optional - in seconds)
+Crawl-delay: 1
