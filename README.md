@@ -1,69 +1,118 @@
-# Studio Kather
+# 🎨 Studio Kather
 
-Site institucional desenvolvido como projeto freelancer para o **Studio Kather**, construído com React, TypeScript e Vite.
+Site oficial do **Studio Kather** — desenvolvido com React, TypeScript e Vite.
 
-🔗 **Deploy:** [studiokather.vercel.app](https://studiokather.vercel.app)
-
----
-
-## 🚀 Tecnologias
-
-- [React](https://react.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Vite](https://vitejs.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
+🌐 **Acesse o site:** [https://studiokather.com](https://studiokather.com)
 
 ---
 
-## 📦 Como rodar localmente
+## 📋 Sobre o Projeto
 
-Clone o repositório e instale as dependências:
-
-```bash
-git clone https://github.com/jeiel2013/studiokather.git
-cd studiokather
-npm install
-```
-
-Inicie o servidor de desenvolvimento:
-
-```bash
-npm run dev
-```
-
-Acesse em: `http://localhost:5173`
+O Studio Kather é um site desenvolvido para apresentar o estúdio e seus serviços de forma moderna e responsiva. A aplicação foi construída com foco em performance, tipagem segura e uma ótima experiência de desenvolvimento.
 
 ---
 
-## 🏗️ Build para produção
+## 🚀 Tecnologias Utilizadas
 
-```bash
-npm run build
-```
-
-Os arquivos gerados ficam na pasta `dist/`.
+| Tecnologia                                    | Descrição                                |
+| --------------------------------------------- | ---------------------------------------- |
+| [React](https://react.dev/)                   | Biblioteca para construção de interfaces |
+| [TypeScript](https://www.typescriptlang.org/) | Superset tipado do JavaScript            |
+| [Vite](https://vitejs.dev/)                   | Bundler moderno e ultra-rápido           |
+| [Tailwind CSS](https://tailwindcss.com/)      | Framework de estilos utilitários         |
+| [ESLint](https://eslint.org/)                 | Linting e qualidade de código            |
 
 ---
 
-## 📁 Estrutura do projeto
+## 📁 Estrutura do Projeto
 
 ```
 studiokather/
-├── public/         # Arquivos estáticos
-├── src/            # Código-fonte da aplicação
-├── index.html
-├── vite.config.ts
-└── package.json
+├── public/              # Arquivos estáticos (imagens, ícones, etc.)
+├── src/                 # Código-fonte principal
+│   ├── components/      # Componentes reutilizáveis
+│   ├── pages/           # Páginas da aplicação
+│   ├── assets/          # Assets internos (imagens, fontes)
+│   └── main.tsx         # Entry point da aplicação
+├── index.html           # HTML principal
+├── vite.config.ts       # Configuração do Vite
+├── tsconfig.json        # Configuração do TypeScript
+├── postcss.config.ts    # Configuração do PostCSS
+└── package.json         # Dependências e scripts
+```
+
+---
+
+## ⚙️ Como Rodar Localmente
+
+### Pré-requisitos
+
+- [Node.js](https://nodejs.org/) v18 ou superior
+- [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/)
+
+### Instalação
+
+```bash
+# Clone o repositório
+git clone https://github.com/jeiel2013/studiokather.git
+
+# Entre na pasta do projeto
+cd studiokather
+
+# Instale as dependências
+npm install
+```
+
+### Desenvolvimento
+
+```bash
+# Inicie o servidor de desenvolvimento com hot reload
+npm run dev
+```
+
+Acesse [http://localhost:5173](http://localhost:5173) no seu navegador.
+
+### Build para Produção
+
+```bash
+# Gere a build otimizada
+npm run build
+
+# Pré-visualize a build localmente
+npm run preview
+```
+
+---
+
+## 🔍 Linting
+
+```bash
+# Verifique a qualidade do código
+npm run lint
+```
+
+O projeto utiliza ESLint com suporte a regras específicas para TypeScript e React. Para projetos em produção, recomenda-se habilitar regras com type-awareness no `eslint.config.js`:
+
+```ts
+tseslint.configs.recommendedTypeChecked,
+// ou, para regras mais rígidas:
+tseslint.configs.strictTypeChecked,
 ```
 
 ---
 
 ## 🌐 Deploy
 
-O projeto está hospedado na [Vercel](https://vercel.com), com deploy automático a partir da branch `main`.
+O site está disponível em produção em:
+
+👉 **[https://studiokather.com](https://studiokather.com)**
 
 ---
 
-## 👨‍💻 Desenvolvido por
+## 📄 Licença
 
-**Jeiel** — [github.com/jeiel2013](https://github.com/jeiel2013)
+Este projeto é de uso privado. Todos os direitos reservados ao **Studio Kather**.
+
+---
+
+<p align="center">Feito com ❤️ para o Studio Kather</p>
