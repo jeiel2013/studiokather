@@ -385,7 +385,7 @@ function About() {
               {/* FAQ */}
               <div className="flex flex-col pt-20 border-t border-black/5">
                 <div className="mb-2">
-                  <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6 text-black uppercase">
+                  <h2 className="text-2xl font-semibold tracking-widest mb-5 ml-1 text-black uppercase">
                     Perguntas Frequentes
                   </h2>
                 </div>
@@ -402,7 +402,7 @@ function About() {
                       }}
                     >
                       <summary className="flex justify-between items-start cursor-pointer list-none outline-none [&::-webkit-details-marker]:hidden gap-4">
-                        <span className="text-2xl md:text-3xl font-medium text-black/90 group-hover:text-olive transition-colors leading-tight">
+                        <span className="text-lg md:text-xl font-medium text-black/90 group-hover:text-olive transition-colors leading-tight">
                           {item.question}
                         </span>
                         <span
@@ -426,7 +426,7 @@ function About() {
                           </svg>
                         </span>
                       </summary>
-                      <div className="mt-6 text-xl text-black/60 font-regular leading-relaxed">
+                      <div className="mt-3 text-lg text-black/60 font-regular leading-relaxed lg:max-w-210">
                         {item.answer}
                       </div>
                     </details>

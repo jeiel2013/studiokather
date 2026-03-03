@@ -624,7 +624,7 @@ function Home() {
         {/* FAQ SECTION */}
         <section className="bg-offwhite pt-6 pb-4">
           <div className="container mx-auto px-3 md:px-6 max-w-[1400px]">
-            <p className="text-4xl md:text-5xl font-semibold text-black/90 uppercase tracking-tight mb-5 ml-1">
+            <p className="text-2xl font-semibold text-black/90 uppercase tracking-widest mb-5 ml-1">
               Perguntas Frequentes
             </p>
 
@@ -640,7 +640,7 @@ function Home() {
                   }}
                 >
                   <summary className="flex justify-between items-start cursor-pointer list-none outline-none [&::-webkit-details-marker]:hidden gap-4">
-                    <span className="text-2xl md:text-3xl font-medium text-black/90 group-hover:text-olive transition-colors leading-tight">
+                    <span className="text-lg md:text-xl font-medium text-black/90 group-hover:text-olive transition-colors leading-tight">
                       {item.question}
                     </span>
                     <span
@@ -662,7 +662,7 @@ function Home() {
                       </svg>
                     </span>
                   </summary>
-                  <div className="mt-6 text-xl text-black/60 font-regular leading-relaxed lg:max-w-210">
+                  <div className="mt-3 text-lg text-black/60 font-regular leading-relaxed lg:max-w-210">
                     {item.answer}
                   </div>
                 </details>
@@ -671,7 +671,7 @@ function Home() {
 
             <a
               href="/about"
-              className="inline-flex items-center justify-center px-6 py-3 border-2 border-olive bg-transparent rounded-full text-olive text-lg font-bold transition-all duration-300 hover:bg-olive hover:text-white whitespace-nowrap w-fit mt-6"
+              className="inline-flex items-center justify-center px-6 py-3 border-2 border-olive bg-transparent rounded-full text-olive text-base font-bold transition-all duration-300 hover:bg-olive hover:text-white whitespace-nowrap w-fit mt-6"
             >
               Ver todas as perguntas
             </a>
