@@ -267,6 +267,28 @@ function Portfolio() {
     }
   }, [isMenuOpen, selectedProject]);
 
+  // Fechar lightbox com tecla Escape e navegar com setas do teclado
+  useEffect(() => {
+    if (!lightboxOpen || !selectedProject) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setLightboxOpen(false);
+      } else if (e.key === "ArrowRight") {
+        setLightboxIndex((prev) =>
+          prev === selectedProject.images.length - 1 ? 0 : prev + 1,
+        );
+      } else if (e.key === "ArrowLeft") {
+        setLightboxIndex((prev) =>
+          prev === 0 ? selectedProject.images.length - 1 : prev - 1,
+        );
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [lightboxOpen, selectedProject]);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -570,10 +592,8 @@ function Portfolio() {
                 <div
                   className="relative aspect-video rounded-xl overflow-hidden bg-black/5 md:cursor-default cursor-zoom-in"
                   onClick={() => {
-                    if (window.innerWidth < 768) {
-                      setLightboxIndex(currentImageIndex);
-                      setLightboxOpen(true);
-                    }
+                    setLightboxIndex(currentImageIndex);
+                    setLightboxOpen(true);
                   }}
                 >
                   <img
@@ -609,12 +629,57 @@ function Portfolio() {
                     </>
                   )}
 
+                  {/* Dica de clique para ampliar - apenas desktop */}
+                  <div className="hidden md:flex absolute bottom-14 left-1/2 -translate-x-1/2 items-center gap-2 bg-black/40 text-white/80 text-xs font-medium px-3 py-1.5 rounded-full pointer-events-none select-none backdrop-blur-sm">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-3.5 h-3.5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                      />
+                    </svg>
+                    Clique na imagem para ampliar
+                  </div>
+
                   {/* Image Counter */}
                   {selectedProject.images.length > 1 && (
                     <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/70 text-white px-4 py-2 rounded-full text-sm font-medium">
                       {currentImageIndex + 1} / {selectedProject.images.length}
                     </div>
                   )}
+
+                  {/* Botão de ampliar - apenas desktop */}
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setLightboxIndex(currentImageIndex);
+                      setLightboxOpen(true);
+                    }}
+                    className="hidden md:flex absolute top-3 right-3 bg-black/50 hover:bg-black/75 text-white p-2 rounded-full transition-all shadow-lg"
+                    aria-label="Ampliar imagem"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-5 h-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                      />
+                    </svg>
+                  </button>
 
                   {/* Ícone de toque - apenas mobile */}
                   <div className="md:hidden absolute top-3 right-3 bg-black/50 text-white p-1.5 rounded-full pointer-events-none">
@@ -654,22 +719,23 @@ function Portfolio() {
                 )}
               </div>
 
-              {/* Lightbox Mobile */}
+              {/* Lightbox — mobile e desktop */}
               {lightboxOpen && (
                 <div
-                  className="md:hidden fixed inset-0 bg-black z-[60] flex items-center justify-center"
+                  className="fixed inset-0 bg-black z-[60] flex items-center justify-center"
                   onClick={() => setLightboxOpen(false)}
                 >
                   {/* Botão fechar */}
                   <button
                     onClick={() => setLightboxOpen(false)}
-                    className="absolute top-4 right-4 bg-white/20 text-white p-2 rounded-full z-10"
+                    className="absolute top-4 right-4 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full z-10 transition-colors"
+                    aria-label="Fechar lightbox"
                   >
                     <X className="w-6 h-6" />
                   </button>
 
                   {/* Contador */}
-                  <div className="absolute top-4 left-1/2 -translate-x-1/2 bg-black/60 text-white px-4 py-1.5 rounded-full text-sm z-10">
+                  <div className="absolute top-4 left-1/2 -translate-x-1/2 bg-black/60 text-white px-4 py-1.5 rounded-full text-sm z-10 font-medium">
                     {lightboxIndex + 1} / {selectedProject.images.length}
                   </div>
 
@@ -694,7 +760,8 @@ function Portfolio() {
                               : prev - 1,
                           );
                         }}
-                        className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/30 text-white p-3 rounded-full"
+                        className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/60 text-white p-3 rounded-full transition-colors"
+                        aria-label="Imagem anterior"
                       >
                         <ChevronLeft className="w-7 h-7" />
                       </button>
@@ -707,7 +774,8 @@ function Portfolio() {
                               : prev + 1,
                           );
                         }}
-                        className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/30 text-white p-3 rounded-full"
+                        className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/60 text-white p-3 rounded-full transition-colors"
+                        aria-label="Próxima imagem"
                       >
                         <ChevronRight className="w-7 h-7" />
                       </button>
