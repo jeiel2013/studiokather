@@ -217,7 +217,7 @@ function Contact() {
                   href="mailto:ola@studiokather.com.br"
                   className="text-white font-medium hover:underline transition-all"
                 >
-                  ola@studiokather.com.br
+                  contato@studiokather.com.br
                 </a>
               </p>
             </div>
