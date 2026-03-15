@@ -14,6 +14,18 @@ import {
 
 const currentYear = new Date().getFullYear();
 
+const mcrone = import.meta.glob<string>(
+  "/src/assets/Images/mcrone/*.{png,jpg,jpeg,webp}",
+  {
+    eager: true,
+    import: "default",
+  },
+);
+const mcroneImages = Object.values(mcrone).map((img, index) => ({
+  url: img,
+  alt: `Minas McRone - Aplicação ${index + 1}`,
+}));
+
 const mazamad = import.meta.glob<string>(
   "/src/assets/Images/mazamad/*.{png,jpg,jpeg,webp}",
   {
