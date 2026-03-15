@@ -14,6 +14,18 @@ import {
 
 const currentYear = new Date().getFullYear();
 
+const madalie = import.meta.glob<string>(
+  "/src/assets/Images/madalie/*.{png,jpg,jpeg,webp}",
+  {
+    eager: true,
+    import: "default",
+  },
+);
+const madalieImages = Object.values(madalie).map((img, index) => ({
+  url: img,
+  alt: `Madalie - Aplicação ${index + 1}`,
+}));
+
 const regra = import.meta.glob<string>(
   "/src/assets/Images/regra/*.{png,jpg,jpeg,webp}",
   {
@@ -237,6 +249,50 @@ const projects: Project[] = [
       "Zadda foi desenvolvida para expressar personalidade, beleza e atitude com identidade marcante. O projeto visual valoriza força feminina, estilo contemporâneo e presença estética refinada. A marca ganha destaque através de elementos visuais expressivos, criando conexão direta com o público e posicionamento autêntico.",
     coverImage: zaddaImages[0]?.url,
     images: zaddaImages,
+  },
+  {
+    id: 10,
+    name: "Madalie — Acessórios de luxo",
+    type: "Identidade Visual e Naming",
+    year: "2025",
+    location: "Goiânia, GO",
+    description:
+      "A identidade visual de Madalie foi criada para expressar elegância, simbolismo e sofisticação atemporal no universo dos acessórios de luxo. Inspirada no Art Nouveau e em elementos botânicos, a marca traduz delicadeza, curadoria e exclusividade. Tipografia refinada, detalhes florais e paleta em verde-musgo com tons metálicos constroem uma atmosfera de luxo discreto, onde cada peça representa presença, significado e identidade feminina.",
+    coverImage: madalieImages[0]?.url,
+    images: madalieImages,
+  },
+  {
+    id: 11,
+    name: "Dra. Ana Luiza Xavier - Clínica Geral & Gastroenterologia",
+    type: "Identidade Visual",
+    year: "2026",
+    location: "Coroaci, MG",
+    description:
+      "A identidade visual da Dra. Ana Luiza Xavier foi desenvolvida para traduzir uma medicina mais humana, próxima e confiável. A proposta equilibra profissionalismo e acolhimento, refletindo cuidado, responsabilidade e escuta no atendimento. A paleta em tons terrosos e bordô transmite maturidade e estabilidade, enquanto a tipografia elegante e as formas orgânicas reforçam uma presença contemporânea, sensível e acessível.",
+    coverImage: anaImages[0]?.url,
+    images: anaImages,
+  },
+  {
+    id: 12,
+    name: "MazaMad",
+    type: "Identidade Visual",
+    year: "2024",
+    location: "Mococa, SP",
+    description:
+      "A identidade visual da MazaMad foi desenvolvida para comunicar robustez, confiança e eficiência no setor industrial. A construção tipográfica geométrica e em caixa alta transmite precisão e estabilidade, enquanto a paleta em verde petróleo e laranja expressa inovação e energia. O resultado é uma marca sólida e contemporânea, alinhada ao mercado moveleiro e ao posicionamento técnico do Grupo Maza.",
+    coverImage: mazamadImages[0]?.url,
+    images: mazamadImages,
+  },
+  {
+    id: 13,
+    name: "Minas McRone",
+    type: "Identidade Visual",
+    year: "2025",
+    location: "Coroaci, MG",
+    description:
+      "Minas McRone nasce como uma marca de bebidas que celebra Minas Gerais como território, cultura e estado de espírito. Inspirada nas paisagens e símbolos mineiros, sua identidade equilibra tradição e contemporaneidade. O sistema visual minimalista, aliado a uma paleta natural e tipografia precisa, traduz autenticidade, origem e sofisticação, permitindo sustentar diferentes rótulos e experiências com consistência e personalidade.",
+    coverImage: mcroneImages[0]?.url,
+    images: mcroneImages,
   },
 ];
 
