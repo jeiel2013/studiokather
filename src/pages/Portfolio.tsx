@@ -14,6 +14,18 @@ import {
 
 const currentYear = new Date().getFullYear();
 
+const sterlane = import.meta.glob<string>(
+  "/src/assets/Images/sterlane/*.{png,jpg,jpeg,webp}",
+  {
+    eager: true,
+    import: "default",
+  },
+);
+const sterlaneImages = Object.values(sterlane).map((img, index) => ({
+  url: img,
+  alt: `Sterlane Bispo - Psicóloga Clínica - Aplicação ${index + 1}`,
+}));
+
 const mcrone = import.meta.glob<string>(
   "/src/assets/Images/mcrone/*.{png,jpg,jpeg,webp}",
   {
@@ -330,6 +342,17 @@ const projects: Project[] = [
     coverImage: mcroneImages[0]?.url,
     images: mcroneImages,
   },
+  {
+    id: 14,
+    name: "Sterlane Bispo",
+    type: "Identidade Visual",
+    year: "2026",
+    location: "Minaçu, GO",
+    description:
+      "A identidade visual de Sterlane Bispo foi desenvolvida para refletir sensibilidade, acolhimento e evolução pessoal no processo terapêutico. Inspirada na simbologia da natureza e da flor de lótus, a marca traduz crescimento, transformação e equilíbrio emocional. A paleta em tons terrosos e naturais reforça calma e estabilidade, enquanto a tipografia elegante comunica maturidade, escuta e cuidado no atendimento clínico.",
+    coverImage: sterlaneImages[0]?.url,
+    images: sterlaneImages,
+  }
 ];
 
 function Portfolio() {
