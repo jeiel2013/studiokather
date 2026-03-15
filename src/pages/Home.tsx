@@ -8,6 +8,13 @@ import About from "../assets/Images/About.jpg";
 import Contact from "../assets/Images/Contact.jpg";
 import "../styles/home.css";
 
+import image1 from "../assets/Images/home/Capas portfólio -04.webp";
+import image2 from "../assets/Images/home/Capas portfólio -07.webp";
+import image3 from "../assets/Images/home/Capas portfólio -08.webp";
+import image4 from "../assets/Images/home/Capas portfólio -11.webp";
+import image5 from "../assets/Images/home/Capas portfólio -12.webp";
+import image6 from "../assets/Images/home/Capas portfólio -14.webp";
+
 import {
   FaPinterest,
   FaBehance,
@@ -101,45 +108,45 @@ const faqItemsHome = [
 const projects: Project[] = [
   {
     id: 1,
-    title: "Botanica Studio",
-    category: "Visual Identity",
+    title: "MazaMad",
+    category: "Identidade Visual",
     image:
-      "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg",
+      image1,
   },
   {
     id: 2,
-    title: "Lumina Arc",
-    category: "Rebranding",
+    title: "Lavoy",
+    category: "Identidade Visual & Naming",
     image:
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop",
+      image2,
   },
   {
     id: 3,
-    title: "Nordic Home",
-    category: "Packaging",
+    title: "Essência Jeans",
+    category: "Identidade Visual",
     image:
-      "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=1000&auto=format&fit=crop",
+      image3,
   },
   {
     id: 4,
-    title: "Aura Tech",
-    category: "Web Design",
+    title: "Zadda",
+    category: "Identidade Visual & Naming",
     image:
-      "https://images.unsplash.com/photo-1634152962476-4b8a00e1915c?q=80&w=1000&auto=format&fit=crop",
+      image4,
   },
   {
     id: 5,
-    title: "Essence",
-    category: "Editorial",
+    title: "Regra",
+    category: "Identidade Visual",
     image:
-      "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?q=80&w=1000&auto=format&fit=crop",
+      image5,
   },
   {
     id: 6,
-    title: "Kinetic",
-    category: "Brand Strategy",
+    title: "Bárbara Benevenutto",
+    category: "Identidade Visual",
     image:
-      "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4734259a-bad7-422f-981e-ce01e79184f2_1600w.jpg",
+      image6,
   },
 ];
 
