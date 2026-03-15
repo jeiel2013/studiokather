@@ -14,6 +14,18 @@ import {
 
 const currentYear = new Date().getFullYear();
 
+const ana = import.meta.glob<string>(
+  "/src/assets/Images/ana/*.{png,jpg,jpeg,webp,mov}",
+  {
+    eager: true,
+    import: "default",
+  },
+);
+const anaImages = Object.values(ana).map((img, index) => ({
+  url: img,
+  alt: `Dr. Ana Luiza Xavier - Aplicação ${index + 1}`,
+}));
+
 const madalie = import.meta.glob<string>(
   "/src/assets/Images/madalie/*.{png,jpg,jpeg,webp}",
   {
