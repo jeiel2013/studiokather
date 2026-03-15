@@ -14,173 +14,178 @@ import {
 
 const currentYear = new Date().getFullYear();
 
+// Sort universal: "capa" / "0..." sempre primeiro,
+// depois ordena pelo número entre parênteses "Nome (2)"
+// ou pelo último número no nome "Nome-13", "Prancheta 1-13"
+const naturalSort = ([a]: [string, unknown], [b]: [string, unknown]) => {
+  const num = (s: string) => {
+    const filename =
+      s
+        .replace(/\.[^.]+$/, "")
+        .split("/")
+        .pop() || "";
+    if (/^0/i.test(filename) || /^capa$/i.test(filename)) return -1;
+    const paren = filename.match(/\((\d+)\)/);
+    if (paren) return parseInt(paren[1]);
+    const last = filename.match(/(\d+)[^\d]*$/);
+    return last ? parseInt(last[1]) : 999;
+  };
+  return num(a) - num(b);
+};
+
 const sterlane = import.meta.glob<string>(
   "/src/assets/Images/sterlane/*.{png,jpg,jpeg,webp}",
-  {
-    eager: true,
-    import: "default",
-  },
+  { eager: true, import: "default" },
 );
-const sterlaneImages = Object.values(sterlane).map((img, index) => ({
-  url: img,
-  alt: `Sterlane Bispo - Psicóloga Clínica - Aplicação ${index + 1}`,
-}));
+const sterlaneImages = Object.entries(sterlane)
+  .sort(naturalSort)
+  .map(([, img], index) => ({
+    url: img,
+    alt: `Sterlane Bispo - Psicóloga Clínica - Aplicação ${index + 1}`,
+  }));
 
 const mcrone = import.meta.glob<string>(
   "/src/assets/Images/mcrone/*.{png,jpg,jpeg,webp}",
-  {
-    eager: true,
-    import: "default",
-  },
+  { eager: true, import: "default" },
 );
-const mcroneImages = Object.values(mcrone).map((img, index) => ({
-  url: img,
-  alt: `Minas McRone - Aplicação ${index + 1}`,
-}));
+const mcroneImages = Object.entries(mcrone)
+  .sort(naturalSort)
+  .map(([, img], index) => ({
+    url: img,
+    alt: `Minas McRone - Aplicação ${index + 1}`,
+  }));
 
 const mazamad = import.meta.glob<string>(
   "/src/assets/Images/mazamad/*.{png,jpg,jpeg,webp}",
-  {
-    eager: true,
-    import: "default",
-  },
+  { eager: true, import: "default" },
 );
-const mazamadImages = Object.values(mazamad).map((img, index) => ({
-  url: img,
-  alt: `MazaMad - Aplicação ${index + 1}`,
-}));
+const mazamadImages = Object.entries(mazamad)
+  .sort(naturalSort)
+  .map(([, img], index) => ({
+    url: img,
+    alt: `MazaMad - Aplicação ${index + 1}`,
+  }));
 
 const ana = import.meta.glob<string>(
   "/src/assets/Images/ana/*.{png,jpg,jpeg,webp,mov}",
-  {
-    eager: true,
-    import: "default",
-  },
+  { eager: true, import: "default" },
 );
-const anaImages = Object.values(ana).map((img, index) => ({
-  url: img,
-  alt: `Dr. Ana Luiza Xavier - Aplicação ${index + 1}`,
-}));
+const anaImages = Object.entries(ana)
+  .sort(naturalSort)
+  .map(([, img], index) => ({
+    url: img,
+    alt: `Dr. Ana Luiza Xavier - Aplicação ${index + 1}`,
+  }));
 
 const madalie = import.meta.glob<string>(
   "/src/assets/Images/madalie/*.{png,jpg,jpeg,webp}",
-  {
-    eager: true,
-    import: "default",
-  },
+  { eager: true, import: "default" },
 );
-const madalieImages = Object.values(madalie).map((img, index) => ({
-  url: img,
-  alt: `Madalie - Aplicação ${index + 1}`,
-}));
+const madalieImages = Object.entries(madalie)
+  .sort(naturalSort)
+  .map(([, img], index) => ({
+    url: img,
+    alt: `Madalie - Aplicação ${index + 1}`,
+  }));
 
 const regra = import.meta.glob<string>(
   "/src/assets/Images/regra/*.{png,jpg,jpeg,webp}",
-  {
-    eager: true,
-    import: "default",
-  },
+  { eager: true, import: "default" },
 );
-const regraImages = Object.values(regra).map((img, index) => ({
-  url: img,
-  alt: `Docidade - Aplicação ${index + 1}`,
-}));
+const regraImages = Object.entries(regra)
+  .sort(naturalSort)
+  .map(([, img], index) => ({
+    url: img,
+    alt: `Regra - Aplicação ${index + 1}`,
+  }));
 
 const essenciaJeans = import.meta.glob<string>(
   "/src/assets/Images/essenciaJeans/*.{png,jpg,jpeg,webp}",
-  {
-    eager: true,
-    import: "default",
-  },
+  { eager: true, import: "default" },
 );
-const essenciaJeansImages = Object.values(essenciaJeans).map((img, index) => ({
-  url: img,
-  alt: `Docidade - Aplicação ${index + 1}`,
-}));
+const essenciaJeansImages = Object.entries(essenciaJeans)
+  .sort(naturalSort)
+  .map(([, img], index) => ({
+    url: img,
+    alt: `Essência Jeans - Aplicação ${index + 1}`,
+  }));
 
 const docidade = import.meta.glob<string>(
   "/src/assets/Images/docidade/*.{png,jpg,jpeg,webp}",
-  {
-    eager: true,
-    import: "default",
-  },
+  { eager: true, import: "default" },
 );
-const docidadeImages = Object.values(docidade).map((img, index) => ({
-  url: img,
-  alt: `Docidade - Aplicação ${index + 1}`,
-}));
+const docidadeImages = Object.entries(docidade)
+  .sort(naturalSort)
+  .map(([, img], index) => ({
+    url: img,
+    alt: `Docidade - Aplicação ${index + 1}`,
+  }));
 
 const barbara = import.meta.glob<string>(
   "/src/assets/Images/barbara/*.{png,jpg,jpeg,webp}",
-  {
-    eager: true,
-    import: "default",
-  },
+  { eager: true, import: "default" },
 );
-const barbaraImages = Object.values(barbara).map((img, index) => ({
-  url: img,
-  alt: `Bárbara Benevenutto - Aplicação ${index + 1}`,
-}));
+const barbaraImages = Object.entries(barbara)
+  .sort(naturalSort)
+  .map(([, img], index) => ({
+    url: img,
+    alt: `Bárbara Benevenutto - Aplicação ${index + 1}`,
+  }));
 
 const maite = import.meta.glob<string>(
   "/src/assets/Images/maite/*.{png,jpg,jpeg,webp}",
-  {
-    eager: true,
-    import: "default",
-  },
+  { eager: true, import: "default" },
 );
-const maiteImages = Object.values(maite).map((img, index) => ({
-  url: img,
-  alt: `Escola da Crinaça Interior - Aplicação ${index + 1}`,
-}));
+const maiteImages = Object.entries(maite)
+  .sort(naturalSort)
+  .map(([, img], index) => ({
+    url: img,
+    alt: `Maitê Ferreira - Aplicação ${index + 1}`,
+  }));
 
 const pastro = import.meta.glob<string>(
   "/src/assets/Images/pastro/*.{png,jpg,jpeg,webp}",
-  {
-    eager: true,
-    import: "default",
-  },
+  { eager: true, import: "default" },
 );
-const pastroImages = Object.values(pastro).map((img, index) => ({
-  url: img,
-  alt: `Escola da Crinaça Interior - Aplicação ${index + 1}`,
-}));
+const pastroImages = Object.entries(pastro)
+  .sort(naturalSort)
+  .map(([, img], index) => ({
+    url: img,
+    alt: `Pastro - Aplicação ${index + 1}`,
+  }));
 
 const prospere = import.meta.glob<string>(
   "/src/assets/Images/prospere/*.{png,jpg,jpeg,webp}",
-  {
-    eager: true,
-    import: "default",
-  },
+  { eager: true, import: "default" },
 );
-const prospereImages = Object.values(prospere).map((img, index) => ({
-  url: img,
-  alt: `Escola da Crinaça Interior - Aplicação ${index + 1}`,
-}));
+const prospereImages = Object.entries(prospere)
+  .sort(naturalSort)
+  .map(([, img], index) => ({
+    url: img,
+    alt: `Prospere - Aplicação ${index + 1}`,
+  }));
 
 const zadda = import.meta.glob<string>(
   "/src/assets/Images/zadda/*.{png,jpg,jpeg,webp}",
-  {
-    eager: true,
-    import: "default",
-  },
+  { eager: true, import: "default" },
 );
-const zaddaImages = Object.values(zadda).map((img, index) => ({
-  url: img,
-  alt: `Escola da Crinaça Interior - Aplicação ${index + 1}`,
-}));
+const zaddaImages = Object.entries(zadda)
+  .sort(naturalSort)
+  .map(([, img], index) => ({
+    url: img,
+    alt: `Zadda - Aplicação ${index + 1}`,
+  }));
 
 const escolaCrianca = import.meta.glob<string>(
   "/src/assets/Images/escolaCrianca/*.{png,jpg,jpeg,webp}",
-  {
-    eager: true,
-    import: "default",
-  },
+  { eager: true, import: "default" },
 );
-const escolaCriancaImages = Object.values(escolaCrianca).map((img, index) => ({
-  url: img,
-  alt: `Escola da Crinaça Interior - Aplicação ${index + 1}`,
-}));
+const escolaCriancaImages = Object.entries(escolaCrianca)
+  .sort(naturalSort)
+  .map(([, img], index) => ({
+    url: img,
+    alt: `Escola da Criança Interior - Aplicação ${index + 1}`,
+  }));
 
 interface ProjectImage {
   url: string;
@@ -300,7 +305,7 @@ const projects: Project[] = [
   },
   {
     id: 10,
-    name: "Madalie — Acessórios de luxo",
+    name: "Madaliê — Acessórios de luxo",
     type: "Identidade Visual e Naming",
     year: "2025",
     location: "Goiânia, GO",
@@ -352,8 +357,48 @@ const projects: Project[] = [
       "A identidade visual de Sterlane Bispo foi desenvolvida para refletir sensibilidade, acolhimento e evolução pessoal no processo terapêutico. Inspirada na simbologia da natureza e da flor de lótus, a marca traduz crescimento, transformação e equilíbrio emocional. A paleta em tons terrosos e naturais reforça calma e estabilidade, enquanto a tipografia elegante comunica maturidade, escuta e cuidado no atendimento clínico.",
     coverImage: sterlaneImages[0]?.url,
     images: sterlaneImages,
-  }
+  },
 ];
+
+// Renderiza <video> para .mov/.mp4/.webm, e <img> para o resto
+const MediaItem = ({
+  url,
+  alt,
+  className,
+  draggable,
+  onClick,
+}: {
+  url: string;
+  alt: string;
+  className?: string;
+  draggable?: boolean;
+  onClick?: (e: React.MouseEvent) => void;
+}) => {
+  const isVideo = /\.(mov|mp4|webm)$/i.test(url);
+
+  if (isVideo) {
+    return (
+      <video
+        src={url}
+        className={className}
+        controls
+        playsInline
+        preload="metadata"
+        onClick={onClick}
+      />
+    );
+  }
+
+  return (
+    <img
+      src={url}
+      alt={alt}
+      className={className}
+      draggable={draggable}
+      onClick={onClick}
+    />
+  );
+};
 
 function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -369,7 +414,6 @@ function Portfolio() {
     const handleMouseMove = (e: MouseEvent) => {
       setCursorPosition({ x: e.clientX, y: e.clientY });
     };
-
     document.addEventListener("mousemove", handleMouseMove);
     return () => document.removeEventListener("mousemove", handleMouseMove);
   }, []);
@@ -382,7 +426,6 @@ function Portfolio() {
     }
   }, [isMenuOpen, selectedProject]);
 
-  // Fechar lightbox com tecla Escape e navegar com setas do teclado
   useEffect(() => {
     if (!lightboxOpen || !selectedProject) return;
 
@@ -404,13 +447,8 @@ function Portfolio() {
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [lightboxOpen, selectedProject]);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
 
   const openProject = (project: Project) => {
     setSelectedProject(project);
@@ -532,70 +570,33 @@ function Portfolio() {
         </div>
       </header>
 
-      {/* Mobile Menu - Fora do Header */}
+      {/* Mobile Menu */}
       <div
         id="mobile-menu"
         className={`fixed inset-0 bg-beige z-40 flex flex-col items-center justify-center gap-8 transition-all duration-300 md:hidden ${
           isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
-        <a
-          href="/"
-          onClick={closeMenu}
-          className="group relative text-4xl font-medium text-black hover:text-olive transition-colors"
-        >
-          Home
-          <span
-            className={`absolute left-0 -bottom-2 h-1 bg-olive transition-all duration-300 ${
-              location.pathname === "/" ? "w-full" : "w-0 group-hover:w-full"
-            }`}
-          ></span>
-        </a>
-
-        <a
-          href="/portfolio"
-          onClick={closeMenu}
-          className="group relative text-4xl font-medium text-black hover:text-olive transition-colors"
-        >
-          Portfolio
-          <span
-            className={`absolute left-0 -bottom-2 h-1 bg-olive transition-all duration-300 ${
-              location.pathname === "/portfolio"
-                ? "w-full"
-                : "w-0 group-hover:w-full"
-            }`}
-          ></span>
-        </a>
-
-        <a
-          href="/about"
-          onClick={closeMenu}
-          className="group relative text-4xl font-medium text-black hover:text-olive transition-colors"
-        >
-          Sobre
-          <span
-            className={`absolute left-0 -bottom-2 h-1 bg-olive transition-all duration-300 ${
-              location.pathname === "/about"
-                ? "w-full"
-                : "w-0 group-hover:w-full"
-            }`}
-          ></span>
-        </a>
-
-        <a
-          href="/contact"
-          onClick={closeMenu}
-          className="group relative text-4xl font-medium text-black hover:text-olive transition-colors"
-        >
-          Contato
-          <span
-            className={`absolute left-0 -bottom-2 h-1 bg-olive transition-all duration-300 ${
-              location.pathname === "/contact"
-                ? "w-full"
-                : "w-0 group-hover:w-full"
-            }`}
-          ></span>
-        </a>
+        {[
+          { href: "/", label: "Home" },
+          { href: "/portfolio", label: "Portfolio" },
+          { href: "/about", label: "Sobre" },
+          { href: "/contact", label: "Contato" },
+        ].map(({ href, label }) => (
+          <a
+            key={href}
+            href={href}
+            onClick={closeMenu}
+            className="group relative text-4xl font-medium text-black hover:text-olive transition-colors"
+          >
+            {label}
+            <span
+              className={`absolute left-0 -bottom-2 h-1 bg-olive transition-all duration-300 ${
+                location.pathname === href ? "w-full" : "w-0 group-hover:w-full"
+              }`}
+            ></span>
+          </a>
+        ))}
       </div>
 
       {/* MAIN CONTENT */}
@@ -632,7 +633,6 @@ function Portfolio() {
                   alt={project.name}
                   className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
                 />
-                {/* Desktop Hover Overlay */}
                 <div className="hidden md:flex absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex-col items-center justify-center text-center p-6 backdrop-blur-[2px]">
                   <h3 className="text-offwhite text-2xl lg:text-3xl font-semibold mb-3 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     {project.name}
@@ -705,17 +705,17 @@ function Portfolio() {
               {/* Image Carousel */}
               <div className="relative">
                 <div
-                  className="relative aspect-video rounded-xl overflow-hidden bg-black/5 md:cursor-default cursor-zoom-in"
+                  className="relative aspect-video rounded-xl overflow-hidden bg-black/5 cursor-zoom-in"
                   onClick={() => {
                     setLightboxIndex(currentImageIndex);
                     setLightboxOpen(true);
                   }}
                 >
-                  <img
-                    src={selectedProject.images[currentImageIndex].url}
+                  <MediaItem
+                    url={selectedProject.images[currentImageIndex].url}
                     alt={selectedProject.images[currentImageIndex].alt}
                     className="w-full h-full object-cover select-none"
-                    draggable="false"
+                    draggable={false}
                   />
 
                   {/* Navigation Arrows - apenas desktop */}
@@ -854,12 +854,12 @@ function Portfolio() {
                     {lightboxIndex + 1} / {selectedProject.images.length}
                   </div>
 
-                  {/* Imagem */}
-                  <img
-                    src={selectedProject.images[lightboxIndex].url}
+                  {/* Mídia */}
+                  <MediaItem
+                    url={selectedProject.images[lightboxIndex].url}
                     alt={selectedProject.images[lightboxIndex].alt}
                     className="max-w-full max-h-full object-contain select-none"
-                    draggable="false"
+                    draggable={false}
                     onClick={(e) => e.stopPropagation()}
                   />
 
@@ -916,11 +916,9 @@ function Portfolio() {
               className="h-7 w-auto ml-3 md:ml-0"
             />
           </a>
-
           <p className="text-base font-medium text-black mt-1">
             © {currentYear} | Studio Kather
           </p>
-
           <div className="flex gap-4">
             <a
               href="https://pin.it/2flz87bqI"
