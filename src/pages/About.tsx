@@ -10,6 +10,8 @@ import {
   FaTiktok,
 } from "react-icons/fa";
 
+import ImageHero from "../assets/Images/HeroAbout.webp"
+
 const currentYear = new Date().getFullYear();
 
 interface FAQItem {
@@ -285,54 +287,57 @@ function About() {
         {/* HERO SECTION */}
         <section
           id="home"
-          className="pt-15 md:pt-28 pb-6 lg:pb-0 animate-fade-in-up"
+          className="pt-20 md:pt-28 pb-6 lg:pb-0 animate-fade-in-up"
         >
           <div className="container mx-auto px-6 max-w-[1400px]">
-            <div className="flex flex-col gap-10 lg:gap-14 w-full">
-              {/* Text Content */}
-              <div className="flex flex-col justify-center py-6 w-full">
-                <h1 className="text-[40px] md:text-[59px] font-semibold leading-[1.15] uppercase max-w-180 lg:max-w-180 text-black tracking-tight mb-6">
-                  Oiê, muito prazer!{" "} <br />
-                  <span className="text-olive">Katharine</span> aqui, mas pode
-                  me chamar de <span className="text-olive">Kath</span>.
-                </h1>
-                <p className="text-black/90 text-lg md:text-2xl font-medium leading-relaxed mb-4 max-w-xl lg:max-w-250">
-                  Sou designer especializada em identidades visuais e fundadora
-                  do Studio Kather. Mais do que estética bonita, entrego
-                  estrutura, clareza e emoção. Cada projeto nasce com base em
-                  estratégia, pesquisa e escuta profunda, porque identidade
-                  visual não é só sobre aparência, é sobre posicionamento.
-                </p>
-                <p className="text-black/90 text-lg md:text-2xl font-medium leading-relaxed mb-4 max-w-xl lg:max-w-250">
-                  Acredito que marcas são feitas de pessoas, e por isso precisam
-                  ser vivas, únicas e intencionais.
-                </p>
-                <p className="text-black/90 text-lg md:text-2xl font-medium leading-relaxed mb-4 max-w-xl lg:max-w-250">
-                  Se você sente que está na hora da sua marca ser reconhecida
-                  pelo que realmente é, seja bem-vindo(a). <br />
-                  Aqui, a gente constrói visualmente tudo aquilo que você veio
-                  dizer ao mundo.
-                </p>
-              </div>
-
-              {/* Visual */}
-              <div className="relative h-[370px] lg:h-[500px] min-h-[300px] w-full rounded-[1.5rem] overflow-hidden shadow-sm group -mt-15 md:-mt-10">
-                <img
-                  src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2000&auto=format&fit=crop"
-                  alt="Office Space"
-                  className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-101"
-                />
-                <div className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/60 to-transparent">
-                  <div className="flex items-center gap-3">
-                    <div className="flex -space-x-3">
-                      <div className="w-10 h-10 rounded-full border-2 border-white bg-gray-200"></div>
-                      <div className="w-10 h-10 rounded-full border-2 border-white bg-gray-300"></div>
-                      <div className="w-10 h-10 rounded-full border-2 border-white bg-gray-400"></div>
-                    </div>
-                    <span className="text-white text-sm font-medium">
-                      +120 projetos entregues
-                    </span>
+            {/* Card container */}
+            <div className="bg-white rounded-3xl shadow-sm overflow-hidden my-8 md:my-12 lg:max-w-7xl lg:mx-auto">
+              {/* Two-column layout: foto à esquerda, texto à direita */}
+              <div className="flex flex-col md:flex-row items-stretch">
+                {/* Coluna esquerda: Foto */}
+                <div className="w-full md:w-[45%] lg:w-[40%] shrink-0 pl-6 pr-2 py-6 md:pl-8 md:pr-3 md:py-8">
+                  <div className="relative h-72 md:h-full min-h-[420px] rounded-2xl overflow-hidden">
+                    {/* Substitua o src pela foto real da Katharine */}
+                    <img
+                      src={ImageHero}
+                      alt="Katharine - Studio Kather"
+                      className="w-full h-full object-cover object-top"
+                    />
                   </div>
+                </div>
+
+                {/* Coluna direita: Título + textos */}
+                <div className="flex flex-col justify-center w-full md:w-[55%] lg:w-[60%] px-8 py-10 md:px-10 lg:px-14 lg:py-14">
+                  <h1 className="text-[28px] md:text-[36px] lg:text-[46px] font-medium leading-[1.2] text-black tracking-tight mb-6">
+                    Oiê, muito prazer! <br />
+                    <em className="italic">
+                      Katharine
+                    </em>{" "}
+                    aqui, mas <br className="hidden sm:block" />
+                    pode me chamar de{" "}
+                    <em className="italic">Kath</em>.
+                  </h1>
+
+                  <p className="text-black text-sm md:text-base lg:text-lg font-regular leading-relaxed mb-4 lg:max-w-130">
+                    Sou designer especializada em identidades visuais e
+                    fundadora do Studio Kather. Mais que estética bonita,
+                    entrego estrutura, clareza e emoção. Cada projeto nasce com
+                    base em estratégia, pesquisa e escuta profunda, porque
+                    identidade visual não é só sobre aparência, é sobre
+                    posicionamento.
+                  </p>
+
+                  <p className="text-black text-sm md:text-base lg:text-lg font-regular leading-relaxed mb-4 lg:max-w-130">
+                    Acredito que marcas são feitas de pessoas, e por isso
+                    precisam ser vivas, únicas e intencionais.
+                  </p>
+
+                  <p className="text-black text-sm md:text-base lg:text-lg font-regular leading-relaxed lg:max-w-130">
+                    Se você sente que está na hora da sua marca ser reconhecida
+                    pelo que realmente é, seja bem-vindo(a). Aqui, a gente
+                    constrói visualmente tudo aquilo que você veio dizer ao
+                    mundo.
+                  </p>
                 </div>
               </div>
             </div>
@@ -340,7 +345,10 @@ function About() {
         </section>
 
         {/* METHODOLOGY / PROCESS SECTION */}
-        <section id="process" className="pt-10 pb-16 md:pt-12 lg:pt-14 md:pb-24">
+        <section
+          id="process"
+          className="pt-10 pb-16 md:pt-12 lg:pt-14 md:pb-24"
+        >
           <div className="container mx-auto px-6 max-w-[1400px]">
             <div className="flex flex-col gap-20 w-full ">
               {/* Methodology */}
