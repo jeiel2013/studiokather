@@ -291,7 +291,7 @@ function About() {
         >
           <div className="container mx-auto px-6 max-w-[1400px]">
             {/* Card container */}
-            <div className="bg-white rounded-3xl shadow-sm overflow-hidden my-8 md:my-12 lg:max-w-7xl lg:mx-auto">
+            <div className="bg-[#f1f0ee] rounded-3xl shadow-sm overflow-hidden my-8 md:my-12 lg:max-w-7xl lg:mx-auto">
               {/* Two-column layout: foto à esquerda, texto à direita */}
               <div className="flex flex-col md:flex-row items-stretch">
                 {/* Coluna esquerda: Foto */}
@@ -357,7 +357,7 @@ function About() {
                   <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6 text-black">
                     Identidade não nasce de um copia e cola
                   </h2>
-                  <p className="text-xl md:text-2xl text-black/60 font-regular">
+                  <p className="text-xl md:text-2xl text-black font-regular">
                     Aqui, passamos por 7 etapas até alcançar um resultado
                     verdadeiramente satisfatório.
                   </p>
@@ -371,7 +371,7 @@ function About() {
                     >
                       <div className="shrink-0">
                         <div
-                          className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white border border-black/10 flex items-center 
+                          className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-[#f1f0ee] border border-black/10 flex items-center 
                         justify-center text-3xl md:text-4xl font-bold text-olive shadow-sm transition-transform duration-300 group-hover:scale-105"
                         >
                           {step.number}
@@ -381,7 +381,7 @@ function About() {
                         <h3 className="text-3xl md:text-4xl font-medium text-black tracking-tight">
                           {step.title}
                         </h3>
-                        <p className="text-lg md:text-xl text-black/60 font-regular leading-relaxed">
+                        <p className="text-lg md:text-xl text-black font-regular leading-relaxed">
                           {step.description}
                         </p>
                       </div>
