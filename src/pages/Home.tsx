@@ -110,43 +110,37 @@ const projects: Project[] = [
     id: 1,
     title: "MazaMad",
     category: "Identidade Visual",
-    image:
-      image1,
+    image: image1,
   },
   {
     id: 2,
     title: "Lavoy",
     category: "Identidade Visual & Naming",
-    image:
-      image2,
+    image: image2,
   },
   {
     id: 3,
     title: "Essência Jeans",
     category: "Identidade Visual",
-    image:
-      image3,
+    image: image3,
   },
   {
     id: 4,
     title: "Zadda",
     category: "Identidade Visual & Naming",
-    image:
-      image4,
+    image: image4,
   },
   {
     id: 5,
     title: "Regra",
     category: "Identidade Visual",
-    image:
-      image5,
+    image: image5,
   },
   {
     id: 6,
     title: "Bárbara Benevenutto",
     category: "Identidade Visual",
-    image:
-      image6,
+    image: image6,
   },
 ];
 
@@ -373,8 +367,8 @@ function Home() {
               <div className="flex flex-col md:p-16 lg:p-24 min-h-[600px] md:min-h-[750px] lg:min-h-[650px] z-10 lg:justify-start p-8 md:pt-10 md:pr-10 md:pb-10 md:pl-10 relative justify-end">
                 <h1 className="leading-tight lg:uppercase md:leading-[1.3] text-balance md:text-6xl lg:text-[53px] text-3xl lg:font-bold font-medium tracking-tight text-center md:text-left mb-6 md:mb-0 text-black md:text-black">
                   Está na hora <br /> de{" "}
-                  <span className="text-[#f1f0ee]">mudar a forma</span> <br /> como
-                  seus clientes <br />
+                  <span className="text-[#f1f0ee]">mudar a forma</span> <br />{" "}
+                  como seus clientes <br />
                   enxergam <span className="text-[#f1f0ee]">sua marca</span>
                 </h1>
                 <p className="hidden md:block md:text-2xl leading-relaxed text-base font-medium text-black max-w-xl mt-6 opacity-0 animate-[fadeInUp_0.8s_cubic-bezier(0.16,1,0.3,1)_0.5s_forwards] lg:max-w-140">
@@ -553,8 +547,8 @@ function Home() {
           <div className="container mx-auto px-3 md:px-6 max-w-[1400px]">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-stretch">
               {/* Image */}
-              <div className="relative order-2 lg:order-1 w-full">
-                <div className="relative overflow-hidden rounded-[1.5rem] aspect-[3/4] md:aspect-[3/2] lg:aspect-auto lg:h-full">
+              <div className="relative order-2 lg:order-1 w-full lg:self-stretch">
+                <div className="relative overflow-hidden rounded-[1.5rem] aspect-[3/4] md:aspect-[3/2] lg:aspect-auto lg:absolute lg:inset-0">
                   <img
                     src={Home1}
                     alt="Designer at work"
@@ -617,11 +611,11 @@ function Home() {
               </div>
 
               {/* Image Card */}
-              <div className="relative w-full overflow-hidden rounded-[1.5rem] aspect-[3/4] md:aspect-[3/2] lg:aspect-auto lg:h-full hidden md:block">
+              <div className="relative w-full rounded-[1.5rem] overflow-hidden aspect-[3/2] lg:aspect-auto lg:self-stretch hidden md:block">
                 <img
                   src={Home2}
                   alt="Creative Process"
-                  className="w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover object-[center_10%]"
                 />
               </div>
             </div>
