@@ -11,6 +11,8 @@ import {
 } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 
+import Contact1 from "../assets/Images/Contact1.webp";
+
 const currentYear = new Date().getFullYear();
 
 function Contact() {
@@ -204,22 +206,13 @@ function Contact() {
       <main className="pt-28 lg:pt-40 pb-10 lg:-mb-21 bg-offwhite min-h-screen">
         <div className="container mx-auto px-3 md:px-6 max-w-[1400px]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-start">
-            {/* Text Card */}
-            <div className="bg-olive shadow-sm rounded-[1.5rem] p-8 md:p-10 lg:p-12 flex flex-col justify-center min-h-[400px] lg:min-h-[600px]">
-              <h1 className="text-[40px] md:text-[59px] font-semibold uppercase text-black leading-tight tracking-tight mb-16">
-                Vamos conhecer seus <span className="text-white">desafios.</span>
-              </h1>
-              <p className="text-lg md:text-2xl text-[#f1f0ee] font-medium leading-relaxed md:max-w-120">
-                Preencha a solicitação para que possamos agendar um horário e
-                conversarmos sobre seu projeto. Se preferir, nos envie um e-mail
-                para{" "}
-                <a
-                  href="mailto:ola@studiokather.com.br"
-                  className="text-[#f1f0ee] font-medium hover:underline transition-all"
-                >
-                  contato@studiokather.com.br
-                </a>
-              </p>
+            {/* Image Card */}
+            <div className="relative shadow-sm rounded-[1.5rem] overflow-hidden min-h-[400px] lg:min-h-[600px]">
+              <img
+                src={Contact1}
+                alt="Studio Kather workspace"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
             </div>
 
             {/* Form Card */}
@@ -276,9 +269,7 @@ function Contact() {
                     ].map((item, index) => (
                       <div key={index} className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-olive mt-2 flex-shrink-0" />
-                        <p className="text-lg text-black font-medium">
-                          {item}
-                        </p>
+                        <p className="text-lg text-black font-medium">{item}</p>
                       </div>
                     ))}
                   </div>
