@@ -603,19 +603,15 @@ function Portfolio() {
       <main className="pt-28 pb-10 bg-offwhite min-h-screen">
         <div className="container mx-auto px-3 md:px-6 max-w-[1400px]">
           {/* Header Card */}
-          <div className="bg-beige/40 rounded-[1.5rem] p-8 md:p-12 lg:p-16 mb-6 md:mb-8">
-            <h1 className="uppercase text-[40px] md:text-[59px] font-semibold text-black leading-tight tracking-tight mb-5 md:mb-3">
-              Portfolio
+          <div className="bg-[#f1f0ee] rounded-[1.5rem] px-8 py-16 md:px-12 md:py-24 lg:px-16 lg:py-32 mb-6 md:mb-8 flex flex-col items-center text-center">
+            <h1 className="uppercase text-[45px] md:text-[65px] font-semibold text-black leading-tight tracking-tight mb-5 md:mb-5">
+              SEJA BEM-VINDO AO MEU PORTFÓLIO!
             </h1>
-            <p className="text-lg md:text-2xl text-black/80 mb-3 md:mb-0 font-medium leading-relaxed">
-              Seja bem-vindo ao meu portfólio!
-            </p>
-            <br />
-            <p className="text-lg md:text-2xl text-black/80 mb-3 md:mb-2 font-medium leading-relaxed lg:wrap-break-word lg:max-w-140">
+            <p className="text-xl md:text-2xl text-black mb-2 md:mb-0 font-regular leading-relaxed max-w-6xl">
               Este espaço está sempre em atualização, então aproveite para
               explorar, mergulhar nos conceitos e se inspirar.
             </p>
-            <p className="text-lg md:text-2xl text-black/80 font-medium leading-relaxed lg:wrap-break-word lg:max-w-140">
+            <p className="text-xl md:text-2xl text-black font-regular leading-relaxed max-w-6xl italic">
               Quem sabe a sua marca não aparece por aqui também?
             </p>
           </div>
