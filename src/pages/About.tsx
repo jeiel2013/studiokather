@@ -402,7 +402,7 @@ function About() {
                   {faqItems.map((item, index) => (
                     <details
                       key={index}
-                      className="group py-8 border-b border-black/10"
+                      className="group py-5 border-b border-black/10"
                       open={openFAQ === index}
                       onClick={(e) => {
                         e.preventDefault();
