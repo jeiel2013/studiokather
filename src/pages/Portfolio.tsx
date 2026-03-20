@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import LogoKather from "../assets/Images/LogoKather.png";
-import K from "../assets/Images/K.png";
+import LogoKather from "../assets/Images/LogoKather.webp";
+import K from "../assets/Images/K.webp";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import "../styles/portfolio.css";
 import { useLocation } from "react-router-dom";
