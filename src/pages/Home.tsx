@@ -4,8 +4,8 @@ import FundoHero from "../assets/Images/FundoHero.webp";
 import K from "../assets/Images/K.png";
 import LogoKather from "../assets/Images/LogoKather.png";
 import CartaoKather from "../assets/Images/CartaoKather.webp";
-import About from "../assets/Images/About.jpg";
-import Contact from "../assets/Images/Contact.jpg";
+import Home1 from "../assets/Images/Home1.webp";
+import Home2 from "../assets/Images/Home2.webp";
 import "../styles/home.css";
 
 import image1 from "../assets/Images/home/Capas portfólio -04.webp";
@@ -556,7 +556,7 @@ function Home() {
               <div className="relative order-2 lg:order-1 w-full">
                 <div className="relative overflow-hidden rounded-[1.5rem] aspect-[3/4] md:aspect-[3/2] lg:aspect-auto lg:h-full">
                   <img
-                    src={About}
+                    src={Home1}
                     alt="Designer at work"
                     className="w-full h-full object-cover"
                   />
@@ -619,7 +619,7 @@ function Home() {
               {/* Image Card */}
               <div className="relative w-full overflow-hidden rounded-[1.5rem] aspect-[3/4] md:aspect-[3/2] lg:aspect-auto lg:h-full hidden md:block">
                 <img
-                  src={Contact}
+                  src={Home2}
                   alt="Creative Process"
                   className="w-full h-full object-cover"
                 />
