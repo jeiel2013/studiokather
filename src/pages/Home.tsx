@@ -373,9 +373,9 @@ function Home() {
               <div className="flex flex-col md:p-16 lg:p-24 min-h-[600px] md:min-h-[750px] lg:min-h-[650px] z-10 lg:justify-start p-8 md:pt-10 md:pr-10 md:pb-10 md:pl-10 relative justify-end">
                 <h1 className="leading-tight lg:uppercase md:leading-[1.3] text-balance md:text-6xl lg:text-[53px] text-3xl lg:font-bold font-medium tracking-tight text-center md:text-left mb-6 md:mb-0 text-black md:text-black">
                   Está na hora <br /> de{" "}
-                  <span className="text-white">mudar a forma</span> <br /> como
+                  <span className="text-[#f1f0ee]">mudar a forma</span> <br /> como
                   seus clientes <br />
-                  enxergam <span className="text-white">sua marca</span>
+                  enxergam <span className="text-[#f1f0ee]">sua marca</span>
                 </h1>
                 <p className="hidden md:block md:text-2xl leading-relaxed text-base font-medium text-black max-w-xl mt-6 opacity-0 animate-[fadeInUp_0.8s_cubic-bezier(0.16,1,0.3,1)_0.5s_forwards] lg:max-w-140">
                   Vamos mostrar o seu profissionalismo, <br /> eficiência e
@@ -386,7 +386,7 @@ function Home() {
                 <div className="mt-0 md:mt-8 md:opacity-0 md:animate-[fadeInUp_0.8s_cubic-bezier(0.16,1,0.3,1)_0.8s_forwards] flex justify-center md:justify-start">
                   <a
                     href="/about"
-                    className="inline-flex items-center justify-center px-6 py-3 border-2 border-offwhite rounded-full text-offwhite text-base md:text-xl font-medium transition-all duration-300 hover:bg-offwhite hover:text-black whitespace-nowrap"
+                    className="inline-flex items-center justify-center px-6 py-3 border-2 border-[#f1f0ee] rounded-full text-offwhite text-base md:text-xl font-medium transition-all duration-300 hover:bg-[#f1f0ee] hover:text-black whitespace-nowrap"
                   >
                     Como trabalhamos?
                   </a>
@@ -496,7 +496,7 @@ function Home() {
               {testimonials.map((testimonial) => (
                 <div
                   key={testimonial.id}
-                  className="bg-white p-8 rounded-[1.5rem] flex flex-col justify-between shadow-sm hover:shadow-lg transition-shadow duration-300 h-full relative lg:min-h-[320px]"
+                  className="bg-[#f1f0ee] p-8 rounded-[1.5rem] flex flex-col justify-between shadow-sm hover:shadow-lg transition-shadow duration-300 h-full relative lg:min-h-[320px]"
                 >
                   {/* Aspas decorativas no canto superior direito */}
                   <svg
@@ -569,11 +569,11 @@ function Home() {
               {/* Content */}
               <div className="order-1 lg:order-2 bg-olive shadow-sm flex flex-col justify-center rounded-[1.5rem] p-6 md:p-10 lg:p-12">
                 <h2 className="text-[40px] md:text-[59px] font-semibold uppercase text-black leading-[1.15] mb-3 tracking-tight mt-6 md:mt-0">
-                  <span className="text-white">Acredito </span>
+                  <span className="text-[#f1f0ee]">Acredito </span>
                   que sua marca é o que ela transmite
                 </h2>
 
-                <p className="text-lg md:text-2xl text-offwhite font-medium leading-relaxed mb-4 mt-2 md:mt-12 text-balance md:mb-0">
+                <p className="text-lg md:text-2xl text-[#f1f0ee] font-medium leading-relaxed mb-4 mt-2 md:mt-12 text-balance md:mb-0">
                   A identidade visual é tudo o que o cliente vê e percebe sobre
                   sua marca, tanto nos meios digitais quanto no offline.
                 </p>
@@ -581,7 +581,7 @@ function Home() {
                 <div className="mt-19 hidden md:block">
                   <a
                     href="/about"
-                    className="inline-flex items-center justify-center px-6 py-3 border-2 border-white rounded-full text-white text-base md:text-xl font-medium transition-all duration-300 hover:bg-white hover:text-black whitespace-nowrap"
+                    className="inline-flex items-center justify-center px-6 py-3 border-2 border-[#f1f0ee] rounded-full text-white text-base md:text-xl font-medium transition-all duration-300 hover:bg-[#f1f0ee] hover:text-black whitespace-nowrap"
                   >
                     Conhecer mais sobre nosso processo
                   </a>
@@ -602,7 +602,7 @@ function Home() {
               <div className="bg-beige shadow-sm flex flex-col justify-center rounded-[1.5rem] p-6 md:p-10 lg:p-12 md:aspect-[3/2] lg:aspect-auto">
                 <h2 className="text-[40px] md:text-[59px] font-semibold uppercase leading-[1.15] tracking-tight mb-4 text-black mt-4 md:mt-0">
                   Marcas sem identidade visual passam{" "}
-                  <span className="text-white">despercebidas</span>
+                  <span className="text-[#f1f0ee]">despercebidas</span>
                 </h2>
                 <p className="text-lg md:text-2xl font-medium leading-relaxed mb-5 md:mb-10 mt-0 md:mt-4 text-black/90 md:max-w-120">
                   Agende uma conversa comigo. Estou disposta a entender sobre
@@ -610,7 +610,7 @@ function Home() {
                 </p>
                 <a
                   href="/contact"
-                  className="inline-flex items-center justify-center px-6 py-3 border-2 border-[#4e6628] bg-transparent rounded-full text-olive hover:text-white text-base md:text-xl font-medium transition-all duration-300 hover:bg-olive whitespace-nowrap w-fit"
+                  className="inline-flex items-center justify-center px-6 py-3 border-2 border-[#4e6628] bg-transparent rounded-full text-olive hover:text-[#f1f0ee] text-base md:text-xl font-medium transition-all duration-300 hover:bg-olive whitespace-nowrap w-fit"
                 >
                   Agendar uma conversa
                 </a>
