@@ -209,13 +209,13 @@ function Contact() {
               <h1 className="text-[40px] md:text-[59px] font-semibold uppercase text-black leading-tight tracking-tight mb-16">
                 Vamos conhecer seus <span className="text-white">desafios.</span>
               </h1>
-              <p className="text-lg md:text-2xl text-offwhite font-medium leading-relaxed md:max-w-120">
+              <p className="text-lg md:text-2xl text-[#f1f0ee] font-medium leading-relaxed md:max-w-120">
                 Preencha a solicitação para que possamos agendar um horário e
                 conversarmos sobre seu projeto. Se preferir, nos envie um e-mail
                 para{" "}
                 <a
                   href="mailto:ola@studiokather.com.br"
-                  className="text-white font-medium hover:underline transition-all"
+                  className="text-[#f1f0ee] font-medium hover:underline transition-all"
                 >
                   contato@studiokather.com.br
                 </a>
@@ -224,11 +224,11 @@ function Contact() {
 
             {/* Form Card */}
             {/* Contact Card */}
-            <div className="bg-white shadow-sm rounded-[1.5rem] p-8 md:p-10 lg:p-12 min-h-[400px] lg:min-h-[600px] flex flex-col justify-center">
+            <div className="bg-[#f1f0ee] shadow-sm rounded-[1.5rem] p-8 md:p-10 lg:p-12 min-h-[400px] lg:min-h-[600px] flex flex-col justify-center">
               <div className="space-y-8">
                 {/* Texto principal */}
                 <div className="space-y-3">
-                  <p className="text-lg md:text-[28px] text-black/80 font-medium leading-relaxed">
+                  <p className="text-lg md:text-[28px] text-black font-medium leading-relaxed">
                     Fale comigo pelo WhatsApp para alinharmos escopo, entender
                     suas necessidades e definir o melhor caminho para a sua
                     marca.
@@ -276,7 +276,7 @@ function Contact() {
                     ].map((item, index) => (
                       <div key={index} className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-olive mt-2 flex-shrink-0" />
-                        <p className="text-lg text-black/70 font-medium">
+                        <p className="text-lg text-black font-medium">
                           {item}
                         </p>
                       </div>
