@@ -315,7 +315,7 @@ function About() {
                     pode me chamar de <em className="italic">Kath</em>.
                   </h1>
 
-                  <p className="text-black text-xl md:text-base lg:text-lg font-regular leading-relaxed mb-4 lg:max-w-130">
+                  <p className="text-black text-xl md:text-xl lg:text-xl font-regular leading-relaxed mb-4 lg:max-w-130">
                     Sou designer especializada em identidades visuais e
                     fundadora do Studio Kather. Mais que estética bonita,
                     entrego estrutura, clareza e emoção. Cada projeto nasce com
@@ -324,12 +324,12 @@ function About() {
                     posicionamento.
                   </p>
 
-                  <p className="text-black text-xl md:text-base lg:text-lg font-regular leading-relaxed mb-4 lg:max-w-130">
+                  <p className="text-black text-xl md:text-base lg:text-xl font-regular leading-relaxed mb-4 lg:max-w-130">
                     Acredito que marcas são feitas de pessoas, e por isso
                     precisam ser vivas, únicas e intencionais.
                   </p>
 
-                  <p className="text-black text-xl md:text-base lg:text-lg font-regular leading-relaxed lg:max-w-130">
+                  <p className="text-black text-xl md:text-base lg:text-xl font-regular leading-relaxed lg:max-w-130">
                     Se você sente que está na hora da sua marca ser reconhecida
                     pelo que realmente é, seja bem-vindo(a). Aqui, a gente
                     constrói visualmente tudo aquilo que você veio dizer ao
