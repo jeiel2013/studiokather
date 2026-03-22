@@ -14,9 +14,6 @@ import {
 
 const currentYear = new Date().getFullYear();
 
-// Sort universal: "capa" / "0..." sempre primeiro,
-// depois ordena pelo número entre parênteses "Nome (2)"
-// ou pelo último número no nome "Nome-13", "Prancheta 1-13"
 const naturalSort = ([a]: [string, unknown], [b]: [string, unknown]) => {
   const num = (s: string) => {
     const filename =
@@ -603,8 +600,8 @@ function Portfolio() {
       <main className="pt-28 pb-10 bg-offwhite min-h-screen">
         <div className="container mx-auto px-3 md:px-6 max-w-[1400px]">
           {/* Header Card */}
-          <div className="bg-[#f1f0ee] rounded-[1.5rem] px-8 py-16 md:px-12 md:py-24 lg:px-16 lg:py-32 mb-6 md:mb-8 flex flex-col items-center text-center">
-            <h1 className="uppercase text-[45px] md:text-[65px] font-semibold text-black leading-tight tracking-tight mb-5 md:mb-5">
+          <div className="bg-[#f1f0ee] rounded-[1.5rem] px-8 py-16 md:px-12 md:py-24 lg:px-16 lg:py-32 mb-6 md:mb-8 flex flex-col items-start text-left md:items-center md:text-center">
+            <h1 className="uppercase md:text-6xl lg:text-[53px] text-[39px] font-semibold text-black leading-tight tracking-tight mb-5 md:mb-5">
               SEJA BEM-VINDO AO MEU PORTFÓLIO!
             </h1>
             <p className="text-xl md:text-2xl text-black mb-2 md:mb-0 font-regular leading-relaxed max-w-6xl">

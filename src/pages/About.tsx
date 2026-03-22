@@ -10,7 +10,7 @@ import {
   FaTiktok,
 } from "react-icons/fa";
 
-import ImageHero from "../assets/Images/HeroAbout.webp"
+import ImageHero from "../assets/Images/HeroAbout.webp";
 
 const currentYear = new Date().getFullYear();
 
@@ -295,7 +295,7 @@ function About() {
               {/* Two-column layout: foto à esquerda, texto à direita */}
               <div className="flex flex-col md:flex-row items-stretch">
                 {/* Coluna esquerda: Foto */}
-                <div className="w-full md:w-[45%] lg:w-[40%] shrink-0 pl-6 pr-2 py-6 md:pl-8 md:pr-3 md:py-8">
+                <div className="w-full md:w-[45%] lg:w-[40%] shrink-0 pl-6 pr-6 py-6 md:pl-8 md:pr-3 md:py-8">
                   <div className="relative h-72 md:h-full min-h-[420px] rounded-2xl overflow-hidden">
                     {/* Substitua o src pela foto real da Katharine */}
                     <img
@@ -308,17 +308,14 @@ function About() {
 
                 {/* Coluna direita: Título + textos */}
                 <div className="flex flex-col justify-center w-full md:w-[55%] lg:w-[60%] px-8 py-10 md:px-10 lg:px-14 lg:py-14">
-                  <h1 className="text-[28px] md:text-[36px] lg:text-[46px] font-medium leading-[1.2] text-black tracking-tight mb-6">
+                  <h1 className="text-4xl md:text-[36px] lg:text-[46px] font-semibold leading-[1.2] text-black tracking-tight mb-6">
                     Oiê, muito prazer! <br />
-                    <em className="italic">
-                      Katharine
-                    </em>{" "}
-                    aqui, mas <br className="hidden sm:block" />
-                    pode me chamar de{" "}
-                    <em className="italic">Kath</em>.
+                    <em className="italic">Katharine</em> aqui, mas{" "}
+                    <br className="hidden sm:block" />
+                    pode me chamar de <em className="italic">Kath</em>.
                   </h1>
 
-                  <p className="text-black text-sm md:text-base lg:text-lg font-regular leading-relaxed mb-4 lg:max-w-130">
+                  <p className="text-black text-xl md:text-base lg:text-lg font-regular leading-relaxed mb-4 lg:max-w-130">
                     Sou designer especializada em identidades visuais e
                     fundadora do Studio Kather. Mais que estética bonita,
                     entrego estrutura, clareza e emoção. Cada projeto nasce com
@@ -327,12 +324,12 @@ function About() {
                     posicionamento.
                   </p>
 
-                  <p className="text-black text-sm md:text-base lg:text-lg font-regular leading-relaxed mb-4 lg:max-w-130">
+                  <p className="text-black text-xl md:text-base lg:text-lg font-regular leading-relaxed mb-4 lg:max-w-130">
                     Acredito que marcas são feitas de pessoas, e por isso
                     precisam ser vivas, únicas e intencionais.
                   </p>
 
-                  <p className="text-black text-sm md:text-base lg:text-lg font-regular leading-relaxed lg:max-w-130">
+                  <p className="text-black text-xl md:text-base lg:text-lg font-regular leading-relaxed lg:max-w-130">
                     Se você sente que está na hora da sua marca ser reconhecida
                     pelo que realmente é, seja bem-vindo(a). Aqui, a gente
                     constrói visualmente tudo aquilo que você veio dizer ao
@@ -349,7 +346,7 @@ function About() {
           id="process"
           className="pt-10 pb-16 md:pt-12 lg:pt-14 md:pb-24"
         >
-          <div className="container mx-auto px-6 max-w-[1400px]">
+          <div className="container mx-auto px-3 md:px-6 max-w-[1400px]">
             <div className="flex flex-col gap-20 w-full ">
               {/* Methodology */}
               <div className="flex flex-col gap-16">
@@ -392,11 +389,9 @@ function About() {
 
               {/* FAQ */}
               <div className="flex flex-col pt-20 border-t border-black/5">
-                <div className="mb-2">
-                  <h2 className="text-2xl font-semibold tracking-widest mb-5 ml-1 text-black uppercase">
-                    Perguntas Frequentes
-                  </h2>
-                </div>
+                <p className="text-2xl font-semibold text-black/90 uppercase tracking-widest mb-5 ml-1">
+                  Perguntas Frequentes
+                </p>
 
                 <div className="flex flex-col">
                   {faqItems.map((item, index) => (
@@ -414,13 +409,11 @@ function About() {
                           {item.question}
                         </span>
                         <span
-                          className={`text-olive pt-2 transform transition-transform duration-300 ${
-                            openFAQ === index ? "rotate-180" : ""
-                          }`}
+                          className={`text-olive pt-1 flex-shrink-0 transform transition-transform duration-300 ${openFAQ === index ? "rotate-180" : ""}`}
                         >
                           <svg
-                            width="24"
-                            height="24"
+                            width="20"
+                            height="20"
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"

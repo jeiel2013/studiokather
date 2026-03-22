@@ -8,6 +8,40 @@ import Home1 from "../assets/Images/Home1.webp";
 import Home2 from "../assets/Images/Home2.webp";
 import "../styles/home.css";
 
+import Banner01 from "../assets/Images/banners-01.webp";
+import Banner02 from "../assets/Images/banners-02.webp";
+import Banner03 from "../assets/Images/banners-03.webp";
+
+const slides = [Banner01, Banner02, Banner03];
+
+export function HeroSlideshow() {
+  const [current, setCurrent] = useState(0);
+  const [prev, setPrev] = useState<number | null>(null);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setPrev(current);
+      setCurrent((c) => (c + 1) % slides.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [current]);
+
+  return (
+    <div className="absolute inset-0 w-full h-full">
+      {slides.map((src, i) => (
+        <img
+          key={src}
+          src={src}
+          alt=""
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+            i === current ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      ))}
+    </div>
+  );
+}
+
 import image1 from "../assets/Images/home/Capas portfólio -04.webp";
 import image2 from "../assets/Images/home/Capas portfólio -07.webp";
 import image3 from "../assets/Images/home/Capas portfólio -08.webp";
@@ -348,39 +382,31 @@ function Home() {
           id="home"
         >
           <div className="container z-10 max-w-[1400px] mr-auto ml-auto px-3 md:px-6 relative">
-            <div className="relative w-full bg-white rounded-[1.5rem] overflow-hidden group">
+            <div className="relative w-full rounded-[1.5rem] overflow-hidden group">
+              {/* SLIDESHOW DE FUNDO */}
               <div className="absolute inset-0 w-full h-full">
-                {/* Desktop */}
-                <img
-                  src={FundoHero}
-                  alt="Hero Studio Kather"
-                  className="hidden md:block object-cover lg:object-center object-top w-full h-full"
-                />
-                {/* Mobile */}
-                <img
-                  src={CartaoKather}
-                  alt="Hero Studio Kather"
-                  className="md:hidden object-cover object-top w-full h-full"
-                />
-                <div className="absolute inset-0 bg-white/1 backdrop-blur-[1px] hidden md:block"></div>
+                <HeroSlideshow />
+                {/* Overlay escuro */}
+                <div className="absolute inset-0 bg-black/75 z-10"></div>
               </div>
-              <div className="flex flex-col md:p-16 lg:p-24 min-h-[600px] md:min-h-[750px] lg:min-h-[650px] z-10 lg:justify-start p-8 md:pt-10 md:pr-10 md:pb-10 md:pl-10 relative justify-end">
-                <h1 className="leading-tight lg:uppercase md:leading-[1.3] text-balance md:text-6xl lg:text-[53px] text-3xl lg:font-bold font-medium tracking-tight text-center md:text-left mb-6 md:mb-0 text-black md:text-black">
+
+              {/* CONTEÚDO CENTRALIZADO */}
+              <div className="flex flex-col items-center justify-center min-h-[600px] md:min-h-[750px] lg:min-h-[650px] z-20 relative p-8 md:p-16 lg:p-24 text-center">
+                <h1 className="leading-tight lg:uppercase md:leading-[1.3] text-balance md:text-6xl lg:text-[53px] text-[39px] lg:font-bold font-medium tracking-tight text-[#f1f0ee] mb-1 md:mb-3">
                   Está na hora <br /> de{" "}
-                  <span className="text-[#f1f0ee]">mudar a forma</span> <br />{" "}
-                  como seus clientes <br />
+                  <span className="text-[#f1f0ee]">mudar a forma</span>{" "}
+                  <br /> como seus clientes <br />
                   enxergam <span className="text-[#f1f0ee]">sua marca</span>
                 </h1>
-                <p className="hidden md:block md:text-2xl leading-relaxed text-base font-medium text-black max-w-xl mt-6 opacity-0 animate-[fadeInUp_0.8s_cubic-bezier(0.16,1,0.3,1)_0.5s_forwards] lg:max-w-140">
-                  Vamos mostrar o seu profissionalismo, <br /> eficiência e
-                  valores em uma identidade visual <br /> não apenas bonita, mas
+                <p className="md:block md:text-2xl leading-relaxed text-[20px] font-regular md:font-regular text-[#f1f0ee] max-w-90 mt-6 opacity-0 animate-[fadeInUp_0.8s_cubic-bezier(0.16,1,0.3,1)_0.5s_forwards] lg:max-w-140">
+                  Vamos mostrar o seu profissionalismo, eficiência e
+                  valores em uma identidade visual não apenas bonita, mas
                   fundamentada em um conceito sólido e duradouro.
                 </p>
-                {/* Botão - centralizado no mobile, alinhado à esquerda no desktop */}
-                <div className="mt-0 md:mt-8 md:opacity-0 md:animate-[fadeInUp_0.8s_cubic-bezier(0.16,1,0.3,1)_0.8s_forwards] flex justify-center md:justify-start">
+                <div className="mt-8 opacity-0 animate-[fadeInUp_0.8s_cubic-bezier(0.16,1,0.3,1)_0.8s_forwards]">
                   <a
                     href="/about"
-                    className="inline-flex items-center justify-center px-6 py-3 border-2 border-[#f1f0ee] rounded-full text-offwhite text-base md:text-xl font-medium transition-all duration-300 hover:bg-[#f1f0ee] hover:text-black whitespace-nowrap"
+                    className="inline-flex items-center justify-center px-6 py-3 border-2 border-[#f1f0ee] rounded-full text-[#f1f0ee] text-lg md:text-xl font-medium transition-all duration-300 hover:bg-[#f1f0ee] hover:text-black whitespace-nowrap"
                   >
                     Como trabalhamos?
                   </a>
