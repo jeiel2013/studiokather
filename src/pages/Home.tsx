@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import FundoHero from "../assets/Images/FundoHero.webp";
 import K from "../assets/Images/K.webp";
 import LogoKather from "../assets/Images/LogoKather.webp";
-import CartaoKather from "../assets/Images/CartaoKather.webp";
 import Home1 from "../assets/Images/Home1.webp";
 import Home2 from "../assets/Images/Home2.webp";
 import "../styles/home.css";
@@ -16,6 +14,7 @@ const slides = [Banner01, Banner02, Banner03];
 
 export function HeroSlideshow() {
   const [current, setCurrent] = useState(0);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [prev, setPrev] = useState<number | null>(null);
 
   useEffect(() => {
