@@ -14,12 +14,9 @@ const slides = [Banner01, Banner02, Banner03];
 
 export function HeroSlideshow() {
   const [current, setCurrent] = useState(0);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [prev, setPrev] = useState<number | null>(null);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setPrev(current);
       setCurrent((c) => (c + 1) % slides.length);
     }, 4000);
     return () => clearInterval(timer);
