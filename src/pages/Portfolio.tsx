@@ -571,7 +571,7 @@ function Portfolio() {
       {/* Mobile Menu */}
       <div
         id="mobile-menu"
-        className={`fixed inset-0 bg-beige z-40 flex flex-col items-center justify-center gap-8 transition-all duration-300 md:hidden ${
+        className={`fixed inset-0 bg-offwhite z-40 flex flex-col items-center justify-center gap-8 transition-all duration-300 md:hidden ${
           isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
