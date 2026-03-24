@@ -10,6 +10,7 @@ import {
   FaLinkedin,
   FaSpotify,
   FaTiktok,
+  FaInstagram,
 } from "react-icons/fa";
 
 const currentYear = new Date().getFullYear();
@@ -914,7 +915,7 @@ function Portfolio() {
           </p>
           <div className="flex gap-4">
             <a
-              href="https://pin.it/2flz87bqI"
+              href="https://br.pinterest.com/studiokather1/_profile/"
               className="text-black hover:text-olive transition-colors"
             >
               <FaPinterest className="w-7 h-7" />
@@ -938,10 +939,16 @@ function Portfolio() {
               <FaSpotify className="w-7 h-7" />
             </a>
             <a
-              href="https://www.tiktok.com/@katharinearaujo_?_t=ZM-8xS2AimDpRN&_r=1"
+              href="https://www.tiktok.com/@katharinearaujoo?_r=1&_t=ZS-94xSOlsTPfT"
               className="text-black hover:text-olive transition-colors"
             >
               <FaTiktok className="w-7 h-7" />
+            </a>
+            <a
+              href="https://www.instagram.com/katharinearaujodesign/"
+              className="text-black hover:text-olive transition-colors"
+            >
+              <FaInstagram className="w-7 h-7" />
             </a>
           </div>
         </div>

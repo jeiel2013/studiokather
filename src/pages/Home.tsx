@@ -51,6 +51,7 @@ import {
   FaLinkedin,
   FaSpotify,
   FaTiktok,
+  FaInstagram,
 } from "react-icons/fa";
 
 const currentYear = new Date().getFullYear();
@@ -383,18 +384,18 @@ function Home() {
               <div className="absolute inset-0 w-full h-full">
                 <HeroSlideshow />
                 {/* Overlay escuro */}
-                <div className="absolute inset-0 bg-black/75 z-10"></div>
+                <div className="absolute inset-0 bg-black/68 z-10"></div>
               </div>
 
               {/* CONTEÚDO CENTRALIZADO */}
-              <div className="flex flex-col items-center justify-center min-h-[600px] md:min-h-[750px] lg:min-h-[650px] z-20 relative p-8 md:p-16 lg:p-24 text-center">
-                <h1 className="leading-tight lg:uppercase md:leading-[1.3] text-balance md:text-6xl lg:text-[53px] text-[39px] lg:font-bold font-medium tracking-tight text-[#f1f0ee] mb-1 md:mb-3">
-                  Está na hora <br /> de{" "}
+              <div className="flex flex-col items-center justify-center md:justify-start md:items-baseline min-h-[600px] md:min-h-[750px] lg:min-h-[650px] z-20 relative p-8 md:p-16 lg:p-24 text-center">
+                <h1 className="leading-tight lg:uppercase md:leading-[1.3] text-balance uppercase md:normal-case text-[40px] md:text-6xl lg:text-[53px] lg:font-bold font-semibold tracking-tight md:text-left text-[#f1f0ee] mb-1 md:mb-3">
+                  Está na hora <br className="hidden md:block" /> de{" "}
                   <span className="text-[#f1f0ee]">mudar a forma</span>{" "}
-                  <br /> como seus clientes <br />
+                  <br className="hidden md:block" /> como seus clientes <br />
                   enxergam <span className="text-[#f1f0ee]">sua marca</span>
                 </h1>
-                <p className="md:block md:text-2xl leading-relaxed text-[20px] font-regular md:font-regular text-[#f1f0ee] max-w-90 mt-6 opacity-0 animate-[fadeInUp_0.8s_cubic-bezier(0.16,1,0.3,1)_0.5s_forwards] lg:max-w-140">
+                <p className="md:block md:text-2xl leading-relaxed text-[20px] hidden font-regular md:text-left md:font-regular text-[#f1f0ee] max-w-90 mt-6 opacity-0 animate-[fadeInUp_0.8s_cubic-bezier(0.16,1,0.3,1)_0.5s_forwards] lg:max-w-140">
                   Vamos mostrar o seu profissionalismo, eficiência e
                   valores em uma identidade visual não apenas bonita, mas
                   fundamentada em um conceito sólido e duradouro.
@@ -725,7 +726,7 @@ function Home() {
           {/* Right: Social Icons */}
           <div className="flex gap-4">
             <a
-              href="https://pin.it/2flz87bqI"
+              href="https://br.pinterest.com/studiokather1/_profile/"
               className="text-black hover:text-olive transition-colors"
             >
               <FaPinterest className="w-7 h-7" />
@@ -749,10 +750,16 @@ function Home() {
               <FaSpotify className="w-7 h-7" />
             </a>
             <a
-              href="https://www.tiktok.com/@katharinearaujo_?_t=ZM-8xS2AimDpRN&_r=1"
+              href="https://www.tiktok.com/@katharinearaujoo?_r=1&_t=ZS-94xSOlsTPfT"
               className="text-black hover:text-olive transition-colors"
             >
               <FaTiktok className="w-7 h-7" />
+            </a>
+            <a
+              href="https://www.instagram.com/katharinearaujodesign/"
+              className="text-black hover:text-olive transition-colors"
+            >
+              <FaInstagram className="w-7 h-7" />
             </a>
           </div>
         </div>
