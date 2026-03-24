@@ -1,118 +1,127 @@
-# 🎨 Studio Kather
+<div align="center">
 
-Site oficial do **Studio Kather** — desenvolvido com React, TypeScript e Vite.
+# kather.
 
-🌐 **Acesse o site:** [https://studiokather.com](https://studiokather.com)
+**Studio Kather — Identidade Visual & Naming**
 
----
+Site oficial da designer Katharine, especializada em criar identidades visuais estratégicas e nomes de marca para negócios que querem ser reconhecidos pelo que realmente são.
 
-## 📋 Sobre o Projeto
+🌐 [studiokather.com](https://studiokather.com)
 
-O Studio Kather é um site desenvolvido para apresentar o estúdio e seus serviços de forma moderna e responsiva. A aplicação foi construída com foco em performance, tipagem segura e uma ótima experiência de desenvolvimento.
+![Studio Kather Preview](./public/image.png)
 
----
-
-## 🚀 Tecnologias Utilizadas
-
-| Tecnologia                                    | Descrição                                |
-| --------------------------------------------- | ---------------------------------------- |
-| [React](https://react.dev/)                   | Biblioteca para construção de interfaces |
-| [TypeScript](https://www.typescriptlang.org/) | Superset tipado do JavaScript            |
-| [Vite](https://vitejs.dev/)                   | Bundler moderno e ultra-rápido           |
-| [Tailwind CSS](https://tailwindcss.com/)      | Framework de estilos utilitários         |
-| [ESLint](https://eslint.org/)                 | Linting e qualidade de código            |
+</div>
 
 ---
 
-## 📁 Estrutura do Projeto
+## ✨ Sobre o projeto
 
-```
-studiokather/
-├── public/              # Arquivos estáticos (imagens, ícones, etc.)
-├── src/                 # Código-fonte principal
-│   ├── components/      # Componentes reutilizáveis
-│   ├── pages/           # Páginas da aplicação
-│   ├── assets/          # Assets internos (imagens, fontes)
-│   └── main.tsx         # Entry point da aplicação
-├── index.html           # HTML principal
-├── vite.config.ts       # Configuração do Vite
-├── tsconfig.json        # Configuração do TypeScript
-├── postcss.config.ts    # Configuração do PostCSS
-└── package.json         # Dependências e scripts
-```
+Este repositório contém o código-fonte do site institucional do **Studio Kather**, desenvolvido com React, TypeScript e Vite.
+
+O site foi construído para apresentar os serviços, portfólio e processo de trabalho da Katharine — designer especializada em identidade visual e naming — transmitindo os mesmos valores que ela entrega aos clientes: **estrutura, clareza e emoção**.
 
 ---
 
-## ⚙️ Como Rodar Localmente
+## 📄 Páginas
 
-### Pré-requisitos
+| Página        | Descrição                                                                                           |
+| ------------- | --------------------------------------------------------------------------------------------------- |
+| **Home**      | Hero com proposta de valor, marcas atendidas, portfólio em destaque, depoimentos, seção sobre e FAQ |
+| **Portfólio** | Galeria completa de projetos de identidade visual e naming                                          |
+| **Sobre**     | Apresentação da Kath, filosofia de trabalho e processo em 7 etapas                                  |
+| **Contato**   | Canal direto via WhatsApp para alinhar escopo e proposta                                            |
 
-- [Node.js](https://nodejs.org/) v18 ou superior
-- [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/)
+---
 
-### Instalação
+## 🛠️ Tecnologias
+
+- [React](https://react.dev/) — biblioteca de interface
+- [TypeScript](https://www.typescriptlang.org/) — tipagem estática
+- [Vite](https://vitejs.dev/) — bundler e dev server
+- [Tailwind CSS](https://tailwindcss.com/) — estilização utilitária
+- [Vercel](https://vercel.com/) — deploy e hospedagem
+
+---
+
+## 🚀 Rodando localmente
+
+**Pré-requisitos:** Node.js 18+ e npm
 
 ```bash
 # Clone o repositório
 git clone https://github.com/jeiel2013/studiokather.git
 
-# Entre na pasta do projeto
+# Entre na pasta
 cd studiokather
 
 # Instale as dependências
 npm install
-```
 
-### Desenvolvimento
-
-```bash
-# Inicie o servidor de desenvolvimento com hot reload
+# Inicie o servidor de desenvolvimento
 npm run dev
 ```
 
 Acesse [http://localhost:5173](http://localhost:5173) no seu navegador.
 
-### Build para Produção
+---
+
+## 📦 Scripts disponíveis
 
 ```bash
-# Gere a build otimizada
-npm run build
-
-# Pré-visualize a build localmente
-npm run preview
+npm run dev        # Inicia o servidor de desenvolvimento
+npm run build      # Gera o build de produção
+npm run preview    # Visualiza o build localmente
+npm run lint       # Verifica o código com ESLint
 ```
 
 ---
 
-## 🔍 Linting
+## 📁 Estrutura do projeto
 
-```bash
-# Verifique a qualidade do código
-npm run lint
 ```
-
-O projeto utiliza ESLint com suporte a regras específicas para TypeScript e React. Para projetos em produção, recomenda-se habilitar regras com type-awareness no `eslint.config.js`:
-
-```ts
-tseslint.configs.recommendedTypeChecked,
-// ou, para regras mais rígidas:
-tseslint.configs.strictTypeChecked,
+studiokather/
+├── public/              # Arquivos estáticos
+├── src/
+│   ├── assets/          # Imagens e fontes
+│   ├── components/      # Componentes reutilizáveis
+│   ├── pages/           # Páginas (Home, Portfólio, Sobre, Contato)
+│   ├── App.tsx          # Componente raiz e rotas
+│   └── main.tsx         # Ponto de entrada
+├── index.html
+├── vite.config.ts
+└── tsconfig.json
 ```
 
 ---
 
 ## 🌐 Deploy
 
-O site está disponível em produção em:
+O site é hospedado na [Vercel](https://vercel.com/) com deploy automático a cada push na branch `main`.
 
-👉 **[https://studiokather.com](https://studiokather.com)**
-
----
-
-## 📄 Licença
-
-Este projeto é de uso privado. Todos os direitos reservados ao **Studio Kather**.
+**URL de produção:** [studiokather.com](https://studiokather.com)
 
 ---
 
-<p align="center">Feito com ❤️ para o Studio Kather</p>
+## 📸 Screenshots
+
+> _Screenshots serão adicionados em breve._
+
+![Home](./public/Home.webp)
+![Portfólio](./public/Portfolio.webp)
+![Sobre](./public/About.webp)
+![Contato](./public/Contact.webp)
+
+---
+
+## 📬 Contato
+
+Desenvolvido por [Jeiel](https://github.com/jeiel2013) para o **Studio Kather**.
+
+Para falar com a Kath sobre identidade visual:
+👉 [studiokather.com/contato](https://studiokather.com/contact)
+
+---
+
+<div align="center">
+  <sub>© 2026 Studio Kather. Todos os direitos reservados.</sub>
+</div>
