@@ -331,7 +331,7 @@ function Home() {
           onClick={closeMenu}
           className="group relative text-4xl font-medium text-black hover:text-olive transition-colors"
         >
-          Portfolio
+          Portfólio
           <span
             className={`absolute left-0 -bottom-2 h-1 bg-olive transition-all duration-300 ${
               location.pathname === "/about"

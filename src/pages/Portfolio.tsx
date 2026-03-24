@@ -577,7 +577,7 @@ function Portfolio() {
       >
         {[
           { href: "/", label: "Home" },
-          { href: "/portfolio", label: "Portfolio" },
+          { href: "/portfolio", label: "Portfólio" },
           { href: "/about", label: "Sobre" },
           { href: "/contact", label: "Contato" },
         ].map(({ href, label }) => (
