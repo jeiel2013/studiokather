@@ -39,7 +39,7 @@ O site foi construído para apresentar os serviços, portfólio e processo de tr
 - [TypeScript](https://www.typescriptlang.org/) — tipagem estática
 - [Vite](https://vitejs.dev/) — bundler e dev server
 - [Tailwind CSS](https://tailwindcss.com/) — estilização utilitária
-- [Vercel](https://vercel.com/) — deploy e hospedagem
+- [Hostinger](https://www.hostinger.com/) — deploy e hospedagem
 
 ---
 
@@ -96,7 +96,7 @@ studiokather/
 
 ## 🌐 Deploy
 
-O site é hospedado na [Vercel](https://vercel.com/) com deploy automático a cada push na branch `main`.
+O site é hospedado na [Hostinger](https://www.hostinger.com/).
 
 **URL de produção:** [studiokather.com](https://studiokather.com)
 
